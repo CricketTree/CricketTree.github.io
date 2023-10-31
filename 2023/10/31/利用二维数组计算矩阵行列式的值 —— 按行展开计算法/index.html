@@ -1,0 +1,1016 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      利用二维数组计算矩阵行列式的值 —— 按行展开计算法 | This is Title
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/20210716212924_a036b.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: true,
+	  appId: 'AnkeGlXrMetjoWeeqeBWI3HV-gzGzoHsz',
+	  appKey: 'mysij0IgTp8H4xHv7wHCo1XN',
+	  serverURLs: '' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「利用二维数组计算矩阵行列式的值 —— 按行展开计算法」
+		
+	</p>
+
+	
+	
+		<span id="star-button" rel="unlike">
+			<i class="icon-heart"></i>
+		</span>
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/" itemprop="url">
+		利用二维数组计算矩阵行列式的值 —— 按行展开计算法
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/" itemprop="url">
+		<time datetime="2023-10-31T10:02:00.000Z" itemprop="dateUpdated">
+	  		2023-10-31
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+	
+    <span class="leancloud_visitors" id="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/_visitors" data-url="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/" data-title="利用二维数组计算矩阵行列式的值 —— 按行展开计算法">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">1</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/_likes" data-url="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/" data-title="利用二维数组计算矩阵行列式的值 —— 按行展开计算法" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h1 id="利用二维数组计算矩阵行列式的值-——-按行展开计算法"><a href="#利用二维数组计算矩阵行列式的值-——-按行展开计算法" class="headerlink" title="利用二维数组计算矩阵行列式的值 —— 按行展开计算法"></a>利用二维数组计算矩阵行列式的值 —— 按行展开计算法</h1><p>![](&#x2F;images&#x2F;利用二维数组计算矩阵行列式的值 —— 按行展开计算法&#x2F;image-70-1368x2048.png)</p>
+<p>遇到一道经典题型–求矩阵行列式的值，我们用 C&#x2F;C++ 来实现</p>
+<h2 id="1-基本思路"><a href="#1-基本思路" class="headerlink" title="1. 基本思路"></a>1. 基本思路</h2><p>在计算行列式的时候，如果低阶的话，可以很容易算出来，但是阶数高的时候没法在程序里用最基本的算法，也就是<strong>对角线法则</strong>，将其一项一项进行运算</p>
+<p>这时候我们就要将其降阶，具体方法就是将其按照某一行展开，在程序里为了方便就都以第一行展开，并将代数余子式再按其第一列展开，然后以此类推，直到得到了 3 阶或 3 阶以下的子矩阵。为什么是 3 阶或 3 阶以下呢？因为这种低阶数的可以用对角线法则直接计算，当然，为了程序编写方便，我们可以直接将其降阶到 1 阶（一阶行列式 的值等于其唯一元素的值，如 ‘4’ &#x3D;&#x3D; 4）</p>
+<h2 id="2-实现方法"><a href="#2-实现方法" class="headerlink" title="2. 实现方法"></a>2. 实现方法</h2><h3 id="2-1-主函数-附上头文件与宏定义"><a href="#2-1-主函数-附上头文件与宏定义" class="headerlink" title="2.1 主函数(附上头文件与宏定义)"></a>2.1 主函数(附上头文件与宏定义)</h3><p>我们要先确定函数要执行些什么、顺序是怎么样的。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span>                     <span class="comment">//we need it to use setprecision()</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span>                        <span class="comment">//we need it to use pow()</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 20                            <span class="comment">//the max size of matrix</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;                                         <span class="comment">//matrix size</span></span><br><span class="line">	<span class="type">double</span> a[N][N];                                <span class="comment">//matrix</span></span><br><span class="line">	<span class="type">double</span> result;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Please enter matrix size n(1&lt;=n&lt;20)\n&quot;</span>;</span><br><span class="line">	cin &gt;&gt; n;                                      <span class="comment">//input the matrix size n</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Please input matrix line by line:\n&quot;</span>;</span><br><span class="line">	<span class="built_in">InputMatrix</span>(a, n);                             <span class="comment">//input the matrix</span></span><br><span class="line">	<span class="built_in">PrintMatrix</span>(a, n);                             <span class="comment">//print the matrix</span></span><br><span class="line">	result = <span class="built_in">DeterminantValue</span>();                   <span class="comment">//get the result of the matrix </span></span><br><span class="line">	cout &lt;&lt; result;                                <span class="comment">//print the result</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先是输入阶数，然后再输入矩阵（InputMatrix），然后输出矩阵（PrintMatrix），接着就是计算出矩阵行列式的值（DeterminantValue），最后输出出来就行了</p>
+<p>接下来我们详细看一下每个阶段的函数</p>
+<h3 id="2-2-InputMatrix"><a href="#2-2-InputMatrix" class="headerlink" title="2.2 InputMatrix()"></a>2.2 InputMatrix()</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">InputMatrix</span><span class="params">(<span class="type">double</span> a[N][N],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; a[i][j];                                    <span class="comment">//input the elements of the matrix</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>依项输入</p>
+<h3 id="2-3-PrintMatrix"><a href="#2-3-PrintMatrix" class="headerlink" title="2.3 PrintMatrix()"></a>2.3 PrintMatrix()</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">PrintMatrix</span><span class="params">(<span class="type">double</span> a[N][N],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; a[i][j];                                    <span class="comment">//print the elements of the matrix</span></span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>依项输出，注意换行</p>
+<h3 id="2-4-DeterminantValue"><a href="#2-4-DeterminantValue" class="headerlink" title="2.4 DeterminantValue()"></a>2.4 DeterminantValue()</h3><p>这个函数是这个程序的核心函数，也是最重要的函数。我们先来复习一下线性代数，**’A’ &#x3D; a<sub>11</sub>A<sub>11</sub> + a<sub>12</sub>A<sub>12</sub> + …… + a<sub>1n</sub>A<sub>1n</sub> &#x3D; Σa<sub>1n</sub>A<sub>1n</sub><strong>，其中</strong>A<sub>ij</sub> &#x3D; (-1)<sup>i+j</sup> M<sub>ij</sub>**</p>
+<p>a<sub>11</sub>、a<sub>12</sub>……a<sub>1n</sub> 很容易找出，所以重点就是找出 A<sub>11</sub>、A<sub>12</sub>……A<sub>1n</sub> ，而 i+j 也很容易表示，难点是 M<sub>ij</sub> 怎么表示，现在我们先把 DeterminantValue() 的主要步骤都写出来</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">DeterminantValue</span><span class="params">(<span class="type">double</span> a[N][N],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="type">double</span> result, temp;</span><br><span class="line">	<span class="type">double</span> sub[N][N];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		result = a[<span class="number">0</span>][<span class="number">0</span>];                                          <span class="comment">//if the matrix size == 1,result == the elements in matrix</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		result = <span class="number">0.0</span>;                                              <span class="comment">//make result back to zero</span></span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">SubMatrix</span>();                                           <span class="comment">//reduce the size of matrix,namely,find the submatrix</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;SubMatrix:\n&quot;</span>;</span><br><span class="line">			<span class="built_in">PrintMatrix</span>(sub, n - <span class="number">1</span>);                               <span class="comment">//print the submatrix</span></span><br><span class="line">			temp = <span class="built_in">DeterminantValue</span>(sub, n - <span class="number">1</span>);                   <span class="comment">//find the value of submatrix</span></span><br><span class="line">			result += a[<span class="number">0</span>][j] * <span class="built_in">pow</span>(<span class="number">-1</span>, i + j) * temp;             <span class="comment">//use submatrix and the corresponding elements in the first line in original matrix to find each value of items</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;DValue of the Submatrix is &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">1</span>) &lt;&lt; temp &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先不要忘了我们要解的是什么，是 M<sub>ij</sub>，也就是子矩阵。子矩阵用来干什么？拿来和 a<sub>ij</sub> 还有 (-1)<sup>i+j</sup> 相乘，然后再把他们加起来就是答案。所以重点是求 M<sub>ij</sub> ，不要忘了</p>
+<p>那么一开始先判断阶数，如果是 1 阶的那么这个矩阵行列式的值就是里面那个元素的值，如果不是，那我们把它降阶再求，如果降了阶还不是 1 阶的，那就继续降，直到阶数等于 1</p>
+<p>那么重点就变成了我们该如何降阶，也就是函数 SubMatrix()</p>
+<h4 id="2-4-1-SubMatrix"><a href="#2-4-1-SubMatrix" class="headerlink" title="2.4.1 SubMatrix()"></a>2.4.1 SubMatrix()</h4><p>首先，虽然说是一直降阶，听起来是个很简单的步骤，但是在计算机上想用代码实现并没有想象中的那么简单。我们再来回顾一次，怎么降阶：**’A’ &#x3D; a<sub>11</sub>A<sub>11</sub> + a<sub>12</sub>A<sub>12</sub> + …… + a<sub>1n</sub>A<sub>1n</sub>**，所以这其实是个套娃的过程，而套娃已经在 DeterminantValue 中实现了，a<sub>ij</sub> 也表示出来了，那在 SubMatrix 中要求的也就只有 M<sub>ij</sub> 了，那么子矩阵 M<sub>ij</sub> 怎么求？看下图找规律（以三阶为例）</p>
+<p>![](&#x2F;images&#x2F;利用二维数组计算矩阵行列式的值 —— 按行展开计算法&#x2F;image-71.png)</p>
+<p>按照定义，是去掉与 a<sub>ij</sub> 同行同列的其他元素，余下的就是子矩阵；但是在程序里怎么表示呢？&gt;</p>
+<h5 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h5><p>首先，我们要取的 a<sub>ij</sub> 都是第一行的，所以要的子矩阵的元素都不在第一行，也就是上图中黄色框框内的，我们可以用下面的代码把它们找出来</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; a[i][j];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>找出来后就是排除掉我们不要的，也就是和 a<sub>ij</sub> 同列的</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a[i][j] </span></span><br><span class="line"><span class="type">int</span> ii = <span class="number">0</span>, jj = <span class="number">0</span>;</span><br><span class="line"><span class="type">double</span> submatrix[N][N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> p = <span class="number">1</span>; p &lt; n; p++)                <span class="comment">// p start at 1</span></span><br><span class="line">&#123;</span><br><span class="line">	jj = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> q = <span class="number">0</span>; q &lt; n; q++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(q != j)</span><br><span class="line">		&#123;</span><br><span class="line">			submatrix[ii][jj] = a[p][q];</span><br><span class="line">			jj++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ii++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样就得到子矩阵了</p>
+<h5 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h5><p>或者，我们直接用整个原矩阵，这样需要多排除 (n-1) 个元素，不过道理类似</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a[i][j] </span></span><br><span class="line"><span class="type">int</span> ii = <span class="number">0</span>, jj = <span class="number">0</span>;</span><br><span class="line"><span class="type">double</span> submatrix[N][N];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> p = <span class="number">0</span>; p &lt; n; p++)                <span class="comment">// p start at 0</span></span><br><span class="line">&#123;</span><br><span class="line">	jj = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> q = <span class="number">0</span>; q &lt; n; q++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(p != i &amp;&amp; q != j)</span><br><span class="line">		&#123;</span><br><span class="line">			sub[ii][jj] = a[p][q];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(p != i &amp;&amp; q != j)</span><br><span class="line">	&#123;</span><br><span class="line">		ii++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样也可以</p>
+<h2 id="3-总体"><a href="#3-总体" class="headerlink" title="3. 总体"></a>3. 总体</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 20</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InputMatrix</span><span class="params">(<span class="type">double</span> a[N][N], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; a[i][j];                                    <span class="comment">//input the elements of the matrix</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">PrintMatrix</span><span class="params">(<span class="type">double</span> a[N][N], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">1</span>) &lt;&lt; a[i][j] &lt;&lt; <span class="string">&quot;\t&quot;</span>;         <span class="comment">//print the elements of the matrix</span></span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">SubMatrix</span><span class="params">(<span class="type">double</span> a[N][N], <span class="type">double</span> submatrix[N][N], <span class="type">int</span> n, <span class="type">int</span> row, <span class="type">int</span> col)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> ii = <span class="number">0</span>, jj = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> p = <span class="number">1</span>; p &lt; n; p++)                <span class="comment">// p start at 1</span></span><br><span class="line">	&#123;</span><br><span class="line">		jj = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> q = <span class="number">0</span>; q &lt; n; q++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (q != col)</span><br><span class="line">			&#123;</span><br><span class="line">				submatrix[ii][jj] = a[p][q];</span><br><span class="line">				jj++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		ii++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">DeterminantValue</span><span class="params">(<span class="type">double</span> a[N][N],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="type">double</span> result, temp;</span><br><span class="line">	<span class="type">double</span> sub[N][N];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		result = a[<span class="number">0</span>][<span class="number">0</span>];                                          <span class="comment">//if the matrix size == 1,result == the elements in matrix</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		result = a[<span class="number">0</span>][<span class="number">0</span>] * a[<span class="number">1</span>][<span class="number">1</span>] - a[<span class="number">0</span>][<span class="number">1</span>] * a[<span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		result = <span class="number">0.0</span>;                                              <span class="comment">//make result back to zero</span></span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">SubMatrix</span>(a, sub, n, i, j);                            <span class="comment">//reduce the size of matrix,namely,find the submatrix</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;SubMatrix:\n&quot;</span>;</span><br><span class="line">			<span class="built_in">PrintMatrix</span>(sub, n - <span class="number">1</span>);                               <span class="comment">//print the submatrix</span></span><br><span class="line">			temp = <span class="built_in">DeterminantValue</span>(sub, n - <span class="number">1</span>);                   <span class="comment">//find the value of submatrix</span></span><br><span class="line">			result += a[<span class="number">0</span>][j] * <span class="built_in">pow</span>(<span class="number">-1</span>, i + j) * temp;             <span class="comment">//use submatrix and the corresponding elements in the first line in original matrix to find each value of items</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;DValue of the Submatrix is &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">1</span>) &lt;&lt; temp &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;                                                     <span class="comment">//matrix size</span></span><br><span class="line">	<span class="type">double</span> a[N][N];                                            <span class="comment">//matrix</span></span><br><span class="line">	<span class="type">double</span> result;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Please enter matrix size n(1&lt;=n&lt;20)\n&quot;</span>;</span><br><span class="line">	cin &gt;&gt; n;                                                  <span class="comment">//input the matrix size n</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Please input matrix line by line:\n&quot;</span>;</span><br><span class="line">	<span class="built_in">InputMatrix</span>(a, n);                                         <span class="comment">//input the matrix</span></span><br><span class="line">	<span class="built_in">PrintMatrix</span>(a, n);                                         <span class="comment">//print the matrix</span></span><br><span class="line">	result = <span class="built_in">DeterminantValue</span>(a, n); ;                         <span class="comment">//get the result of the matrix </span></span><br><span class="line">	cout &lt;&lt; endl &lt;&lt; <span class="string">&quot;result is &quot;</span> &lt;&lt; result;                    <span class="comment">//print the result</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/YiZhiZhu.png"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+			<a href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构" rel="prev">
+				&laquo;Pre post
+			</a>
+		
+		
+			<a href="/2023/10/31/%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3%E6%A0%88/" title="初步了解栈" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">
+								Python base64 编解码			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								Python base64 编解码1. 引入 base64 模块想要在 python 中使用 base64 编解码，我们要先引入 base64 模块
+1import base64
+
+这个时候我们就可以使用 base64 模块中的相关功...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python base64 编解码"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构">
+								线性结构和非线性结构			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								线性结构和非线性结构▲线性结构首先，我们先了解一下线性结构：
+线性是种什么样的关系呢，简单的理解就是，有一定的联系，即数据之间是相关的。说的学术一点就是数据元素之间存在一对一的线性关系。
+而数据元素之间不一定是物理地址上的连续才是线性...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SanGuoSha2.jpeg" alt="线性结构和非线性结构"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3%E6%A0%88/" title="初步了解栈">
+								初步了解栈			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								初步了解栈栈,存储货物或供旅客住宿的地方,可引申为仓库、中转站，所以引入到计算机领域里，就是指数据暂时存储的地方，所以才有进栈、出栈的说法。
+栈是限制插入和删除只能在一个位置上进行的线性表。
+至于什么是线性表，可以看另一篇文章：线性结...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3%E6%A0%88/" title="初步了解栈">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SanGuoSha1.jpeg" alt="初步了解栈"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/" title="汇编学习-2.3 几条汇编代码">
+								汇编学习-2.3 几条汇编代码			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.3 几条汇编代码我们可以通过汇编指令来控制 CPU 进行工作，常用的指令如下表所示：
+**汇编指令****控制 CPU 完成的操作****用高级语言的语法描述**mov ax,18将 18 送入寄存器 axax=18mov ah,...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/" title="汇编学习-2.3 几条汇编代码">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.3 几条汇编代码"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">
+								汇编学习-2.2 字在寄存器中的存储			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.2 字在寄存器中的存储出于对兼容性的考虑，8086CPU 可以一次性处理两种尺寸的数据：
+
+字节：记为 byte，一个字节由 8 个比特（即二进制位）组成，可以存在 8 位寄存器中
+
+字：记为 word，一个字由两个字节组成，这两...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.2 字在寄存器中的存储"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" title="汇编学习-2.1 通用寄存器">
+								汇编学习-2.1 通用寄存器			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.1 通用寄存器8086CPU 的所有寄存器都是 16 位的，可以存放两个字节。AX、BX、CX、DX 四个寄存器通常用来存放一般性的数据，被称为通用寄存器
+以 AX 为例：
+![16 位寄存器的逻辑结构](&#x2F;images...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" title="汇编学习-2.1 通用寄存器">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.1 通用寄存器"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.0%20%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%88CPU%20%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%89/" title="汇编学习-2.0 寄存器（CPU 工作原理）">
+								汇编学习-2.0 寄存器（CPU 工作原理）			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.0 寄存器（CPU 工作原理）一个典型的 CPU （此处，我们讨论的不是某一具体的 CPU）由运算器、控制器、寄存器等器件构成，这些器件靠内部总线相连。前面所说的总线，相对于 CPU 内部来说是外部总线。内部总线实现 CPU 内部...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.0%20%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%88CPU%20%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%89/" title="汇编学习-2.0 寄存器（CPU 工作原理）">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.0 寄存器（CPU 工作原理）"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.9%20%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习-1.9 内存地址空间">
+								汇编学习-1.9 内存地址空间			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.9 内存地址空间什么是内存地址空间呢？
+我们来简单了解一下内存地址空间。举例来讲，一个 CPU 的地址线宽度为 10，那么可以寻址 1024 个内存单元，这 1024 个可寻的内存单元就构成了这个 CPU 的内存地址空间（210 ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.9%20%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习-1.9 内存地址空间">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.9 内存地址空间"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">
+								汇编学习-1.8 各类存储器芯片			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.8 各类存储器芯片一台 PC 机中，装有多个存储器芯片，这些存储器芯片从物理连接上看是独立的、不同的器件。
+不过从读写属性上看的话，就只分为 2 种：随机存储器（RAM）和 只读存储器（ROM）。随机存储器可读可写，但必须带电存储...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.8 各类存储器芯片"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.7%20%E4%B8%BB%E6%9D%BF%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%8D%A1/" title="汇编学习-1.7 主板与接口卡">
+								汇编学习-1.7 主板与接口卡			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.7 主板与接口卡1.7.1 主板在每一台 PC 机中，都有一块主板，主板上有核心器件和一些主要器件，这些器件通过总线（地址总线、数据总线、控制总线）相连，而这些器件就有：CPU，存储器，外围芯片组，扩展插槽（扩展插槽上一般插有 R...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.7%20%E4%B8%BB%E6%9D%BF%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%8D%A1/" title="汇编学习-1.7 主板与接口卡">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.7 主板与接口卡"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2023, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>

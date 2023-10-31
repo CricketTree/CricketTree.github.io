@@ -1,0 +1,1073 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      C++反汇编与逆向分析技术揭秘-3.2关系运算和逻辑运算 | This is Title
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/20210716212924_a036b.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: true,
+	  appId: 'AnkeGlXrMetjoWeeqeBWI3HV-gzGzoHsz',
+	  appKey: 'mysij0IgTp8H4xHv7wHCo1XN',
+	  serverURLs: '' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「C++反汇编与逆向分析技术揭秘-3.2关系运算和逻辑运算」
+		
+	</p>
+
+	
+	
+		<span id="star-button" rel="unlike">
+			<i class="icon-heart"></i>
+		</span>
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" itemprop="url">
+		C++反汇编与逆向分析技术揭秘-3.2关系运算和逻辑运算
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" itemprop="url">
+		<time datetime="2023-10-31T09:28:04.000Z" itemprop="dateUpdated">
+	  		2023-10-31
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+	
+    <span class="leancloud_visitors" id="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/_visitors" data-url="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" data-title="C++反汇编与逆向分析技术揭秘-3.2关系运算和逻辑运算">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">1</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/_likes" data-url="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" data-title="C++反汇编与逆向分析技术揭秘-3.2关系运算和逻辑运算" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h1 id="3-2-关系运算和逻辑运算"><a href="#3-2-关系运算和逻辑运算" class="headerlink" title="3.2 关系运算和逻辑运算"></a>3.2 关系运算和逻辑运算</h1><p>关系运算用于判断两者之间的关系，如等于、不等于、大于等于、小于等于、大于和小于，对应的符号分别为”&#x3D;&#x3D;”、”!&#x3D;”、 “&gt;&#x3D;”、”&lt;&#x3D;”、”&gt;”、”&lt;”，关系运算的作用是比较关系运算符左右两边的操作数的值，得出一个判断结果:真或假。逻辑运算用于判定两个逻辑值之间的依赖关系，如或、与、非，对应的符号有”‘’”、”&amp;&amp;”、”!” ， 逻辑运算也是可以组合的，执行顺序和关系运算相同。</p>
+<ul>
+<li><p>或 运算：比较运算符”‘’”左右的语句的结果，如果有一个值为真，则返回真值；如果都为假，则返回假值</p>
+</li>
+<li><p>与 运算：比较运算符”&amp;&amp;”左右的语句的结果，如果有一个值为假，则返回假值；如果都为真值，则返回真值</p>
+</li>
+<li><p>非 运算：改变运算符 “!” 后面的语句的真假结果，如果该语句的结果为真值，则返回假值；如果为假值，则返回真值</p>
+</li>
+</ul>
+<h2 id="3-2-1-关系运算和条件跳转的对应"><a href="#3-2-1-关系运算和条件跳转的对应" class="headerlink" title="3.2.1 关系运算和条件跳转的对应"></a>3.2.1 关系运算和条件跳转的对应</h2><p>如何选择条件跳转指令，需要根据所使用到的关系运算，不同的关系运算对应的条件跳转指令也不同</p>
+<p>下面我们来看看各种关系对应的条件跳转指令</p>
+<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center">指令助记符</th><th class="has-text-align-center" data-align="center">检查标记位</th><th>说明</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center">JZ</td><td class="has-text-align-center" data-align="center">ZF==1</td><td>等于 0 则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JE</td><td class="has-text-align-center" data-align="center">ZF==1</td><td>相等则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNZ</td><td class="has-text-align-center" data-align="center">ZF==0</td><td>不等于 0 则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNE</td><td class="has-text-align-center" data-align="center">ZF==0</td><td>不相等则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JS</td><td class="has-text-align-center" data-align="center">SF==1</td><td>符号为 负 则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNS</td><td class="has-text-align-center" data-align="center">SF==0</td><td>符号为 正 则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JP/JPE</td><td class="has-text-align-center" data-align="center">PF==1</td><td>"1"的个数为偶数则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JPN/JPO</td><td class="has-text-align-center" data-align="center">PF==0</td><td>"1"的个数为奇数则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JO</td><td class="has-text-align-center" data-align="center">OF==1</td><td>溢出则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNO</td><td class="has-text-align-center" data-align="center">OF==0</td><td>无溢出则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JC</td><td class="has-text-align-center" data-align="center">CF==1</td><td>进位则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JB</td><td class="has-text-align-center" data-align="center">CF==1</td><td>小于则跳转（无符号比较）</td></tr><tr><td class="has-text-align-center" data-align="center">JNAE</td><td class="has-text-align-center" data-align="center">CF==1</td><td>不大于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNC</td><td class="has-text-align-center" data-align="center">CF==0</td><td>无进位则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNB</td><td class="has-text-align-center" data-align="center">CF==0</td><td>不小于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JAE</td><td class="has-text-align-center" data-align="center">CF==0</td><td>大于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JBE</td><td class="has-text-align-center" data-align="center">CF==1 或 ZF==1</td><td>小于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNA</td><td class="has-text-align-center" data-align="center">CF==1 或 ZF==1</td><td>不大于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNBE</td><td class="has-text-align-center" data-align="center">CF==0 或 ZF==0</td><td>不小于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JA</td><td class="has-text-align-center" data-align="center">CF==0 或 ZF==0</td><td>大于则跳转（无符号比较）</td></tr><tr><td class="has-text-align-center" data-align="center">JL</td><td class="has-text-align-center" data-align="center">SF != OF</td><td>小于则跳转（有符号比较）</td></tr><tr><td class="has-text-align-center" data-align="center">JNGE</td><td class="has-text-align-center" data-align="center">SF != OF</td><td>不大于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNL</td><td class="has-text-align-center" data-align="center">SF == OF</td><td>不小于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JGE</td><td class="has-text-align-center" data-align="center">SF == OF</td><td>大于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JLE</td><td class="has-text-align-center" data-align="center">ZF != OF 或 ZF==1</td><td>小于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNG</td><td class="has-text-align-center" data-align="center">ZF != OF 或 ZF==1</td><td>不大于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JNLE</td><td class="has-text-align-center" data-align="center">SF == OF 或 ZF==0</td><td>不小于等于则跳转</td></tr><tr><td class="has-text-align-center" data-align="center">JG</td><td class="has-text-align-center" data-align="center">SF == OF 或 ZF==0</td><td>大于则跳转（有符号比较）</td></tr></tbody></table></figure>
+其中，有一定的规律，比如 A 和 G 表示的是大于，比如说 JA 和 JG；B 和 L 表示的是小于，比如说 JB 和 JL；E 表示的是相等，比如说 JE 是相等则跳转，JGE/JAE 是大于等于则跳转，JLE/JBE 是小于等于则跳转；N 表示的是 不 ，比如说 JNE 是不相等，JNG/JNA 是不大于则跳转，JNGE/JNAE 是不大于等于则跳转......
+
+<p>在通常情况下，这些条件跳转指令都与 CMP 和 TEST 匹配出现，但条件跳转指令检查的是标记位。因此，在有修改标记位的代码处，也可以根据需要使用条件跳转指令来修改程序流程</p>
+<h2 id="3-2-2-表达式短路"><a href="#3-2-2-表达式短路" class="headerlink" title="3.2.2 表达式短路"></a>3.2.2 表达式短路</h2><p>表达式短路通过 “逻辑与” 运算 和 “逻辑或” 运算 使语句根据条件在执行时发生中断，从而不予执行后面的语句。如何利用表达式短路来实现语句中断呢？根据逻辑与和逻辑或运算的特性，如果是与运算，当运算符左边的语句块为假值时，则直接返回假值，不执行右边的语句；如果是或运算，当运算符左边的语句块为真值时，直接返回真值，不执行右边的语句块</p>
+<p>我们将进一步学习和理解表达式短路的构成</p>
+<p>![](&#x2F;images&#x2F;C++反汇编与逆向分析技术揭秘-3.2 关系运算和逻辑运算&#x2F;image-165.png)</p>
+<pre class="wp-block-syntaxhighlighter-code">//当 num 等于 0 时，逻辑与 运算符左边的值为假，将不会执行右边语句
+    num && (num += Accumulation(num - 1));
+00007FF613B1177E  cmp         dword ptr [num],0 
+//这里为短路模式汇编代码，比较变量 num 是否等于 0 
+00007FF613B11785  je          Accumulation+46h (07FF613B117A6h)  
+//通过 je 跳转，检查 ZF 标记位等于 1 跳转 
+00007FF613B11787  mov         eax,dword ptr [num] 
+//跳转失败，进入递归调用 
+00007FF613B1178D  dec         eax  
+00007FF613B1178F  mov         ecx,eax  
+//对变量减 1，并将结果转移
+00007FF613B11791  call        Accumulation (07FF613B111AEh)  
+00007FF613B11796  mov         ecx,dword ptr [num]  
+00007FF613B1179C  add         ecx,eax  
+00007FF613B1179E  mov         eax,ecx  
+00007FF613B117A0  mov         dword ptr [num],eax  
+//继续调用自己，形成递归
+    return num;
+00007FF613B117A6  mov         eax,dword ptr [num]</pre>
+<p>在上面的实例中，通过递归函数 Accumulation 完成了整数累加和计算，在递归函数的构成中，必须要有一个出口，本实例选择了逻辑运算”&amp;&amp;”来制造递归函数的出口。通过使用 CMP 指令来检查运算符左边的语句是否为假值，根据跳转指令 JE 来决定是否跳过程序流程。当变量 num 为假时，JE 成功跳转，跳过递归函数调用，程序流程将会执行到出口 return 处</p>
+<p>逻辑运算” ‘’ “虽然与逻辑运算”&amp;&amp;”有些不同，但它们的构成原理相同，只需稍作修改就可以解决这一类型的问题。将 逻辑与 运算修改为 逻辑或 运算来实现表达式短路</p>
+<pre class="wp-block-syntaxhighlighter-code">//当 num 等于 0 时，逻辑或 运算符左边的值为真，将不会执行右边语句
+    (num == 0) '' (num += Accumulation(num - 1));
+//使用逻辑或 运算造成的表达式短路，生成的反汇编代码与使用逻辑与 时是样的
+00007FF67B54177E  cmp         dword ptr [num],0  
+00007FF67B541785  je          Accumulation+46h (07FF67B5417A6h)  
+00007FF67B541787  mov         eax,dword ptr [num]  
+00007FF67B54178D  dec         eax  
+00007FF67B54178F  mov         ecx,eax  
+00007FF67B541791  call        Accumulation (07FF67B5411AEh)  
+00007FF67B541796  mov         ecx,dword ptr [num]  
+00007FF67B54179C  add         ecx,eax  
+00007FF67B54179E  mov         eax,ecx  
+00007FF67B5417A0  mov         dword ptr [num],eax  
+    return num;
+00007FF67B5417A6  mov         eax,dword ptr [num]  </pre>
+<p>我们对比一下可以发现，两种短路表达式编译为相同的汇编代码，虽然使用的逻辑运算符不同，但在这两种情况下，运算符的左边的语句块都是在与 0 值作比较，而且判定的结果都是等于 0 时不执行运算符右边的语句块，所以就变成了相同的汇编代码</p>
+<p>转换成汇编代码后，通过比较后跳转来实现短路，这种结构实质上呢，就是分支结构，在反汇编代码中时没有表达式短路的<s>（虽然这节标题叫作表达式短路）</s>，我们能够看到的都是分支结构，至于什么是分支结构我们之后会详细了解的</p>
+<h2 id="3-2-3-条件表达式"><a href="#3-2-3-条件表达式" class="headerlink" title="3.2.3 条件表达式"></a>3.2.3 条件表达式</h2><p>条件表达式，也就是三目运算</p>
+<blockquote>
+<p>表达式 1  ?  表达式 2  :  表达式 3</p>
+<p><cite>我们来复习一下：如果表达式 1 是真值，那么执行表达式 2；如果是假值，那么执行表达式 3</cite></p>
+</blockquote>
+<p>条件表达式也属于表达式的一种，所以表达式 1，表达式 2，表达式 3 都可以套用到条件表达式中，条件表达式被套用后，其执行顺序依然是由左向右，自内向外</p>
+<p>条件表达式的构成应该是先判断再选择，但是，编译器并不一定会按照这种方式进行编译，当表达式 2 与表达式 3 都为常量时，条件表达式可以被优化；而当表达式 2 或表达式 3 中的一个为变量时，条件表达式不可以被优化，会转换成分支结构；当表达式 1 为一个常量值时，编译器会在编译过程得到答案，将不会有条件表达式存在</p>
+<p>编译器有四种条件表达式的转换方案</p>
+<ol>
+<li><p>表达式 1 为简单比较，而表达式 2 和表达式 3 两者的差值等于 1</p>
+</li>
+<li><p>表达式 1 为简单比较，而表达式 2 和表达式 3 两者的差值大于 1</p>
+</li>
+<li><p>表达式 1 为复杂比较，而表达式 2 和表达式 3 两者的差值大于 1</p>
+</li>
+<li><p>表达式 2 和表达式 3 有一个是变量，于是没有优化</p>
+</li>
+</ol>
+<p>我们可以自己通过反汇编形式对比这 4 种转换方案，找出它们的特征，分析它们之间的区别</p>
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/Letter.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+			<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.3%20%E4%BD%8D%E8%BF%90%E7%AE%97/" title="C++反汇编与逆向分析技术揭秘-3.3位运算" rel="prev">
+				&laquo;Pre post
+			</a>
+		
+		
+			<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" title="C++反汇编与逆向分析技术揭秘-3.1算术运算和赋值" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.3%20%E4%BD%8D%E8%BF%90%E7%AE%97/" title="C++反汇编与逆向分析技术揭秘-3.3位运算">
+								C++反汇编与逆向分析技术揭秘-3.3位运算			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								3.3 位运算二进制数据的运算成为位运算，位运算操作有：
+
+“&lt;&lt;”：左移运算，最高位左移到 CF 中，最低位补零
+
+“&gt;&gt;”：右移运算，最高位不变，最低位右移到 CF 中
+
+“ ‘ “：位或运算，在两个数的相...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.3%20%E4%BD%8D%E8%BF%90%E7%AE%97/" title="C++反汇编与逆向分析技术揭秘-3.3位运算">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-3.3位运算"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" title="C++反汇编与逆向分析技术揭秘-3.1算术运算和赋值">
+								C++反汇编与逆向分析技术揭秘-3.1算术运算和赋值			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								3.1 算术运算和赋值 本节内容稍长，爱护眼睛，望周知
+
+Table of Contents
+
+
+3.1.1 各种算术运算的工作方式
+
+3.1.1.1 加法
+
+ODebug
+
+ORelease
+
+▲常量扩散
+
+▲常量折叠
+
+
+
+
+
+3...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" title="C++反汇编与逆向分析技术揭秘-3.1算术运算和赋值">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-3.1算术运算和赋值"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-2.3%20main%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%86%E5%88%AB/" title="C++反汇编与逆向分析技术揭秘-2.3main函数的识别">
+								C++反汇编与逆向分析技术揭秘-2.3main函数的识别			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.3 main函数的识别通过上节的学习，我们知道了调用main函数之前，必须先要得到三个必要的参数，而这三个参数的获取我们应该已经了解了，那么我们来看看怎么识别main函数：
+首先，main函数被调用前要先调用下面的函数：
+
+Get...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-2.3%20main%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%86%E5%88%AB/" title="C++反汇编与逆向分析技术揭秘-2.3main函数的识别">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-2.3main函数的识别"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-2.2%20%E4%BA%86%E8%A7%A3%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/" title="C++反汇编与逆向分析技术揭秘-2.2了解启动程序">
+								C++反汇编与逆向分析技术揭秘-2.2了解启动程序			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.2 了解启动程序> 需要注意的是，本篇将以VC++ 6.0作为示例，而其他C++的编译器与其差异不大，我们可以用自己的编译器实际操作一下
+VC++ 6.0在控制台和多字节编码环境下的启动函数为mainCRTStartup，由系统库...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-2.2%20%E4%BA%86%E8%A7%A3%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/" title="C++反汇编与逆向分析技术揭秘-2.2了解启动程序">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-2.2了解启动程序"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-2.1%20%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%85%A5%E5%8F%A3/" title="C++反汇编与逆向分析技术揭秘-2.1程序的真正入口">
+								C++反汇编与逆向分析技术揭秘-2.1程序的真正入口			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.1 程序的真正入口VC++开发的程序，在调试时总是从main或WinMain函数开始，这就让我们误认为它们是程序的第一条指令执行的地方，这个认识其实是不对的。
+其实呢，main 或WinMain也是一个函数，也需要有一个调用者。在...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-2.1%20%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%85%A5%E5%8F%A3/" title="C++反汇编与逆向分析技术揭秘-2.1程序的真正入口">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-2.1程序的真正入口"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.6%20%E5%B8%B8%E9%87%8F/" title="C++反汇编与逆向分析技术揭秘-1.6常量">
+								C++反汇编与逆向分析技术揭秘-1.6常量			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.6 常量常量和变量不同，变量可以随时改变，在程序运行中可以修改其保存的值；而常量呢，顾名思义，就是一个恒定不变的值，它在内存中也是不可修改的。比如说在程序中见到1、2、3这样的数字，或者是”Hello”这样的字符串，还有数组名称等...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.6%20%E5%B8%B8%E9%87%8F/" title="C++反汇编与逆向分析技术揭秘-1.6常量">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-1.6常量"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.5%20%E5%9C%B0%E5%9D%80%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8/" title="C++反汇编与逆向分析技术揭秘-1.5地址">
+								C++反汇编与逆向分析技术揭秘-1.5地址			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.5 地址、指针和引用首先我们先来初步了解一下什么时是地址和指针，还有引用
+
+地址：在C++中，地址标号用十六进制表示，如果我们想取一个变量的地址，那么就需要用到”&amp;”符号。但我们需要知道，只有变量才有地址，而常量是没有地址...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.5%20%E5%9C%B0%E5%9D%80%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8/" title="C++反汇编与逆向分析技术揭秘-1.5地址">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-1.5地址"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.4%20%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="C++反汇编与逆向分析技术揭秘-1.4布尔类型">
+								C++反汇编与逆向分析技术揭秘-1.4布尔类型			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.4 布尔类型1.4.1 布尔类型的介绍布尔类型很简单，只有 0 与 非0 两种情况，在C++中，0 则表示为假，非0 则表示为真，并且是用bool定义布尔类型变量。布尔类型变量在内存中占一个字节，无论输入给布尔类型变量怎么样的数，...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.4%20%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="C++反汇编与逆向分析技术揭秘-1.4布尔类型">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-1.4布尔类型"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.3%20%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="C++反汇编与逆向分析技术揭秘-1.3字符和字符串">
+								C++反汇编与逆向分析技术揭秘-1.3字符和字符串			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.3 字符和字符串字符串是由一个个字符组成的，而每个字符在字符表中又各自对应着一个唯一的编号。系统通过这些编号在表中查找这些字符，并把它们显示出来。其实，字符表格中的编号就是字符的编码格式。
+1.3.1字符的编码在C++中，字符的编...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.3%20%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="C++反汇编与逆向分析技术揭秘-1.3字符和字符串">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-1.3字符和字符串"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.2%20%E6%B5%AE%E7%82%B9%E6%95%B0/" title="C++反汇编与逆向分析技术揭秘-1.2浮点数">
+								C++反汇编与逆向分析技术揭秘-1.2浮点数			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								实数数据不可能都是整数，那么就会出现怎么输出小数的问题。在计算机的发展历程中，出现过许多中存储实数的方式，有的现在很少用了不管如何存储，我们都可以划分为定点实数存储方式和浮点实数存储方式这两种。
+所谓定点实数，就是约定整数位和小数位的...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/C++%E5%8F%8D%E6%B1%87%E7%BC%96%E4%B8%8E%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98-1.2%20%E6%B5%AE%E7%82%B9%E6%95%B0/" title="C++反汇编与逆向分析技术揭秘-1.2浮点数">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="C++反汇编与逆向分析技术揭秘-1.2浮点数"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2023, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>
