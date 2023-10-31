@@ -305,16 +305,16 @@
 </li>
 </ol>
 <p>这也就是说，CPU 在操纵和控制它们的时候，把它们都当作内存来对待，把它们总的看作一个由若干存储单元组成的逻辑存储器，这个逻辑存储器就是我们所说的内存地址空间</p>
-<p>![](C:\Users\zero to hero\Desktop\BLOG\source\2image.png)CPU 将系统中各类存储器看作一个逻辑存储器</p>
+<p>![](&#x2F;images&#x2F;汇编学习-1.9 内存地址空间&#x2F;2image.png)CPU 将系统中各类存储器看作一个逻辑存储器</p>
 <p>在上图中，所有的物理存储器都被看作一个由若干个存储单元组成的逻辑存储器，每个物理存储器在这个逻辑存储器中占有一个地址段，即一段地址空间。CPU 在这段地址空间中读写数据，实际上就是在相对应的物理存储器中读取数据</p>
 <p>我们来看一个例子：</p>
-<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image-1024x402.png)</p>
+<p>![](&#x2F;images&#x2F;汇编学习-1.9 内存地址空间&#x2F;image-1024x402.png)</p>
 <p>内存地址空间的大小受 CPU 地址总线宽度的限制。8086CPU 的地址总线宽度为 20，可以传送 2<sup>20</sup> 个不同的地址信息（大小从 0 至 2<sup>20</sup>-1）。即可以定位 2<sup>20</sup> 个内存单元，则 8086CPU 的内存地址空间大小为 1 MB（2<sup>16</sup> &#x3D; 64 * 1024B &#x3D; 64KB，2<sup>20</sup> &#x3D; 1024KB &#x3D; 1 MB）。同理，80386CPU 的地址总线宽度为 32，则内存地址空间最大为 4GB。</p>
 <p>我们在基于一个计算机硬件系统编程的时候，必须得知道这个系统中的内存地址空间分配情况。因为当读者想在某类存储器中读写数据的时候，读者必须知道它的第一个单元的地址和最后一个单元的地址，才能保证读写操作是在预期的存储器中进行。比如，读者希望向显示器输出一段信息，那么读者必须将这段信息写到显存中，显卡才能将它输出到显示器上。要向显存中写入数据，读者必须知道显存在内存地址空间中的地址。而不同的计算机系统的内存地址空间的分配情况是不同的。</p>
 	
 		</div>
 		
-		<div id="current-post-cover" data-scr="/img/Painting.jpg"></div>
+		<div id="current-post-cover" data-scr="/img/Painting.png"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -371,7 +371,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/" title="汇编学习-2.3 几条汇编代码">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.3 几条汇编代码"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.3 几条汇编代码"/>
 							</a>
 						</div>
 					</li>												
@@ -397,7 +397,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.2 字在寄存器中的存储"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.2 字在寄存器中的存储"/>
 							</a>
 						</div>
 					</li>												
@@ -421,7 +421,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" title="汇编学习-2.1 通用寄存器">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.1 通用寄存器"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.1 通用寄存器"/>
 							</a>
 						</div>
 					</li>												
@@ -443,7 +443,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.0%20%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%88CPU%20%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%89/" title="汇编学习-2.0 寄存器（CPU 工作原理）">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-2.0 寄存器（CPU 工作原理）"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.0 寄存器（CPU 工作原理）"/>
 							</a>
 						</div>
 					</li>												
@@ -466,7 +466,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.8 各类存储器芯片"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.8 各类存储器芯片"/>
 							</a>
 						</div>
 					</li>												
@@ -488,7 +488,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.7%20%E4%B8%BB%E6%9D%BF%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%8D%A1/" title="汇编学习-1.7 主板与接口卡">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.7 主板与接口卡"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.7 主板与接口卡"/>
 							</a>
 						</div>
 					</li>												
@@ -511,7 +511,7 @@
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.6%20%E6%80%BB%E7%BA%BF/" title="汇编学习-1.6 总线">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.6 总线"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.6 总线"/>
 							</a>
 						</div>
 					</li>												
@@ -534,7 +534,7 @@ CPU 要从内存中读数据，首先要...
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.5%20CPU%20%E5%AF%B9%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E8%AF%BB%E5%86%99/" title="汇编学习-1.5 CPU 对存储器的读写">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.5 CPU 对存储器的读写"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.5 CPU 对存储器的读写"/>
 							</a>
 						</div>
 					</li>												
@@ -556,7 +556,7 @@ CPU 要从内存中读数据，首先要...
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.4%20%E5%AD%98%E5%82%A8%E5%99%A8%E4%B8%8E%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83/" title="汇编学习-1.4存储器与存储单元">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.4存储器与存储单元"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.4存储器与存储单元"/>
 							</a>
 						</div>
 					</li>												
@@ -584,7 +584,7 @@ CPU 要从内存中读数据，首先要...
 						<div class="relate-post-cover">
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.3%20%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BB%84%E6%88%90%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4%E5%92%8C%E6%95%B0%E6%8D%AE/" title="汇编学习-1.3汇编语言的组成以及指令和数据">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.jpg" alt="汇编学习-1.3汇编语言的组成以及指令和数据"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.3汇编语言的组成以及指令和数据"/>
 							</a>
 						</div>
 					</li>												
