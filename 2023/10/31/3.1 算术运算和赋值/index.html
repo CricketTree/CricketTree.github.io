@@ -1,0 +1,1167 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      3.1算术运算和赋值 | This is Title
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/20210716212924_a036b.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: true,
+	  appId: 'AnkeGlXrMetjoWeeqeBWI3HV-gzGzoHsz',
+	  appKey: 'mysij0IgTp8H4xHv7wHCo1XN',
+	  serverURLs: '' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「3.1算术运算和赋值」
+		
+	</p>
+
+	
+	
+		<span id="star-button" rel="unlike">
+			<i class="icon-heart"></i>
+		</span>
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2023/10/31/3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" itemprop="url">
+		3.1算术运算和赋值
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2023/10/31/3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" itemprop="url">
+		<time datetime="2023-10-31T09:27:44.000Z" itemprop="dateUpdated">
+	  		2023-10-31
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+	
+    <span class="leancloud_visitors" id="/2023/10/31/3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/_visitors" data-url="/2023/10/31/3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" data-title="3.1算术运算和赋值">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">1</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2023/10/31/3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/_likes" data-url="/2023/10/31/3.1%20%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E5%92%8C%E8%B5%8B%E5%80%BC/" data-title="3.1算术运算和赋值" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h1 id="3-1-算术运算和赋值"><a href="#3-1-算术运算和赋值" class="headerlink" title="3.1 算术运算和赋值"></a>3.1 算术运算和赋值</h1><p> <cite><strong>本节内容稍长，爱护眼睛，望周知</strong></cite></p>
+<div class="wp-block-group"><!-- wp:ht/block-toc {"headerEntries":"[{\u0022text\u0022:\u0022算术运算是指加法、减法、乘法、除法这四种数学运算，也称为四则运算。我们知道，数学上也有四则运算，那计算机上的四则运算和数学上的有什么不同呢？\u0022,\u0022link\u0022:\u0022htoc-\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022首先，赋值运算类似于数学中的"等于"，是将一个内存单元中的数据传递到另一个内存空间中。由于内存没有处理器那样的控制能力，各个内存单元之间是无法直接传递数据的，所以必须通过处理器访问并中转，以实现两个内存单元间的数据传输。\u0022,\u0022link\u0022:\u0022htoc-1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022int main()\\n{\\n    int a = 10;  //这里的等号'='就是赋值运算，将10赋值给变量a\\n    int b;\\n    b = a;\\n    //这里将变量a 的值赋值给变量b ，而变量a 所在的内存单元中的数据是 10，所以传递到变量b 的内存单元后，变量b 表示的就是 10\\n}\u0022,\u0022link\u0022:\u0022htoc-int-main-int-a-10-10-a-int-b-b-a-a-b-a-10-b-b-10\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022在 C++ 中，算术运算于其他传递计算结果的代码组合后才能被视为一条有效的语句，也就是说算术运算单独存在是没有意义的，因为单独的算术运算虽然可以编译通过，但是不会生成代码，就像你有炊具但是没有食材，最后是做不出饭菜的。不过，因为只进行计算而没有 传递结果的运算会被编译器视为无效语句，与空语句等价，所以不会对程序结果有任何结果\u0022,\u0022link\u0022:\u0022htoc-c\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:2,\u0022text\u0022:\u00223.1.1 各种算术运算的工作方式\u0022,\u0022link\u0022:\u0022htoc-3-1-1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0,\u0022children\u0022:[{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.1 加法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[{\u0022tag\u0022:4,\u0022text\u0022:\u0022Debug\u0022,\u0022link\u0022:\u0022htoc-debug\u0022,\u0022labelTOC\u0022:\u0022ODebug\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[]},{\u0022tag\u0022:4,\u0022text\u0022:\u0022Release\u0022,\u0022link\u0022:\u0022htoc-release\u0022,\u0022labelTOC\u0022:\u0022ORelease\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量传播\u0022,\u0022link\u0022:\u0022htoc-11\u0022,\u0022labelTOC\u0022:\u0022▲常量扩散\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量折叠\u0022,\u0022link\u0022:\u0022htoc-111\u0022,\u0022labelTOC\u0022:\u0022▲常量折叠\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]}]}]},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.2 减法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-2\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[]},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.3 乘法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-3\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[]},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.4 除法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-4\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[{\u0022tag\u0022:4,\u0022text\u0022:\u0022除法计算约定\u0022,\u0022link\u0022:\u0022htoc-111111\u0022,\u0022labelTOC\u0022:\u0022O除法计算约定\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[]},{\u0022tag\u0022:4,\u0022text\u0022:\u0022对整数除法的优化\u0022,\u0022link\u0022:\u0022htoc-1111111\u0022,\u0022labelTOC\u0022:\u0022O对整数除法的优化\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2\u0022,\u0022labelTOC\u0022:\u0022▲除数为 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-21\u0022,\u0022labelTOC\u0022:\u0022▲除数为非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的 2 的幂\u0022,\u0022link\u0022:\u0022htoc-211\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2111\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除法优化的原则\u0022,\u0022link\u0022:\u0022htoc-111111111\u0022,\u0022labelTOC\u0022:\u0022▲除法优化的原则\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]}]}]}]},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.1 加法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[{\u0022tag\u0022:4,\u0022text\u0022:\u0022Debug\u0022,\u0022link\u0022:\u0022htoc-debug\u0022,\u0022labelTOC\u0022:\u0022ODebug\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[]},{\u0022tag\u0022:4,\u0022text\u0022:\u0022Release\u0022,\u0022link\u0022:\u0022htoc-release\u0022,\u0022labelTOC\u0022:\u0022ORelease\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量传播\u0022,\u0022link\u0022:\u0022htoc-11\u0022,\u0022labelTOC\u0022:\u0022▲常量扩散\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量折叠\u0022,\u0022link\u0022:\u0022htoc-111\u0022,\u0022labelTOC\u0022:\u0022▲常量折叠\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]}]}]},{\u0022text\u0022:\u0022加法运算对应的汇编指令为 ADD，也就是英文中的 'add' ，翻译过来就是添加。在执行加法运算的时候，针对不同的操作数，转换的指令也会不同，而编译器会根据优化方案选择最佳的匹配方案。一般 C++ 最常用的优化方案是下面这两种：\u0022,\u0022link\u0022:\u0022htoc-add-add-c\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022本节内容我们来对比和分析一下Debug编译选项组与Release编译选项组这两个选项对各种计算产生的目标代码方案。\u0022,\u0022link\u0022:\u0022htoc-debug-release\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:4,\u0022text\u0022:\u0022Debug\u0022,\u0022link\u0022:\u0022htoc-debug\u0022,\u0022labelTOC\u0022:\u0022ODebug\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[]},{\u0022text\u0022:\u0022首先我们先是定义了变量 number_one 和变量 number_two ，我们可以看到编译器是用 mov 将数 0 传入 number_one 所在的地址中，对于 number_two 也是同理\u0022,\u0022link\u0022:\u0022htoc-number-one-number-two-mov-0-number-one-number-two\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022然后是变量 + 常量的运算，我们可以看到，编译器将放在 number_one 地址处的数据先是用 mov 放到了 eax 中，然后对 eax 执行加 1 运算（在汇编中，inc 的作用是将指定的操作数的内容加1，再将结果送回到该操作数），最后将结果放回变量 number_one 中，完成加法运算\u0022,\u0022link\u0022:\u0022htoc-number-one-mov-eax-eax-1-inc-1-number-one\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022接下来是变量 + 变量的运算，由上面的C++源码对比可以看出，编译器先使用 eax 存放变量 number_one，然后使用 ecx 存放变量 number_two，再将 eax 的数据加到 ecx 里，完成后将 ecx 的数据转移到 eax （eax 原本的数据将会被覆盖掉），最后再将 eax 的数据存入变量 number_two 的地址处。这样就完成了number_three = number_one + number_two 的运算\u0022,\u0022link\u0022:\u0022htoc-c-eax-number-one-ecx-number-two-eax-ecx-ecx-eax-eax-eax-number-two-number-three-number-one-number-two\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:4,\u0022text\u0022:\u0022Release\u0022,\u0022link\u0022:\u0022htoc-release\u0022,\u0022labelTOC\u0022:\u0022ORelease\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量传播\u0022,\u0022link\u0022:\u0022htoc-11\u0022,\u0022labelTOC\u0022:\u0022▲常量扩散\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量折叠\u0022,\u0022link\u0022:\u0022htoc-111\u0022,\u0022labelTOC\u0022:\u0022▲常量折叠\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]}]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量传播\u0022,\u0022link\u0022:\u0022htoc-11\u0022,\u0022labelTOC\u0022:\u0022▲常量扩散\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022常量折叠\u0022,\u0022link\u0022:\u0022htoc-111\u0022,\u0022labelTOC\u0022:\u0022▲常量折叠\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.2 减法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-2\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[]},{\u0022text\u0022:\u0022设有二进制数 Y ,其反码记为 Y（ 反 ），假定其二进制长度为8位，有：\u0022,\u0022link\u0022:\u0022htoc-y-y-8\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022Y + Y（ 反 ）= 1111 1111B\u0022,\u0022link\u0022:\u0022htoc-y-y-1111-1111b\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022Y + Y（ 反 ）+ 1 = 0 （ 进位丢失 ）\u0022,\u0022link\u0022:\u0022htoc-y-y-1-0\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022根据以上公式从，可得： Y（ 反 ） + 1 = 0 - Y\u0022,\u0022link\u0022:\u0022htoc-y-1-0-y\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022Y（ 反 ） + 1 = - Y\u0022,\u0022link\u0022:\u0022htoc-y-1-y\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022Y（ 补 ） = - Y\u0022,\u0022link\u0022:\u0022htoc-y-y\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.3 乘法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-3\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[]},{\u0022text\u0022:\u0022有符号 imul\u0022,\u0022link\u0022:\u0022htoc-imul1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022无符号 mul\u0022,\u0022link\u0022:\u0022htoc-mul1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022我们可以看到，有符号数乘以常量值，且这个常量非2的幂，会直接使用有符号乘法 imul 指令。而当常量值为 2 的幂时，编译器会采用执行周期短的左移运算来代替执行周期长的乘法指令。当常值为 2 的幂时，编译器会采用执行周期短的左移运算来代替执行周期长的乘法指令。\u0022,\u0022link\u0022:\u0022htoc-2-imul-2-2\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022这是因为，任何十进制数都可以转换成二进制数来表示，在二进制数中乘以2就等同于所有位依次向左移动1 位。如十进制数3的二进制数为 0011，3乘以 2 后等于 6，6 转换成二进制数为 0110。\u0022,\u0022link\u0022:\u0022htoc-2-1-3-0011-3-2-6-6-0110\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022而当乘数和被乘数同时都是未知变量时，则无法套用优化方案。这时编译器不会优化处理，将直接使用乘法指令完成乘法计算。\u0022,\u0022link\u0022:\u0022htoc-1111\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022在上例中，乘法运算与加法运算的结合运算，编译器采用 LEA 指令来处理。在代码中，lea 语句 的目的并不是取地址。如果这种组合运算中的乘数不等于 2、4、8 的时候，组合运算会有些许不同\u0022,\u0022link\u0022:\u0022htoc-lea-lea-2-4-8\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022我们可以看到，编译器会直接先拆分，然后再进行运算\u0022,\u0022link\u0022:\u0022htoc-11111\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:3,\u0022text\u0022:\u00223.1.1.4 除法\u0022,\u0022link\u0022:\u0022htoc-3-1-1-4\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:1,\u0022children\u0022:[{\u0022tag\u0022:4,\u0022text\u0022:\u0022除法计算约定\u0022,\u0022link\u0022:\u0022htoc-111111\u0022,\u0022labelTOC\u0022:\u0022O除法计算约定\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[]},{\u0022tag\u0022:4,\u0022text\u0022:\u0022对整数除法的优化\u0022,\u0022link\u0022:\u0022htoc-1111111\u0022,\u0022labelTOC\u0022:\u0022O对整数除法的优化\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2\u0022,\u0022labelTOC\u0022:\u0022▲除数为 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-21\u0022,\u0022labelTOC\u0022:\u0022▲除数为非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的 2 的幂\u0022,\u0022link\u0022:\u0022htoc-211\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2111\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除法优化的原则\u0022,\u0022link\u0022:\u0022htoc-111111111\u0022,\u0022labelTOC\u0022:\u0022▲除法优化的原则\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]}]}]},{\u0022tag\u0022:4,\u0022text\u0022:\u0022除法计算约定\u0022,\u0022link\u0022:\u0022htoc-111111\u0022,\u0022labelTOC\u0022:\u0022O除法计算约定\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[]},{\u0022text\u0022:\u0022向下取整：                                                                                                                                             所谓对 x 向下取整，就是往 -∞ 方向也就是往小的方向，取最接近 x 的整数值，换言之也就是取得不大于 x 的最大整数，例如，+3.5 向下取整得到3，-3.5向下取整得到-4。在数学描述中，⌊ x ⌋ 表示的就是对 x 向下取整。在标准 C 语言的 math.h 中，定义了 floor 函数，其作用就是向下取整，也有人称之为"地板取整"。向下取整的除法，当除数为 2 的幂时，可以直接用带符号右移指令( sar ) 来完成。但是，向下取整存在一个问题：那就是 ⌊ - a / b ⌋ ≠ - ⌊ a / b ⌋，比如说 ⌊ -1 / 2 ⌋ 是 -1，而 -⌊ 1 / 2 ⌋ 却是 0（假设 a / b 不为整数）\u0022,\u0022link\u0022:\u0022htoc-x-x-x-3-5-3-3-5-4-x-x-c-math-h-floor-2-sar-a-b-a-b-1-2-1-1-2-0-a-b1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022向上取整                                                                                                                                                 所谓对 x 向上取整，就是往 +∞ 方向也就是往大的方向，取最接近 x 的整数值，换言之也就是取得不小于 x 的最小整数。例如，+3.5 向上取整得到 4 ，-3.5 向上取整得到 -3。在数学描述中，⌈ x ⌉ 表示对x 向上取整。在标准 C 语言的 math.h 中有定义 ceil 函数，其作用就是向上取整，也有人称之为"天花板取整"。向上取整也存在一个问题：也是 ⌈ - a / b ⌉ ≠ - ⌈ a / b ⌉，比如 ⌈ -1 / 2 ⌉ 是 0，而 -⌈ 1 / 2 ⌉ 却是 -1（假设 a / b 不为整数）\u0022,\u0022link\u0022:\u0022htoc-x-x-x-3-5-4-3-5-3-x-x-c-math-h-ceil-a-b-a-b-1-2-0-1-2-1-a-b1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022向 0 取整                                                                                                                                                所谓对 x 向零取整，就是往 0 方向，取最接近 x 的整数值，换而言之也就是放弃小数部分。举例说明，+3.5 向零取整得到 3，-3.5 向零取整得到 -3。在数学描述中，[ x ] 表示对 x向零取整。在C语言和其他多数高级语言中，对整数除法规定为向零取整。也有人称这种取整方法为"截断除法"\u0022,\u0022link\u0022:\u0022htoc-0-x-0-x-3-5-3-3-5-3-x-x-c1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:4,\u0022text\u0022:\u0022对整数除法的优化\u0022,\u0022link\u0022:\u0022htoc-1111111\u0022,\u0022labelTOC\u0022:\u0022O对整数除法的优化\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:2,\u0022children\u0022:[{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2\u0022,\u0022labelTOC\u0022:\u0022▲除数为 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-21\u0022,\u0022labelTOC\u0022:\u0022▲除数为非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的 2 的幂\u0022,\u0022link\u0022:\u0022htoc-211\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2111\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除法优化的原则\u0022,\u0022link\u0022:\u0022htoc-111111111\u0022,\u0022labelTOC\u0022:\u0022▲除法优化的原则\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]}]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2\u0022,\u0022labelTOC\u0022:\u0022▲除数为 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-21\u0022,\u0022labelTOC\u0022:\u0022▲除数为非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022text\u0022:\u0022由于除法指令的周期比乘法指令周期长很多，因此编译器会用周期较短的乘法和其他指令代替除法。我们来看看数学证明\u0022,\u0022link\u0022:\u0022htoc-11111111\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022设 x 为被除数变量，o 为某一常量，则有:\u0022,\u0022link\u0022:\u0022htoc-x-o\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的 2 的幂\u0022,\u0022link\u0022:\u0022htoc-211\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除数为负的非 2 的幂\u0022,\u0022link\u0022:\u0022htoc-2111\u0022,\u0022labelTOC\u0022:\u0022▲除数为负的非 2 的幂\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:5,\u0022text\u0022:\u0022除法优化的原则\u0022,\u0022link\u0022:\u0022htoc-111111111\u0022,\u0022labelTOC\u0022:\u0022▲除法优化的原则\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:3,\u0022children\u0022:[]},{\u0022tag\u0022:2,\u0022text\u0022:\u00223.1.2 算术结果溢出\u0022,\u0022link\u0022:\u0022htoc-3-1-2\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0,\u0022children\u0022:[]},{\u0022text\u0022:\u0022进位：                                                                                                                                                    无符号数超出存储范围叫做进位。因为没有符号位，所以不会破坏数据，而多出的1位数据会被进位标志位 CF 保存，数据产生了进位，只是进位后的 1 位数据 1 不在自身的存储空间中，而在标志位 CF 中，可通过查看进位标志位 CF，检查数据是否进位。\u0022,\u0022link\u0022:\u0022htoc-1-cf-1-1-cf-cf1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022溢出：                                                                                                                                                    有符号数超出存储范围叫做溢出，由于数据进位，从而破坏了有符号数的最高位一符号位，因为只有有符号数才有符号位，所以溢出只针对有符号数。可查看溢出标志位 OF，检查数据是否溢出。OF 的判定规则很简单，如果参与加法计算的数值符号一致，而计算结果符号不同，则判定 OF 成立，其他都不成立。\u0022,\u0022link\u0022:\u0022htoc-of-of-of1\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022tag\u0022:2,\u0022text\u0022:\u00223.1.3 自增与自减\u0022,\u0022link\u0022:\u0022htoc-3-1-3\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0,\u0022children\u0022:[]},{\u0022text\u0022:\u0022先递增(减)：先执行自增(减)，然后再执行语句块\u0022,\u0022link\u0022:\u0022htoc-111111111111\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0},{\u0022text\u0022:\u0022后递增(减)：先执行语句块，然后再执行自增(减)\u0022,\u0022link\u0022:\u0022htoc-1111111111111\u0022,\u0022labelTOC\u0022:\u0022\u0022,\u0022visibleTOC\u0022:1,\u0022level\u0022:0}]","className":"is-style-rounded"} -->
+<div class="wp-block-ht-block-toc is-style-rounded htoc htoc--position-wide toc-list-style-plain" data-htoc-state="expanded"><span class="htoc__title"><span class="ht_toc_title">Table of Contents</span><span class="htoc__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><g fill="#444"><path d="M15 7H1c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="M15 1H1c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1zM15 13H1c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1z"/></g></svg></span></span><div class="htoc__itemswrap">
+
+<ul>
+<li><p><a href="#htoc-3-1-1">3.1.1 各种算术运算的工作方式</a></p>
+<ul>
+<li><p><a href="#htoc-3-1-1-1">3.1.1.1 加法</a></p>
+<ul>
+<li><p><a href="#htoc-debug">ODebug</a></p>
+</li>
+<li><p><a href="#htoc-release">ORelease</a></p>
+</li>
+<li><p><a href="#htoc-11">▲常量扩散</a></p>
+</li>
+<li><p><a href="#htoc-111">▲常量折叠</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#htoc-3-1-1-2">3.1.1.2 减法</a></p>
+</li>
+<li><p><a href="#htoc-3-1-1-3">3.1.1.3 乘法</a></p>
+</li>
+<li><p><a href="#htoc-3-1-1-4">3.1.1.4 除法</a></p>
+<ul>
+<li><p><a href="#htoc-111111">O除法计算约定</a></p>
+</li>
+<li><p><a href="#htoc-1111111">O对整数除法的优化</a></p>
+<ul>
+<li><p><a href="#htoc-2">▲除数为 2 的幂</a></p>
+</li>
+<li><p><a href="#htoc-21">▲除数为非 2 的幂</a></p>
+</li>
+<li><p><a href="#htoc-211">▲除数为负的 2 的幂</a></p>
+</li>
+<li><p><a href="#htoc-2111">▲除数为负的非 2 的幂</a></p>
+</li>
+<li><p><a href="#htoc-111111111">▲除法优化的原则</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#htoc-3-1-2">3.1.2 算术结果溢出</a></p>
+</li>
+<li><p><a href="#htoc-3-1-3">3.1.3 自增与自减</a></p>
+</li>
+</ul>
+<p>算术运算是指加法、减法、乘法、除法这四种数学运算，也称为四则运算。我们知道，数学上也有四则运算，那计算机上的四则运算和数学上的有什么不同呢？</p>
+<p>首先，赋值运算类似于数学中的”等于”，是将一个内存单元中的数据传递到另一个内存空间中。由于内存没有处理器那样的控制能力，各个内存单元之间是无法直接传递数据的，所以必须通过处理器访问并中转，以实现两个内存单元间的数据传输。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;  <span class="comment">//这里的等号&#x27;=&#x27;就是赋值运算，将10赋值给变量a</span></span><br><span class="line">    <span class="type">int</span> b;</span><br><span class="line">    b = a;</span><br><span class="line">    <span class="comment">//这里将变量a 的值赋值给变量b ，而变量a 所在的内存单元中的数据是 10，所以传递到变量b 的内存单元后，变量b 表示的就是 10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 C++ 中，算术运算于其他传递计算结果的代码组合后才能被视为一条有效的语句，也就是说算术运算单独存在是没有意义的，因为单独的算术运算虽然可以编译通过，但是不会生成代码，就像你有炊具但是没有食材，最后是做不出饭菜的。不过，因为只进行计算而没有 传递结果的运算会被编译器视为无效语句，与空语句等价，所以不会对程序结果有任何结果</p>
+<h2 id="3-1-1-各种算术运算的工作方式"><a href="#3-1-1-各种算术运算的工作方式" class="headerlink" title="3.1.1 各种算术运算的工作方式"></a>3.1.1 各种算术运算的工作方式</h2><h3 id="3-1-1-1-加法"><a href="#3-1-1-1-加法" class="headerlink" title="3.1.1.1 加法"></a>3.1.1.1 加法</h3><p>加法运算对应的汇编指令为 ADD，也就是英文中的 ‘add’ ，翻译过来就是添加。在执行加法运算的时候，针对不同的操作数，转换的指令也会不同，而编译器会根据优化方案选择最佳的匹配方案。一般 C++ 最常用的优化方案是下面这两种：</p>
+<ol>
+<li><p>生成文件占用空间最小</p>
+</li>
+<li><p>执行效率最快</p>
+</li>
+</ol>
+<p>本节内容我们来对比和分析一下Debug编译选项组与Release编译选项组这两个选项对各种计算产生的目标代码方案。</p>
+<h4 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h4><p>在使用Debug编译选项组的时候，C++产生的目标汇编代码会和源码一一对应：</p>
+<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image-20221104144856347.png)</p>
+<p>现在我们来分析一下Debug编译选项组下编译的汇编代码：</p>
+<p>首先我们先是定义了变量 number_one 和变量 number_two ，我们可以看到编译器是用 mov 将数 0 传入 number_one 所在的地址中，对于 number_two 也是同理</p>
+<p>然后是变量 + 常量的运算，我们可以看到，编译器将放在 number_one 地址处的数据先是用 mov 放到了 eax 中，然后对 eax 执行加 1 运算（在汇编中，inc 的作用是将指定的操作数的内容加1，再将结果送回到该操作数），最后将结果放回变量 number_one 中，完成加法运算</p>
+<p>接下来是变量 + 变量的运算，由上面的C++源码对比可以看出，编译器先使用 eax 存放变量 number_one，然后使用 ecx 存放变量 number_two，再将 eax 的数据加到 ecx 里，完成后将 ecx 的数据转移到 eax （eax 原本的数据将会被覆盖掉），最后再将 eax 的数据存入变量 number_two 的地址处。这样就完成了number_three &#x3D; number_one + number_two 的运算</p>
+<p>其中 eax 、ecx 是寄存器</p>
+<h4 id="Release"><a href="#Release" class="headerlink" title="Release"></a>Release</h4><p>C++ 中，很多编译器的Release 编译选项组的默认选项是第二种方案–执行效率优先</p>
+<p>在这种方案下，编译出来的汇编代码将会有较大的变化。因为其遵循效率优先，所以编译器会将无用代码去除，并将可合并代码进行归并处理。比如连续两次给同一个变量赋值，它会将第一次赋值给省去，因为在其后又重新对其进行了赋值操作，而且在此之前没有对该变量的任何访问，所以编译器判定此句代码是被删除的。</p>
+<p>首先，我们先了解两个关于优化的概念。在编译过程中，编译器常常会采用”常量传播”和”常量折叠”这样的方案对代码中的变量与常量进行优化</p>
+<h5 id="常量传播"><a href="#常量传播" class="headerlink" title="常量传播"></a>常量传播</h5><p>将编译期间可计算出结果的变量转化成变量，这样就减少了变量的使用，比如说：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> nVar = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;nVarOne = %d \r\n&quot;</span>,nVar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们知道，上面的变量 nVar 是一个在编译期间可以计算出结果的变量。所以，在程序中所有引用到 nVar 的地方都可以直接用常量 1来代替，这样代码就可以变成下面这样：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;nVarOne = %d \r\n&quot;</span>,<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="常量折叠"><a href="#常量折叠" class="headerlink" title="常量折叠"></a>常量折叠</h5><p>当计算公式中出现多个常量进行计算的时候，且编译器可以在编译期间计算出结果时，这样所有的常量计算都将被计算结果代替（个人觉得这个大多数时候是没什么用的，因为我们写代码的时候一般不会闲着没事把数拆开）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> nVar = <span class="number">1</span> + <span class="number">5</span> - <span class="number">3</span> * <span class="number">6</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;nVarOne = %d \r\n&quot;</span>,nVar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个时候就不会生成计算指令，因为”1 + 5 - 3 * 6 “的值是可以在编译过程中计算出来的，所以编译器会先计算出”1 + 5 - 3 * 6 “的结果，也就是 -12，然后将数值 -12 替换掉原表达式</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> nVar = <span class="number">-12</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;nVarOne = %d \r\n&quot;</span>,nVar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来我们可以再使用”常量传播”</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;nVarOne = %d \r\n&quot;</span>,<span class="number">-12</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-1-1-2-减法"><a href="#3-1-1-2-减法" class="headerlink" title="3.1.1.2 减法"></a>3.1.1.2 减法</h3><p>减法运算对应于汇编指令 sub，也就是英文中的”subtraction”的缩写。我们知道，计算机只会做加法，但是可以通过补码转换，将减法转变为加法的形式来完成运算</p>
+<p>我们先来浅浅学习一下将减法转变为加法的过程：</p>
+<blockquote>
+<p>设有二进制数 Y ,其反码记为 Y（ 反 ），假定其二进制长度为8位，有：</p>
+<p>Y + Y（ 反 ）&#x3D; 1111 1111B</p>
+<p>Y + Y（ 反 ）+ 1 &#x3D; 0 （ 进位丢失 ）</p>
+<p>根据以上公式从，可得： Y（ 反 ） + 1 &#x3D; 0 - Y</p>
+<p>Y（ 反 ） + 1 &#x3D; - Y</p>
+<p>Y（ 补 ） &#x3D; - Y</p>
+</blockquote>
+<p>这就是为什么负数的补码可以简化为取反加 1 的原因</p>
+<p>比如，7 - 4 可以转换成：</p>
+<p>7 +（ 0 - 4 ）~ 7 +（ 4（ 反 ）+ 1 ）~ 7 + 4（ 补 ）</p>
+<p>有了这个特性，所有的减法运算就都可以转换成加法运算了</p>
+<p>而减法运算的工作方式与加法运算的基本一致，就不赘述了</p>
+<h3 id="3-1-1-3-乘法"><a href="#3-1-1-3-乘法" class="headerlink" title="3.1.1.3 乘法"></a>3.1.1.3 乘法</h3><p>乘法运算对应的汇编指令有两种：</p>
+<ul>
+<li>有符号 imul</li>
+<li>无符号 mul</li>
+</ul>
+<p>由于乘法指令的执行周期较长，在编译过程中，编译器会先尝试将乘法转换为加法，或者使用移位等周期较短的指令，如果它们都不可以转换的时候，才会使用乘法指令。</p>
+<p>我们可以继续用Debug编译选项组来对比C++源码和对应的汇编代码</p>
+<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image.png)</p>
+<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image-1.png)</p>
+<div class="wp-block-group"><!-- wp:paragraph -->
+
+<p>我们可以看到，有符号数乘以常量值，且这个常量非2的幂，会直接使用有符号乘法 imul 指令。而当常量值为 2 的幂时，编译器会采用执行周期短的左移运算来代替执行周期长的乘法指令。当常值为 2 的幂时，编译器会采用执行周期短的左移运算来代替执行周期长的乘法指令。</p>
+<p>这是因为，任何十进制数都可以转换成二进制数来表示，在二进制数中乘以2就等同于所有位依次向左移动1 位。如十进制数3的二进制数为 0011，3乘以 2 后等于 6，6 转换成二进制数为 0110。</p>
+<p>而当乘数和被乘数同时都是未知变量时，则无法套用优化方案。这时编译器不会优化处理，将直接使用乘法指令完成乘法计算。</p>
+<p>我们发现，两常量相乘时，会先在编译期间计算出相乘的结果，再将表达式转换为常量值</p>
+<p>在上例中，乘法运算与加法运算的结合运算，编译器采用 LEA 指令来处理。在代码中，lea 语句 的目的并不是取地址。如果这种组合运算中的乘数不等于 2、4、8 的时候，组合运算会有些许不同</p>
+<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image-4.png)</p>
+<p>我们可以看到，编译器会直接先拆分，然后再进行运算</p>
+<p>而两变量相乘的时候，会直接使用有符号乘法指令</p>
+<p>再者，无符号数乘法的原理与之相同，我们可以自己思考一下</p>
+<h3 id="3-1-1-4-除法"><a href="#3-1-1-4-除法" class="headerlink" title="3.1.1.4 除法"></a>3.1.1.4 除法</h3><h4 id="除法计算约定"><a href="#除法计算约定" class="headerlink" title="除法计算约定"></a>除法计算约定</h4><p>除法运算对应的汇编指令分有符号 idiv 和无符号 div 两种。除法指令的执行周期较长，效率也较低，所以编译器想尽办法用其他运算指令代替除法指令。C++ 中的除法和数学中的除法不同。在 C++ 中，除法运算不保留余数，有专门求取余数的运算 ( 运算符为 % )，也称之为取模运算。对于整数除法，C++ 的规则是仅仅保留整数部分，小数部分完全舍弃。</p>
+<p>我们先讨论一下除法计算的相关约定。以下讨论的除法是”计算机整数除法”，我们使用 C 语言中的 a&#x2F;b 表示除法关系。在 C 语言中，两个无符号整数相除，结果依然是无符号的;两个有符号整数相除，结果则是有符号的;如果有符号数和无符号数混除，其结果则是无符号的，有符号数的最高位 ( 符号位 ) 被作为数据位对待,然后作为无符号数参与计算。</p>
+<p>对于除法而言，计算机面临着如何处理小数部分的问题。在数学意义上，7&#x2F;2&#x3D; 3.5，而对于计算机而言，整数除法的结果必须为整数。对于3.5这样的数值，计算机取整数部分的方式不止一种，下面来介绍三种取整方式：</p>
+<ul>
+<li><p>向下取整：                                                                                                                                             </p>
+</li>
+<li><p>所谓对 x 向下取整，就是往 -∞ 方向也就是往小的方向，取最接近 x 的整数值，换言之也就是取得不大于 x 的最大整数，例如，+3.5 向下取整得到3，-3.5向下取整得到-4。在数学描述中，<strong>⌊</strong> x <strong>⌋</strong> 表示的就是对 x 向下取整。在标准 C 语言的 math.h 中，定义了 floor 函数，其作用就是向下取整，也有人称之为**”地板取整”**。向下取整的除法，当除数为 2 的幂时，可以直接用带符号右移指令( sar ) 来完成。但是，向下取整存在一个问题：那就是 <strong>⌊</strong> - a &#x2F; b <strong>⌋</strong> ≠ - <strong>⌊</strong> a &#x2F; b <strong>⌋</strong>，比如说 <strong>⌊</strong> -1 &#x2F; 2 <strong>⌋</strong> 是 -1，而 -<strong>⌊</strong> 1 &#x2F; 2 <strong>⌋</strong> 却是 0（假设 a &#x2F; b 不为整数）</p>
+</li>
+<li><p>向上取整                                                                                                                                                </p>
+</li>
+<li><p>所谓对 x 向上取整，就是往 +∞ 方向也就是往大的方向，取最接近 x 的整数值，换言之也就是取得不小于 x 的最小整数。例如，+3.5 向上取整得到 4 ，-3.5 向上取整得到 -3。在数学描述中，<strong>⌈</strong> x <strong>⌉</strong> 表示对x 向上取整。在标准 C 语言的 math.h 中有定义 ceil 函数，其作用就是向上取整，也有人称之为**”天花板取整”**。向上取整也存在一个问题：也是 <strong>⌈</strong> - a &#x2F; b <strong>⌉</strong> ≠ - <strong>⌈</strong> a &#x2F; b <strong>⌉</strong>，比如 <strong>⌈</strong> -1 &#x2F; 2 <strong>⌉</strong> 是 0，而 -<strong>⌈</strong> 1 &#x2F; 2 <strong>⌉</strong> 却是 -1（假设 a &#x2F; b 不为整数）</p>
+</li>
+<li><p>向 0 取整                                                                                                                                               </p>
+</li>
+<li><p>所谓对 x 向零取整，就是往 0 方向，取最接近 x 的整数值，换而言之也就是放弃小数部分。举例说明，+3.5 向零取整得到 3，-3.5 向零取整得到 -3。在数学描述中，[ x ] 表示对 x向零取整。在C语言和其他多数高级语言中，对整数除法规定为向零取整。也有人称这种取整方法为**”截断除法”**</p>
+</li>
+</ul>
+<h4 id="对整数除法的优化"><a href="#对整数除法的优化" class="headerlink" title="对整数除法的优化"></a>对整数除法的优化</h4><p>如果除数是变量，则只能使用除法指令（这和两变量相乘很相似）如果除数为常量，就有了优化的余地，根据除数值的相关特性，编译器有对应的处理方式</p>
+<h5 id="除数为-2-的幂"><a href="#除数为-2-的幂" class="headerlink" title="除数为 2 的幂"></a>除数为 2 的幂</h5><p>我们知道，在乘法里，如果常值为 2 的幂时，编译器会采用执行周期短的左移运算来代替执行周期长的乘法指令，那么在除法运算里也是类似的：在C语言中，有符号除法的除法规则是向 0 取整，对有符号数做右移运算，编译后使用的指令为 sar，相当于向下取整</p>
+<p>比如说，4 &#x2F; 2 等价于 4 &gt;&gt; 1，结果就是 2（ ‘ &gt;&gt; ‘ 的意思是右移，比如说 4 的二进制码是 0100，右移就是 0010，也就是 2 了）如果是 5 &#x2F; 2 ，也就是 5 &gt;&gt; 1，结果还是 2（ 5 的二进制码是 0101，右移就是 0010，也就是 2 ）这也是我们在 C 语言中整型用除法时取整的原理</p>
+<h5 id="除数为非-2-的幂"><a href="#除数为非-2-的幂" class="headerlink" title="除数为非 2 的幂"></a>除数为非 2 的幂</h5><p>由于除法指令的周期比乘法指令周期长很多，因此编译器会用周期较短的乘法和其他指令代替除法。我们来看看数学证明</p>
+<blockquote>
+<p>设 x 为被除数变量，o 为某一常量，则有:</p>
+<p><cite>x &#x2F; o &#x3D; x * ( 1 &#x2F; o ) &#x3D; x * ( 2<sup>n</sup> &#x2F; o ) * ( 1 &#x2F; 2<sup>n</sup> )</cite></p>
+</blockquote>
+<p>由于 o 为常量，且 2<sup>n</sup> 的取值由编译器选择，所以 ( 2<sup>n</sup> &#x2F; o ) 的值在编译期间可以计算出来，一般来说，n 的取值都大于等于32， 这样就可以直接调整使用乘法结果的高位，也就是说 ( 2<sup>n</sup> &#x2F; o ) 是一个编译期间先行计算的常量值，这个值通常被称为 Magic Number</p>
+<p>我们用 M 代表 ( 2<sup>n</sup> &#x2F; o )，那么就有 x &#x2F; o &#x3D; x * ( 1 &#x2F; o ) &#x3D; x * ( 2<sup>n</sup> &#x2F; o ) * ( 1 &#x2F; 2<sup>n</sup> ) &#x3D; ( x * M ) * ( 1 &#x2F; 2<sup>n</sup> )</p>
+<p>我们再用 K 代表 ( x * M )，那么就有 K * ( 1 &#x2F; 2<sup>n</sup> ) &#x3D; K &#x2F; 2<sup>n</sup>  </p>
+<p>这样除数不就变成了 2 的幂了吗，就是 K &gt;&gt; n</p>
+<p>然而除法运算还有更加深奥的方面没有研究，比如 ( 2<sup>n</sup> &#x2F; o ) 的 n 次方的大小问题，这里就先不深究了</p>
+<h5 id="除数为负的-2-的幂"><a href="#除数为负的-2-的幂" class="headerlink" title="除数为负的 2 的幂"></a>除数为负的 2 的幂</h5><p>有了先前学习的基础，我们知道 sar 是右移指令，其实，除数为负的 2 的幂的除法和除数为 2 的幂的除法很相似，如果我们用 Release 编译选项组查看汇编代码，发现里面多了一个 neg 指令，其实这个 neg 指令相当于取负，其他的和除数为 2 的幂的除法基本一致</p>
+<h5 id="除数为负的非-2-的幂"><a href="#除数为负的非-2-的幂" class="headerlink" title="除数为负的非 2 的幂"></a>除数为负的非 2 的幂</h5><p>我们知道，在除数为非 2 的幂的除法中，x &#x2F; o &#x3D; x * ( 1 &#x2F; o ) &#x3D; x * ( 2<sup>n</sup> &#x2F; o ) * ( 1 &#x2F; 2<sup>n</sup> ) &#x3D;  x * M * ( 1 &#x2F; 2<sup>n</sup> )</p>
+<p>那么在除数为负的非 2 的幂的除法中，就是 x &#x2F; ( -o ) &#x3D; x * ( -1 &#x2F; o ) &#x3D; x * (  -2<sup>n</sup> &#x2F; o ) * ( 1 &#x2F; 2<sup>n</sup> ) &#x3D; x * ( -M ) * ( 1 &#x2F; 2<sup>n</sup> )，我们来研究一下这个 -M :</p>
+<blockquote>
+<p><cite>-M &#x3D; - ( 2<sup>n</sup> &#x2F; o ) &#x3D; ( 2<sup>n</sup> &#x2F; o ) ( 求补 )</cite></p>
+</blockquote>
+<p>而更深奥的方面我们在这就不研究了</p>
+<h5 id="除法优化的原则"><a href="#除法优化的原则" class="headerlink" title="除法优化的原则"></a>除法优化的原则</h5><p>其实，我们通过还原所得的数都是近似值，这说明给出的公式不够严格，我们要在稍稍深度学习除法运算再来探索这方面的原理</p>
+<p>我们可以先不管如何证明的，先看一下为什么还原的除数近似而不等的原因：我们的 Magic Number 是整数值，而 ( 2<sup>n</sup> &#x2F; o ) 是实数值，所以我们要找到 Magic Number 表达式中 2<sup>n</sup> 的值才行</p>
+<h2 id="3-1-2-算术结果溢出"><a href="#3-1-2-算术结果溢出" class="headerlink" title="3.1.2 算术结果溢出"></a>3.1.2 算术结果溢出</h2><p>其实我们在之前已经接触过算术结果溢出的相关知识，比如 int 类型的数据如果经过计算后超出了 int 类型的存储范围，超出的部分也就是溢出数据，将无法被保存。又比如说一个负数，溢出后由于表示符号的最高位被进位了，原来符号位上的 1 变成了 0，这是负数也就变成了正数。</p>
+<p>不过，我们需要知道，溢出的部分丢失后不是说它就是最大的数了，而是变成了一个很小的数，所以，有一些循环看似死循环，其实有可能并不是死循环，我们来看一下下面的例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span> ; i &gt; <span class="number">0</span> ; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的 for 循环看上去是一一个死循环，但由于 i 是一个有符号数，当 i 等于它允许取得的最大正数值0x7FFFFFF 时，再次加 1 后，数值会产生进位，将符号位 0 修改为 1，最终结果为 0x80000000，这时的最高位为 1,按照有符号数进行解释，这便是一个负数，对于 for 循环而言，当循环条件为假时，则会跳出循环体，结束循环。</p>
+<p>溢出是由于数据进位后超出数据的保存范围导致的。溢出和进位都表示数据超出了存储范围，它们之间又有什么区别呢?</p>
+<ul>
+<li><p>进位：                                                                                                                                                    </p>
+</li>
+<li><p>无符号数超出存储范围叫做进位。因为没有符号位，所以不会破坏数据，而多出的1位数据会被进位标志位 CF 保存，数据产生了进位，只是进位后的 1 位数据 1 不在自身的存储空间中，而在标志位 CF 中，可通过查看进位标志位 CF，检查数据是否进位。</p>
+</li>
+<li><p>溢出：                                                                                                                                                    </p>
+</li>
+<li><p>有符号数超出存储范围叫做溢出，由于数据进位，从而破坏了有符号数的最高位一符号位，因为只有有符号数才有符号位，所以溢出只针对有符号数。可查看溢出标志位 OF，检查数据是否溢出。OF 的判定规则很简单，如果参与加法计算的数值符号一致，而计算结果符号不同，则判定 OF 成立，其他都不成立。</p>
+</li>
+</ul>
+<h2 id="3-1-3-自增与自减"><a href="#3-1-3-自增与自减" class="headerlink" title="3.1.3 自增与自减"></a>3.1.3 自增与自减</h2><p>我们知道，C&#x2F;C++ 中分别用 ‘ ++ ‘，’ - - ‘ 来表示自增和自减。而自增和自减有两种：</p>
+<ul>
+<li><p>先递增(减)：先执行自增(减)，然后再执行语句块</p>
+</li>
+<li><p>后递增(减)：先执行语句块，然后再执行自增(减)</p>
+</li>
+</ul>
+<p>下面我们要研究的是在汇编语言中自增和自减是怎么执行的</p>
+<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image-6.png)</p>
+<p>![](C:\Users\zero to hero\Desktop\BLOG\source\image-5.png)</p>
+<p>通过上面的汇编我们可以清晰的知道自增和自减是如何运作的：</p>
+<p>先递增是将原语句块”number_two &#x3D; 5 + (++number_one);”分解为”number_one +&#x3D; 1 ;”和”number_two&#x3D; 5 +number_one;”，这样就实现了先自增 1，再参与语句块运算。同理，后递增的拆分过程只是执行顺序做了替换，先参与表达式运算，再将自身加 1。在识别过程中，后递增必然会保存计算前的变量值，在表达式计算完成后，才取出之前的值加 1，这是个显著特点。</p>
+</div></div></div></div>	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/Letter.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+			<a href="/2023/10/31/3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" title="3.2关系运算和逻辑运算" rel="prev">
+				&laquo;Pre post
+			</a>
+		
+		
+			<a href="/2023/10/31/2.3%20main%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%86%E5%88%AB/" title="2.3main函数的识别" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/3.3%20%E4%BD%8D%E8%BF%90%E7%AE%97/" title="3.3位运算">
+								3.3位运算			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								3.3 位运算二进制数据的运算成为位运算，位运算操作有：
+
+“&lt;&lt;”：左移运算，最高位左移到 CF 中，最低位补零
+
+“&gt;&gt;”：右移运算，最高位不变，最低位右移到 CF 中
+
+“ ‘ “：位或运算，在两个数的相...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/3.3%20%E4%BD%8D%E8%BF%90%E7%AE%97/" title="3.3位运算">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="3.3位运算"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" title="3.2关系运算和逻辑运算">
+								3.2关系运算和逻辑运算			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								3.2 关系运算和逻辑运算关系运算用于判断两者之间的关系，如等于、不等于、大于等于、小于等于、大于和小于，对应的符号分别为”&#x3D;&#x3D;”、”!&#x3D;”、 “&gt;&#x3D;”、”&lt;&#x3D;”、”&gt...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/3.2%20%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" title="3.2关系运算和逻辑运算">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="3.2关系运算和逻辑运算"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/2.3%20main%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%86%E5%88%AB/" title="2.3main函数的识别">
+								2.3main函数的识别			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.3 main函数的识别通过上节的学习，我们知道了调用main函数之前，必须先要得到三个必要的参数，而这三个参数的获取我们应该已经了解了，那么我们来看看怎么识别main函数：
+首先，main函数被调用前要先调用下面的函数：
+
+Get...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/2.3%20main%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%86%E5%88%AB/" title="2.3main函数的识别">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="2.3main函数的识别"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/2.2%20%E4%BA%86%E8%A7%A3%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/" title="2.2了解启动程序">
+								2.2了解启动程序			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.2 了解启动程序> 需要注意的是，本篇将以VC++ 6.0作为示例，而其他C++的编译器与其差异不大，我们可以用自己的编译器实际操作一下
+VC++ 6.0在控制台和多字节编码环境下的启动函数为mainCRTStartup，由系统库...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/2.2%20%E4%BA%86%E8%A7%A3%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/" title="2.2了解启动程序">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="2.2了解启动程序"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/1.5%20%E5%9C%B0%E5%9D%80%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8/" title="1.5地址">
+								1.5地址			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.5 地址、指针和引用首先我们先来初步了解一下什么时是地址和指针，还有引用
+
+地址：在C++中，地址标号用十六进制表示，如果我们想取一个变量的地址，那么就需要用到”&amp;”符号。但我们需要知道，只有变量才有地址，而常量是没有地址...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/1.5%20%E5%9C%B0%E5%9D%80%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8/" title="1.5地址">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="1.5地址"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/1.6%20%E5%B8%B8%E9%87%8F/" title="1.6常量">
+								1.6常量			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.6 常量常量和变量不同，变量可以随时改变，在程序运行中可以修改其保存的值；而常量呢，顾名思义，就是一个恒定不变的值，它在内存中也是不可修改的。比如说在程序中见到1、2、3这样的数字，或者是”Hello”这样的字符串，还有数组名称等...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/1.6%20%E5%B8%B8%E9%87%8F/" title="1.6常量">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="1.6常量"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/2.1%20%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%85%A5%E5%8F%A3/" title="2.2程序的真正入口">
+								2.2程序的真正入口			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.1 程序的真正入口VC++开发的程序，在调试时总是从main或WinMain函数开始，这就让我们误认为它们是程序的第一条指令执行的地方，这个认识其实是不对的。
+其实呢，main 或WinMain也是一个函数，也需要有一个调用者。在...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/2.1%20%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%85%A5%E5%8F%A3/" title="2.2程序的真正入口">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="2.2程序的真正入口"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/1.4%20%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="1.4布尔类型">
+								1.4布尔类型			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.4 布尔类型1.4.1 布尔类型的介绍布尔类型很简单，只有 0 与 非0 两种情况，在C++中，0 则表示为假，非0 则表示为真，并且是用bool定义布尔类型变量。布尔类型变量在内存中占一个字节，无论输入给布尔类型变量怎么样的数，...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/1.4%20%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="1.4布尔类型">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="1.4布尔类型"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/1.3%20%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="1.3字符和字符串">
+								1.3字符和字符串			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.3 字符和字符串字符串是由一个个字符组成的，而每个字符在字符表中又各自对应着一个唯一的编号。系统通过这些编号在表中查找这些字符，并把它们显示出来。其实，字符表格中的编号就是字符的编码格式。
+1.3.1字符的编码在C++中，字符的编...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/1.3%20%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="1.3字符和字符串">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="1.3字符和字符串"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/1.2%20%E6%B5%AE%E7%82%B9%E6%95%B0/" title="1.2浮点数">
+								1.2浮点数			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								实数数据不可能都是整数，那么就会出现怎么输出小数的问题。在计算机的发展历程中，出现过许多中存储实数的方式，有的现在很少用了不管如何存储，我们都可以划分为定点实数存储方式和浮点实数存储方式这两种。
+所谓定点实数，就是约定整数位和小数位的...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/1.2%20%E6%B5%AE%E7%82%B9%E6%95%B0/" title="1.2浮点数">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Letter.jpg" alt="1.2浮点数"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2023, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>
