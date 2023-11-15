@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      汇编学习-1.8 各类存储器芯片 | This is Title
+      汇编学习-2.4 物理地址 | This is Title
     
   </title>
   <meta name="author" content="John Doe">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「汇编学习-1.8 各类存储器芯片」
+			「汇编学习-2.4 物理地址」
 		
 	</p>
 
@@ -221,27 +221,14 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
-			</div>
-		</div>
-
-		
-<script src="/plugin/toc/katelog.min.js"></script>
-
-
-		
 	 
 
 <div class="layout-post">
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" itemprop="url">
-		汇编学习-1.8 各类存储器芯片
+	<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" itemprop="url">
+		汇编学习-2.4 物理地址
 	</a>
 
 		</div>
@@ -257,9 +244,9 @@
 
 	Updated on
 
-	<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" itemprop="url">
-		<time datetime="2023-10-31T09:49:27.000Z" itemprop="dateUpdated">
-	  		2023-10-31
+	<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" itemprop="url">
+		<time datetime="2023-12-01T03:56:27.000Z" itemprop="dateUpdated">
+	  		2023-11-15
 	  </time>
 	</a> 
 
@@ -273,7 +260,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/_visitors" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" data-title="汇编学习-1.8 各类存储器芯片">
+    <span class="leancloud_visitors" id="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/_visitors" data-url="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" data-title="汇编学习-2.4 物理地址">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -285,7 +272,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/_likes" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" data-title="汇编学习-1.8 各类存储器芯片" rel="unlike">
+    <span class="leancloud_likes" id="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/_likes" data-url="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" data-title="汇编学习-2.4 物理地址" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -295,20 +282,131 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h1 id="1-8-各类存储器芯片"><a href="#1-8-各类存储器芯片" class="headerlink" title="1.8 各类存储器芯片"></a>1.8 各类存储器芯片</h1><p>一台 PC 机中，装有多个存储器芯片，这些存储器芯片从物理连接上看是独立的、不同的器件。</p>
-<p>不过从读写属性上看的话，就只分为 2 种：随机存储器（RAM）和 只读存储器（ROM）。随机存储器可读可写，但必须带电存储，关机后存储的内容会丢失；只读存储器顾名思义，只能读、不能写，不过与随机存储器不同的是，关机后其中的内容是不会丢失的。</p>
-<p>如果是从功能与连接上分类的话，就分为 3 类：</p>
-<ul>
-<li><p>随机存储器</p>
-</li>
-<li><p>用于存放供 CPU 使用的绝大部分程序和数据，主随机存储器一般由两个位置上的 RAM 组成，装在主板上的 RAM 与 插在扩展插槽上的 RAM（注意这不是接口卡上的，是扩展插槽上的）</p>
-</li>
-<li><p>BIOS，即 Basic Input&#x2F;Output System，基本输入&#x2F;输出系统。BIOS 是由主板和各类接口卡厂商提供的软件系统，可以通过它利用该硬件设备进行最基本的输入输出。在主板和某些接口卡上插有存储相应 BIOS 的 RAM。比如说，主板上的 ROM 存储着主板的 BIOS（通常称为系统 BIOS）；显卡上的 ROM 存储着显卡的 BIOS；如果网卡上装有 ROM，那其中就可以存储网卡的 BIOS接口卡上的 RAM</p>
-</li>
-<li><p>某些接口卡需要对大批量输入、输出数据进行暂时存储，在其上装有 RAM。最典型的就是显示卡上的 RAM，我们一般把它称为 显存。显示卡随时将显存中的数据向显示器上输出。换句话说，我们将需要显示的内容写入显存，就会出现在显示器上。</p>
-</li>
-</ul>
-	
+			<!-- wp:paragraph -->
+
+<p>CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>CPU 通过地址总线送入存储器的必须是一个内存单元的物理地址，在 CPU 向地址总线上发出物理地址之前，必须在内部先形成这个物理地址。不同的 CPU 可以有不同的形成物理地址的方式</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>我们要研究的是 8086CPU，我们知道 8086CPU 的上一代等是 8 位机，而 8086CPU 是 16 位机，也可以说是 16 位结构的 CPU，现在我们先来了解一下什么是 16 位结构的 CPU</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>简单的， 16 位结构讲的是 CPU 具有以下几个结构特性：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+
+<!-- wp:list-item -->*   运算器一次最多可以处理 16 位的数据
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->*   寄存器的最大宽度为 16 位
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->*   寄存器与运算器之间的通路为 16 位
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+
+<p>这也就是说，16 位结构的 CPU 能够一次性处理、传输、暂时存储的信息的最大长度是 16 位的（内存单元的地址在送上地址总线之前，必须在 CPU 中处理、传输、暂时存放）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>在学习 8086CPU 是怎么给出物理地址之前，我们先来梳理一下 8086CPU：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>8086CPU 有 20 位地址总线，可以传送 20 位地址，达到 1 mb 的寻址能力；又是 16 位结构，在内部一次性处理、传输、暂时存储的地址为 16 位，从 8086CPU 内部结构来看，如果将地址从内部简单的发出，那么它只能送出 16 位的地址，表现出的寻址能力只有 64 kb</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p>而 8086CPU 采用一种在内部用两个 16 位地址合成的方法来形成一个 20 位的物理地址</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":542,"width":840,"height":567,"sizeSlug":"full","linkDestination":"none"} -->
+
+<figure class="wp-block-image aligncenter size-full is-resized">![](/images/汇编学习-2.4 物理地址/image.png)<figcaption class="wp-element-caption">8086CPU 相关部件的逻辑结构</figcaption></figure>
+
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+
+<p>当 CPU 要读取内存时：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+
+<!-- wp:list-item -->1.  CPU 中的相关部件提供两个 16 位的地址，一个称为段地址，另一个称为偏移地址
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->2.  段地址和偏移地址通过内部总线被送入一个称为地址加法器的部件
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->3.  地址加法器将两个 16 位地址合成为一个 20 位的物理地址
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->4.  地址加法器通过内部总线将 20 位物理地址送上地址总线
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->5.  20 位物理地址被地址总线传送到存储器
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+
+<p>地址加法器采用 <strong>物理地址&#x3D;段地址×16+偏移地址</strong> 的方法用段地址和偏移地址合成物理地址<br>（其中的 16 是十进制数）下图是一个例子：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":543,"width":840,"height":342,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image aligncenter size-large is-resized">![](/images/汇编学习-2.4 物理地址/image-1-1024x418.png)<figcaption class="wp-element-caption">地址加法器的工作过程</figcaption></figure>
+
+<!-- /wp:image -->
+
+<!-- wp:quote -->
+<blockquote>
+<!-- wp:paragraph -->
+
+<p>由 段地址 × 16 引发的讨论</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+
+<p><em>“段地址 × 16” 有一个更为常用的说法是左移 4 位（这个 4 位指的是二进制的 4 位，因为计算机中的所有信息都是以二进制的形式存储的，段地址当然也不例外） 我们来看一个例子：一个数据为 2h，二进制形式为 10b，对其进行左移位运算：</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td class="has-text-align-right" data-align="right">左移位数</td><td class="has-text-align-right" data-align="right">二进制</td><td class="has-text-align-right" data-align="right">十六进制</td><td class="has-text-align-right" data-align="right">十进制</td></tr><tr><td class="has-text-align-right" data-align="right">0</td><td class="has-text-align-right" data-align="right">10b</td><td class="has-text-align-right" data-align="right">2h</td><td class="has-text-align-right" data-align="right">2</td></tr><tr><td class="has-text-align-right" data-align="right">1</td><td class="has-text-align-right" data-align="right">100b</td><td class="has-text-align-right" data-align="right">4h</td><td class="has-text-align-right" data-align="right">4</td></tr><tr><td class="has-text-align-right" data-align="right">2</td><td class="has-text-align-right" data-align="right">1000b</td><td class="has-text-align-right" data-align="right">8h</td><td class="has-text-align-right" data-align="right">8</td></tr><tr><td class="has-text-align-right" data-align="right">3</td><td class="has-text-align-right" data-align="right">10000b</td><td class="has-text-align-right" data-align="right">10h</td><td class="has-text-align-right" data-align="right">16</td></tr><tr><td class="has-text-align-right" data-align="right">4</td><td class="has-text-align-right" data-align="right">100000b</td><td class="has-text-align-right" data-align="right">20h</td><td class="has-text-align-right" data-align="right">32</td></tr></tbody></table><figcaption class="wp-element-caption">_观察上面位移次数和各种形式数据的关系，我们可以发现啊：_</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+
+<!-- wp:list-item -->*   一个数据的二进制形式左移 1 位相当于该数据乘以 2
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->*   一个数据的二进制形式左移 N 位相当于该数据乘以 2<sup>N</sup>
+
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->*   地址加法器如何完成 段地址 × 16 的运算？就是将以二进制形式存放的段地址左移 4 位
+<!-- /wp:list --><cite>进一步思考，我们可以看出：一个数据的十六进制数形式左移 1 位，相当于乘以 16；一个数据的十进制形式左移 1 位，相当于乘以 10；一个 X 进制的数据左移 1 位，相当于乘以 X</cite>
+</blockquote>
+<!-- /wp:quote -->	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/Painting.png"></div>
@@ -326,12 +424,8 @@
 	<span>
 		<a id="totop-post-page">To Top</a>
 		
-			<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.9%20%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习-1.9 内存地址空间" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.7%20%E4%B8%BB%E6%9D%BF%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%8D%A1/" title="汇编学习-1.7 主板与接口卡" rel="next">
+			<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -349,35 +443,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" title="汇编学习-2.4 物理地址">
-								汇编学习-2.4 物理地址			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 1日, 2023				
-							</p>
-							<p class="relate-post-content">
-								
-
-CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址
-
-
-
-
-CPU 通过地址总线送入存储器的必须是一个内存单元...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" title="汇编学习-2.4 物理地址">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.4 物理地址"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -493,6 +558,29 @@ CPU 通过地址总线送入存储器的必须是一个内存单元...
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.9%20%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习-1.9 内存地址空间">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.9 内存地址空间"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">
+								汇编学习-1.8 各类存储器芯片			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								1.8 各类存储器芯片一台 PC 机中，装有多个存储器芯片，这些存储器芯片从物理连接上看是独立的、不同的器件。
+不过从读写属性上看的话，就只分为 2 种：随机存储器（RAM）和 只读存储器（ROM）。随机存储器可读可写，但必须带电存储...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.8 各类存储器芯片"/>
 							</a>
 						</div>
 					</li>												
