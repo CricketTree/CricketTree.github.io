@@ -282,121 +282,52 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<!-- wp:paragraph -->
-
-<p>CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
+			<p>CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址</p>
 <p>CPU 通过地址总线送入存储器的必须是一个内存单元的物理地址，在 CPU 向地址总线上发出物理地址之前，必须在内部先形成这个物理地址。不同的 CPU 可以有不同的形成物理地址的方式</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p>我们要研究的是 8086CPU，我们知道 8086CPU 的上一代等是 8 位机，而 8086CPU 是 16 位机，也可以说是 16 位结构的 CPU，现在我们先来了解一下什么是 16 位结构的 CPU</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p>简单的， 16 位结构讲的是 CPU 具有以下几个结构特性：</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list -->
-
-<!-- wp:list-item -->*   运算器一次最多可以处理 16 位的数据
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->*   寄存器的最大宽度为 16 位
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->*   寄存器与运算器之间的通路为 16 位
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-
+<ul>
+<li><p>运算器一次最多可以处理 16 位的数据</p>
+</li>
+<li><p>寄存器的最大宽度为 16 位</p>
+</li>
+<li><p>寄存器与运算器之间的通路为 16 位</p>
+</li>
+</ul>
 <p>这也就是说，16 位结构的 CPU 能够一次性处理、传输、暂时存储的信息的最大长度是 16 位的（内存单元的地址在送上地址总线之前，必须在 CPU 中处理、传输、暂时存放）</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p>在学习 8086CPU 是怎么给出物理地址之前，我们先来梳理一下 8086CPU：</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p>8086CPU 有 20 位地址总线，可以传送 20 位地址，达到 1 mb 的寻址能力；又是 16 位结构，在内部一次性处理、传输、暂时存储的地址为 16 位，从 8086CPU 内部结构来看，如果将地址从内部简单的发出，那么它只能送出 16 位的地址，表现出的寻址能力只有 64 kb</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p>而 8086CPU 采用一种在内部用两个 16 位地址合成的方法来形成一个 20 位的物理地址</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p>当 CPU 要读取内存时：</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list {"ordered":true} -->
-
-<!-- wp:list-item -->1.  CPU 中的相关部件提供两个 16 位的地址，一个称为段地址，另一个称为偏移地址
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->2.  段地址和偏移地址通过内部总线被送入一个称为地址加法器的部件
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->3.  地址加法器将两个 16 位地址合成为一个 20 位的物理地址
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->4.  地址加法器通过内部总线将 20 位物理地址送上地址总线
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->5.  20 位物理地址被地址总线传送到存储器
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-
+<ol>
+<li><p>CPU 中的相关部件提供两个 16 位的地址，一个称为段地址，另一个称为偏移地址</p>
+</li>
+<li><p>段地址和偏移地址通过内部总线被送入一个称为地址加法器的部件</p>
+</li>
+<li><p>地址加法器将两个 16 位地址合成为一个 20 位的物理地址</p>
+</li>
+<li><p>地址加法器通过内部总线将 20 位物理地址送上地址总线</p>
+</li>
+<li><p>20 位物理地址被地址总线传送到存储器</p>
+</li>
+</ol>
 <p>地址加法器采用 <strong>物理地址&#x3D;段地址×16+偏移地址</strong> 的方法用段地址和偏移地址合成物理地址<br>（其中的 16 是十进制数）下图是一个例子：</p>
-<!-- /wp:paragraph -->
-
 <p>![](&#x2F;images&#x2F;汇编学习-2.4 物理地址&#x2F;image.png)</p>
-<!-- wp:quote -->
 <blockquote>
-<!-- wp:paragraph -->
-
 <p>由 段地址 × 16 引发的讨论</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-
 <p><em>“段地址 × 16” 有一个更为常用的说法是左移 4 位（这个 4 位指的是二进制的 4 位，因为计算机中的所有信息都是以二进制的形式存储的，段地址当然也不例外） 我们来看一个例子：一个数据为 2h，二进制形式为 10b，对其进行左移位运算：</em></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:table {"className":"is-style-stripes"} -->
 <figure class="wp-block-table is-style-stripes"><table><tbody><tr><td class="has-text-align-right" data-align="right">左移位数</td><td class="has-text-align-right" data-align="right">二进制</td><td class="has-text-align-right" data-align="right">十六进制</td><td class="has-text-align-right" data-align="right">十进制</td></tr><tr><td class="has-text-align-right" data-align="right">0</td><td class="has-text-align-right" data-align="right">10b</td><td class="has-text-align-right" data-align="right">2h</td><td class="has-text-align-right" data-align="right">2</td></tr><tr><td class="has-text-align-right" data-align="right">1</td><td class="has-text-align-right" data-align="right">100b</td><td class="has-text-align-right" data-align="right">4h</td><td class="has-text-align-right" data-align="right">4</td></tr><tr><td class="has-text-align-right" data-align="right">2</td><td class="has-text-align-right" data-align="right">1000b</td><td class="has-text-align-right" data-align="right">8h</td><td class="has-text-align-right" data-align="right">8</td></tr><tr><td class="has-text-align-right" data-align="right">3</td><td class="has-text-align-right" data-align="right">10000b</td><td class="has-text-align-right" data-align="right">10h</td><td class="has-text-align-right" data-align="right">16</td></tr><tr><td class="has-text-align-right" data-align="right">4</td><td class="has-text-align-right" data-align="right">100000b</td><td class="has-text-align-right" data-align="right">20h</td><td class="has-text-align-right" data-align="right">32</td></tr></tbody></table><figcaption class="wp-element-caption">_观察上面位移次数和各种形式数据的关系，我们可以发现啊：_</figcaption></figure>
-<!-- /wp:table -->
+* 一个数据的二进制形式左移 1 位相当于该数据乘以 2
 
-<!-- wp:list -->
-
-<!-- wp:list-item -->*   一个数据的二进制形式左移 1 位相当于该数据乘以 2
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->*   一个数据的二进制形式左移 N 位相当于该数据乘以 2<sup>N</sup>
-
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->*   地址加法器如何完成 段地址 × 16 的运算？就是将以二进制形式存放的段地址左移 4 位
-<!-- /wp:list --><cite>进一步思考，我们可以看出：一个数据的十六进制数形式左移 1 位，相当于乘以 16；一个数据的十进制形式左移 1 位，相当于乘以 10；一个 X 进制的数据左移 1 位，相当于乘以 X</cite>
+<ul>
+<li><p>一个数据的二进制形式左移 N 位相当于该数据乘以 2<sup>N</sup></p>
+</li>
+<li><p>地址加法器如何完成 段地址 × 16 的运算？就是将以二进制形式存放的段地址左移 4 位</p>
+<p>进一步思考，我们可以看出：一个数据的十六进制数形式左移 1 位，相当于乘以 16；一个数据的十进制形式左移 1 位，相当于乘以 10；一个 X 进制的数据左移 1 位，相当于乘以 X</p>
+</li>
+</ul>
 </blockquote>
-<!-- /wp:quote -->	
+	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/Painting.png"></div>
