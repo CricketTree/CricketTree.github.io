@@ -219,34 +219,36 @@
 	<div id="layout-cart">
 		
 			<div class="post" id="post">
-				<a class="post-cover" href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" title=" 汇编学习-2.4 物理地址 " target="_blank">
+				<a class="post-cover" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" title=" PE文件格式-15章调试UPX压缩的notepad的程序 " target="_blank">
 					
-					<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png"/>
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png"/>
 				</a>
 
 				<div class="post-text">
 					<p class="post-time">
-						十二月 1日, 2023
+						十一月 23日, 2023
 					</p>	
 					<h3 class="post-title" id="post-title-index">
-						<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" title="汇编学习-2.4 物理地址">							
+						<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" title="PE文件格式-15章调试UPX压缩的notepad的程序">							
 							
-	<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" itemprop="url">
-		汇编学习-2.4 物理地址
+	<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" itemprop="url">
+		PE文件格式-15章调试UPX压缩的notepad的程序
 	</a>
 
 						</a>
 					</h3>
 					<p class="post-content">
 						
-							CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的...
+							15.1notepad.exe的EP代码先回忆一下什么是EP
+
+EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
 						
 					</p>
 					<p class="post-meta">
 						
 
 	
-    <span class="leancloud_visitors" id="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/_visitors" data-url="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" data-title="汇编学习-2.4 物理地址">
+    <span class="leancloud_visitors" id="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/_visitors" data-url="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" data-title="PE文件格式-15章调试UPX压缩的notepad的程序">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -258,7 +260,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/_likes" data-url="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" data-title="汇编学习-2.4 物理地址" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/_likes" data-url="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" data-title="PE文件格式-15章调试UPX压缩的notepad的程序" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -324,7 +326,7 @@
 			</div>
 		
 			<div class="post" id="post">
-				<a class="post-cover" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title=" PE文件格式-运行时压缩 " target="_blank">
+				<a class="post-cover" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title=" PE文件格式-14章运行时压缩 " target="_blank">
 					
 					<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png"/>
 				</a>
@@ -334,10 +336,10 @@
 						十一月 14日, 2023
 					</p>	
 					<h3 class="post-title" id="post-title-index">
-						<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">							
+						<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-14章运行时压缩">							
 							
-	<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" itemprop="url">
-		PE文件格式-运行时压缩
+	<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" itemprop="url">
+		PE文件格式-14章运行时压缩
 	</a>
 
 						</a>
@@ -351,7 +353,7 @@
 						
 
 	
-    <span class="leancloud_visitors" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_visitors" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-运行时压缩">
+    <span class="leancloud_visitors" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_visitors" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-14章运行时压缩">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -363,7 +365,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_likes" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-运行时压缩" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_likes" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-14章运行时压缩" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>

@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      汇编学习-2.4 物理地址 | This is Title
+      PE文件格式-14章运行时压缩 | This is Title
     
   </title>
   <meta name="author" content="John Doe">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「汇编学习-2.4 物理地址」
+			「PE文件格式-14章运行时压缩」
 		
 	</p>
 
@@ -221,14 +221,27 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
 	 
 
 <div class="layout-post">
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" itemprop="url">
-		汇编学习-2.4 物理地址
+	<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" itemprop="url">
+		PE文件格式-14章运行时压缩
 	</a>
 
 		</div>
@@ -244,9 +257,9 @@
 
 	Updated on
 
-	<a href="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" itemprop="url">
-		<time datetime="2023-12-01T03:56:27.000Z" itemprop="dateUpdated">
-	  		2023-11-15
+	<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" itemprop="url">
+		<time datetime="2023-11-14T15:14:22.000Z" itemprop="dateUpdated">
+	  		2023-11-23
 	  </time>
 	</a> 
 
@@ -260,7 +273,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/_visitors" data-url="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" data-title="汇编学习-2.4 物理地址">
+    <span class="leancloud_visitors" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_visitors" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-14章运行时压缩">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -272,7 +285,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/_likes" data-url="/2023/12/01/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" data-title="汇编学习-2.4 物理地址" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_likes" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-14章运行时压缩" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -282,46 +295,88 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址</p>
-<p>CPU 通过地址总线送入存储器的必须是一个内存单元的物理地址，在 CPU 向地址总线上发出物理地址之前，必须在内部先形成这个物理地址。不同的 CPU 可以有不同的形成物理地址的方式</p>
-<p>我们要研究的是 8086CPU，我们知道 8086CPU 的上一代等是 8 位机，而 8086CPU 是 16 位机，也可以说是 16 位结构的 CPU，现在我们先来了解一下什么是 16 位结构的 CPU</p>
-<p>简单的， 16 位结构讲的是 CPU 具有以下几个结构特性：</p>
+			<h1 id="14-1数据压缩"><a href="#14-1数据压缩" class="headerlink" title="14.1数据压缩"></a>14.1数据压缩</h1><p>不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压缩”；若不能，则称为“有损压缩”</p>
+<h2 id="14-1-1无损压缩"><a href="#14-1-1无损压缩" class="headerlink" title="14.1.1无损压缩"></a>14.1.1无损压缩</h2><p>无损压缩用来缩减文件（数据）的大小，压缩后的文件更易保管、移动。使用经过压缩的文件之前，需要先对文件解压缩（此过程中应该保证数据完整性）</p>
+<p>7z、ZIP、RAR等都是具有代表性的压缩文件格式，，它们最根本的压缩理念是Run-Length、Lempel-Ziv、Huffman（这些都是最具代表性的无损压缩算法，还有许多其它压缩算法都是在上面3种压缩算法的基础上改造而成的），然后各自应用了一些各自特有的技术（压缩率、压缩\解压时间）</p>
+<h2 id="14-1-2有损压缩"><a href="#14-1-2有损压缩" class="headerlink" title="14.1.2有损压缩"></a>14.1.2有损压缩</h2><p>有损压缩运行压缩文件（数据）时损失一定信息，以此换取高压缩率。压缩多媒体文件（jpg、mp3、mp4）时，大部分都使用这种有损压缩方式。人类的肉眼与听觉几乎无法察觉到这些多媒体文件在压缩中损失的数据。以mp3为例，mp3的核心算法通过删除超越人类听觉范围（20~20000Hz）的波长区段来缩减（不需要的数据大小）</p>
+<h1 id="14-2运行时压缩器"><a href="#14-2运行时压缩器" class="headerlink" title="14.2运行时压缩器"></a>14.2运行时压缩器</h1><p>运行时压缩器时针对可执行文件而言的，可执行文件内部含有解压缩代码，文件在运行瞬间于内存中解压缩后执行</p>
+<p>运行时压缩文件也是PE文件，内部含有原PE文件与解码程序。在程序的EP代码中执行解码程序，同时在内存中解压缩后执行</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>普通压缩</th>
+<th>运行时压缩</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对象文件</td>
+<td>所有文件</td>
+<td>PE文件（exe、dll、sys）</td>
+</tr>
+<tr>
+<td>压缩结果</td>
+<td>压缩文件（zip、rar）</td>
+<td>PE文件（exe、dll、sys）</td>
+</tr>
+<tr>
+<td>解压缩方式</td>
+<td>使用专门解压缩程序</td>
+<td>内部含有解码程序</td>
+</tr>
+<tr>
+<td>文件是否可执行</td>
+<td>本身不可执行</td>
+<td>本身可执行</td>
+</tr>
+<tr>
+<td>优点</td>
+<td>可以对所有文件以高压缩率压缩</td>
+<td>无需专门解压程序便可直接运行</td>
+</tr>
+<tr>
+<td>缺点</td>
+<td>若无专门解压缩软件则无法使用压缩文件</td>
+<td>每次运行均需要调用解码程序导致运行时间过长</td>
+</tr>
+</tbody></table>
+<p>可以看到，与普通压缩器相比，运行时压缩器的一个明显不同时“PE文件的可运行性”</p>
+<p>把普通PE文件创建成运行时压缩文件的实用程序称为“压缩器”（Packer），经反逆向（Anti-Reversing）技术特别处理的压缩器称为保护器（Protector）</p>
+<h2 id="14-2-1压缩器"><a href="#14-2-1压缩器" class="headerlink" title="14.2.1压缩器"></a>14.2.1压缩器</h2><h3 id="1-使用目的"><a href="#1-使用目的" class="headerlink" title="#1.使用目的"></a>#1.使用目的</h3><p>缩减PE文件的大小</p>
+<p><strong>隐藏PE文件内部代码与资源（字符串、API名称字符串等）</strong></p>
+<h3 id="2-压缩器种类"><a href="#2-压缩器种类" class="headerlink" title="#2.压缩器种类"></a>#2.压缩器种类</h3><p>PE压缩器大致可分为两种：</p>
 <ul>
-<li>运算器一次最多可以处理 16 位的数据</li>
-<li>寄存器的最大宽度为 16 位</li>
-<li>寄存器与运算器之间的通路为 16 位</li>
+<li>一类是单纯用于压缩普通PE文件的压缩器，比如说UPX、ASPack等</li>
+<li>另一类是对源文件进行较大变形、严重破坏PE头、意图稍显不纯的压缩器（这里的意图不纯的压缩器是指专门用于恶意程序，如Virtus、Trojan、Worm等），比如说UPack、PESpin、NSAnti等</li>
 </ul>
-<p>这也就是说，16 位结构的 CPU 能够一次性处理、传输、暂时存储的信息的最大长度是 16 位的（内存单元的地址在送上地址总线之前，必须在 CPU 中处理、传输、暂时存放）</p>
-<p>在学习 8086CPU 是怎么给出物理地址之前，我们先来梳理一下 8086CPU：</p>
-<p>8086CPU 有 20 位地址总线，可以传送 20 位地址，达到 1 mb 的寻址能力；又是 16 位结构，在内部一次性处理、传输、暂时存储的地址为 16 位，从 8086CPU 内部结构来看，如果将地址从内部简单的发出，那么它只能送出 16 位的地址，表现出的寻址能力只有 64 kb</p>
-<p>而 8086CPU 采用一种在内部用两个 16 位地址合成的方法来形成一个 20 位的物理地址</p>
-<p>当 CPU 要读取内存时：</p>
-<ol>
-<li>CPU 中的相关部件提供两个 16 位的地址，一个称为段地址，另一个称为偏移地址</li>
-<li>段地址和偏移地址通过内部总线被送入一个称为地址加法器的部件</li>
-<li>地址加法器将两个 16 位地址合成为一个 20 位的物理地址</li>
-<li>地址加法器通过内部总线将 20 位物理地址送上地址总线</li>
-<li>20 位物理地址被地址总线传送到存储器</li>
-</ol>
-<p>地址加法器采用 <strong>物理地址&#x3D;段地址×16+偏移地址</strong> 的方法用段地址和偏移地址合成物理地址<br>（其中的 16 是十进制数）下图是一个例子：</p>
-<p>![](&#x2F;images&#x2F;汇编学习-2.4 物理地址&#x2F;image.png)</p>
-<blockquote>
-<p>由 段地址 × 16 引发的讨论</p>
-<p><em>“段地址 × 16” 有一个更为常用的说法是左移 4 位（这个 4 位指的是二进制的 4 位，因为计算机中的所有信息都是以二进制的形式存储的，段地址当然也不例外） 我们来看一个例子：一个数据为 2h，二进制形式为 10b，对其进行左移位运算：</em></p>
-<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td class="has-text-align-right" data-align="right">左移位数</td><td class="has-text-align-right" data-align="right">二进制</td><td class="has-text-align-right" data-align="right">十六进制</td><td class="has-text-align-right" data-align="right">十进制</td></tr><tr><td class="has-text-align-right" data-align="right">0</td><td class="has-text-align-right" data-align="right">10b</td><td class="has-text-align-right" data-align="right">2h</td><td class="has-text-align-right" data-align="right">2</td></tr><tr><td class="has-text-align-right" data-align="right">1</td><td class="has-text-align-right" data-align="right">100b</td><td class="has-text-align-right" data-align="right">4h</td><td class="has-text-align-right" data-align="right">4</td></tr><tr><td class="has-text-align-right" data-align="right">2</td><td class="has-text-align-right" data-align="right">1000b</td><td class="has-text-align-right" data-align="right">8h</td><td class="has-text-align-right" data-align="right">8</td></tr><tr><td class="has-text-align-right" data-align="right">3</td><td class="has-text-align-right" data-align="right">10000b</td><td class="has-text-align-right" data-align="right">10h</td><td class="has-text-align-right" data-align="right">16</td></tr><tr><td class="has-text-align-right" data-align="right">4</td><td class="has-text-align-right" data-align="right">100000b</td><td class="has-text-align-right" data-align="right">20h</td><td class="has-text-align-right" data-align="right">32</td></tr></tbody></table><figcaption class="wp-element-caption">_观察上面位移次数和各种形式数据的关系，我们可以发现啊：_</figcaption></figure>
-
-
+<h2 id="14-2-2保护器"><a href="#14-2-2保护器" class="headerlink" title="14.2.2保护器"></a>14.2.2保护器</h2><p>不同于普通的压缩器，保护器还会应用多种防止代码逆向分析的技术（反调试、反模拟、代码混乱、多态代码、垃圾代码、调试器监视等）。这类保护器使压缩后的PE文件尺寸反而比源文件要大一些</p>
+<h3 id="1-使用目的-1"><a href="#1-使用目的-1" class="headerlink" title="#1.使用目的"></a>#1.使用目的</h3><p>防止破解</p>
+<p>不仅可以保护PE文件本身，<strong>还可以在文件运行时保护进程内存，防止打开Dump窗口</strong></p>
+<h3 id="2-使用现状"><a href="#2-使用现状" class="headerlink" title="#2.使用现状"></a>#2.使用现状</h3><p>比如说游戏的安全保护程序。当然还有那些意图不纯的恶心代码（Trojan、Worm）中也大量使用保护器来防止（或降低）杀毒软件的检测。有些保护器还能提供“多变的代码”，每次都会生成不同形态当功能相同的代码，这给病毒诊断带来很大困难</p>
+<h2 id="14-3运行时压缩测试"><a href="#14-3运行时压缩测试" class="headerlink" title="14.3运行时压缩测试"></a>14.3运行时压缩测试</h2><p>以notepad.exe为例进行运行时压缩测试</p>
+<p>我使用的压缩器是UPX，操作简单、功能强大，且完全免费，在命令行窗口运行会显示出UPX的使用说明</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/image-20231120154301102.png" alt="image-20231120154301102"></p>
+<p>把notepad.exe文件复制到工作文件夹后，对notepad.exe进行运行时压缩</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/image-20231120155235186.png" alt="image-20231120155235186"></p>
+<p>从列出的文件中可以看到，压缩后的文件尺寸明显减小了（运行时压缩的压缩率相比普通的zip压缩要低一些，这是由于压缩后得到的是PE文件，需要添加PE头，并且还需要放入解压缩代码）</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/image-20231120155429309.png" alt="image-20231120155429309"></p>
+<h3 id="比较-notepad-exe-与-notepad-upx-exe-文件"><a href="#比较-notepad-exe-与-notepad-upx-exe-文件" class="headerlink" title="比较 notepad.exe 与 notepad_upx.exe 文件"></a>比较 notepad.exe 与 notepad_upx.exe 文件</h3><p>下图是从PE文件视角比较两个文件的示意图（图是书上的），很好的反映出了UPX压缩器的特点（选用不同类型的压缩器与选项，运行时压缩文件的形态业不相同）</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/image-20231120160702742.png" alt="image-20231120160702742"></p>
+<p>可以看到：</p>
 <ul>
-<li>一个数据的二进制形式左移 1 位相当于该数据乘以 2</li>
-<li>一个数据的二进制形式左移 N 位相当于该数据乘以 2<sup>N</sup></li>
-<li>地址加法器如何完成 段地址 × 16 的运算？就是将以二进制形式存放的段地址左移 4 位</li>
+<li>PE头的大小一样</li>
+<li>节区名称改变</li>
+<li>第一个节区的RawDataSize&#x3D;0（文件中的大小为0）</li>
+<li>EP位于第二个节区（原notepad.exe的EP在第一个节区）</li>
+<li>资源节区（.rsrc）的大小几乎无变化</li>
 </ul>
-<p>进一步思考，我们可以看出：一个数据的十六进制数形式左移 1 位，相当于乘以 16；一个数据的十进制形式左移 1 位，相当于乘以 10；一个 X 进制的数据左移 1 位，相当于乘以 X</p>
-</blockquote>
+<p>需要注意的是，第一个节区（UPX0）的RawDataSize为0，即第一个节区在磁盘文件中是不存在的。UPX为何要创建这个空的节区呢？我们用PEView查看第一个节区头</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/image-20231120161747841.png" alt="image-20231120161747841"></p>
+<p>这就是说，经过UPX压缩后的PE文件在运行瞬间将（文件中的）压缩的代码解压到（内存中的）第一个节区。下一章使用调试器调试实际的解压缩过程</p>
 	
 		</div>
 		
-		<div id="current-post-cover" data-scr="/img/Painting.png"></div>
+		<div id="current-post-cover" data-scr="/img/RiceShower.png"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -336,8 +391,12 @@
 	<span>
 		<a id="totop-post-page">To Top</a>
 		
+			<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal" rel="prev">
+				&laquo;Pre post
+			</a>
 		
-			<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal" rel="next">
+		
+			<a href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -355,6 +414,151 @@
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" title="PE文件格式-15章调试UPX压缩的notepad的程序">
+								PE文件格式-15章调试UPX压缩的notepad的程序			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 23日, 2023				
+							</p>
+							<p class="relate-post-content">
+								15.1notepad.exe的EP代码先回忆一下什么是EP
+
+EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS等）的代码入口点，是执行应用程序时最先执行的代码的起始位置，它依赖于C...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" title="PE文件格式-15章调试UPX压缩的notepad的程序">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-15章调试UPX压缩的notepad的程序"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">
+								网鼎杯2020青龙组-singal			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 15日, 2023				
+							</p>
+							<p class="relate-post-content">
+								
+
+这道题是道虚拟机题，有静态和动调两种方式解决
+方法一：静态分析说是静态分析，其实就是把他给的虚拟机代码和数据库复制粘贴来用，图二中的就是虚拟机的运行代码，我们要的数据库就是 v4，在图一第 6 行，把 unk_403040 处的值...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="网鼎杯2020青龙组-singal"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">
+								Python base64 编解码			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								Python base64 编解码1. 引入 base64 模块想要在 python 中使用 base64 编解码，我们要先引入 base64 模块
+1import base64
+
+这个时候我们就可以使用 base64 模块中的相关功...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python base64 编解码"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构">
+								线性结构和非线性结构			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								线性结构和非线性结构▲线性结构首先，我们先了解一下线性结构：
+线性是种什么样的关系呢，简单的理解就是，有一定的联系，即数据之间是相关的。说的学术一点就是数据元素之间存在一对一的线性关系。
+而数据元素之间不一定是物理地址上的连续才是线性...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SanGuoSha2.jpeg" alt="线性结构和非线性结构"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/" title="利用二维数组计算矩阵行列式的值 —— 按行展开计算法">
+								利用二维数组计算矩阵行列式的值 —— 按行展开计算法			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								利用二维数组计算矩阵行列式的值 —— 按行展开计算法![](&#x2F;images&#x2F;利用二维数组计算矩阵行列式的值 —— 按行展开计算法&#x2F;image-70-1368x2048.png)
+遇到一道经典题型–求矩阵行...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E5%88%A9%E7%94%A8%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%80%BC%20%E2%80%94%E2%80%94%20%E6%8C%89%E8%A1%8C%E5%B1%95%E5%BC%80%E8%AE%A1%E7%AE%97%E6%B3%95/" title="利用二维数组计算矩阵行列式的值 —— 按行展开计算法">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SanGuoSha3.jpeg" alt="利用二维数组计算矩阵行列式的值 —— 按行展开计算法"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3%E6%A0%88/" title="初步了解栈">
+								初步了解栈			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								初步了解栈栈,存储货物或供旅客住宿的地方,可引申为仓库、中转站，所以引入到计算机领域里，就是指数据暂时存储的地方，所以才有进栈、出栈的说法。
+栈是限制插入和删除只能在一个位置上进行的线性表。
+至于什么是线性表，可以看另一篇文章：线性结...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3%E6%A0%88/" title="初步了解栈">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SanGuoSha1.jpeg" alt="初步了解栈"/>
+							</a>
+						</div>
+					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -447,142 +651,6 @@
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.0%20%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%88CPU%20%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%89/" title="汇编学习-2.0 寄存器（CPU 工作原理）">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.0 寄存器（CPU 工作原理）"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.9%20%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习-1.9 内存地址空间">
-								汇编学习-1.9 内存地址空间			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								1.9 内存地址空间什么是内存地址空间呢？
-我们来简单了解一下内存地址空间。举例来讲，一个 CPU 的地址线宽度为 10，那么可以寻址 1024 个内存单元，这 1024 个可寻的内存单元就构成了这个 CPU 的内存地址空间（210 ...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.9%20%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="汇编学习-1.9 内存地址空间">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.9 内存地址空间"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">
-								汇编学习-1.8 各类存储器芯片			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								1.8 各类存储器芯片一台 PC 机中，装有多个存储器芯片，这些存储器芯片从物理连接上看是独立的、不同的器件。
-不过从读写属性上看的话，就只分为 2 种：随机存储器（RAM）和 只读存储器（ROM）。随机存储器可读可写，但必须带电存储...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.8%20%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87/" title="汇编学习-1.8 各类存储器芯片">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.8 各类存储器芯片"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.7%20%E4%B8%BB%E6%9D%BF%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%8D%A1/" title="汇编学习-1.7 主板与接口卡">
-								汇编学习-1.7 主板与接口卡			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								1.7 主板与接口卡1.7.1 主板在每一台 PC 机中，都有一块主板，主板上有核心器件和一些主要器件，这些器件通过总线（地址总线、数据总线、控制总线）相连，而这些器件就有：CPU，存储器，外围芯片组，扩展插槽（扩展插槽上一般插有 R...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.7%20%E4%B8%BB%E6%9D%BF%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%8D%A1/" title="汇编学习-1.7 主板与接口卡">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.7 主板与接口卡"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.6%20%E6%80%BB%E7%BA%BF/" title="汇编学习-1.6 总线">
-								汇编学习-1.6 总线			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								1.6 总线1.6.1 地址总线CPU 是通过地址总线来指定存储器单元的，地址总线上能够传送多少个不同的信息，CPU 就能对多少个存储单元进行寻址
-在电子计算机中，一根导线可以传送的稳定状态只有两种，高电平和低电平；用二进制来表示的话...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.6%20%E6%80%BB%E7%BA%BF/" title="汇编学习-1.6 总线">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.6 总线"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.5%20CPU%20%E5%AF%B9%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E8%AF%BB%E5%86%99/" title="汇编学习-1.5 CPU 对存储器的读写">
-								汇编学习-1.5 CPU 对存储器的读写			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								1.5 CPU 对存储器的读写之前讲到过，存储器被划分为多个存储单元，存储单元从零开始顺序编号。这些编号呢，我们可以把它看作是存储单元在存储器中的地址。就像是一条街，每门每户都有属于它们自己的门牌号。
-CPU 要从内存中读数据，首先要...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.5%20CPU%20%E5%AF%B9%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E8%AF%BB%E5%86%99/" title="汇编学习-1.5 CPU 对存储器的读写">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.5 CPU 对存储器的读写"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.4%20%E5%AD%98%E5%82%A8%E5%99%A8%E4%B8%8E%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83/" title="汇编学习-1.4存储器与存储单元">
-								汇编学习-1.4存储器与存储单元			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								1.4 存储器与存储单元CPU 是计算机的核心部件，它控制整个计算机的运作并进行运算。要想让一个CPU工作，就必须向它提供指令和数据。指令和数据在存储器中存放，也就是平时所说的内存。在一台PC机中内存的作用仅次于CPU。离开了内存，性...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-1.4%20%E5%AD%98%E5%82%A8%E5%99%A8%E4%B8%8E%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83/" title="汇编学习-1.4存储器与存储单元">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-1.4存储器与存储单元"/>
 							</a>
 						</div>
 					</li>												
