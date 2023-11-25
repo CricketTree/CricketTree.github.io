@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Hello World | This is Title
+      PE文件格式-PE重定位操作原理 | This is Title
     
   </title>
   <meta name="author" content="John Doe">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Hello World」
+			「PE文件格式-PE重定位操作原理」
 		
 	</p>
 
@@ -240,8 +240,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/10/27/hello-world/" itemprop="url">
-		Hello World
+	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" itemprop="url">
+		PE文件格式-PE重定位操作原理
 	</a>
 
 		</div>
@@ -257,9 +257,9 @@
 
 	Updated on
 
-	<a href="/2023/10/27/hello-world/" itemprop="url">
-		<time datetime="2023-10-27T14:43:22.000Z" itemprop="dateUpdated">
-	  		2023-10-31
+	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" itemprop="url">
+		<time datetime="2023-11-25T13:43:01.000Z" itemprop="dateUpdated">
+	  		2023-11-25
 	  </time>
 	</a> 
 
@@ -273,7 +273,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2023/10/27/hello-world/_visitors" data-url="/2023/10/27/hello-world/" data-title="Hello World">
+    <span class="leancloud_visitors" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/_visitors" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" data-title="PE文件格式-PE重定位操作原理">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -285,7 +285,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/10/27/hello-world/_likes" data-url="/2023/10/27/hello-world/" data-title="Hello World" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/_likes" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" data-title="PE文件格式-PE重定位操作原理" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -295,23 +295,24 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-	
+			<h1 id="16-3-PE重定位操作原理"><a href="#16-3-PE重定位操作原理" class="headerlink" title="16.3 PE重定位操作原理"></a>16.3 PE重定位操作原理</h1><p>Windows的PE装载器进行PE重定位处理时，基本的操作原理很简单</p>
+<blockquote>
+<p>PE重定位的基本操作原理</p>
+<ul>
+<li>在应用程序中查找硬编码的地址位置</li>
+<li>读取值后，减去ImageBase（VA-&gt;RVA）</li>
+<li>加上实际加载地址（RVA-&gt;VA）</li>
+</ul>
+</blockquote>
+<p>其中最关键的是查找硬编码地址的位置。查找过程中会用到PE文件内部的Relocation Table（重定位表），它是记录硬编码地址偏移（位置）的列表（重定位表是在PE文件构建过程（编译&#x2F;链接）中提供的）。通过重定位表查找，其实就是根据PE头的“基址重定位表”项进行的查找</p>
+<h2 id="16-3-1-基址重定位表"><a href="#16-3-1-基址重定位表" class="headerlink" title="16.3.1 基址重定位表"></a>16.3.1 基址重定位表</h2><p>基址重定位表地址位于PE头的 DataDirectory 数组的第六个元素（数组索引为5）：</p>
+<p>IMAGE_NT_HEADERS \ IMAGE_OPTIONAL_HEADER \ IMAGE_DATA_DIRECTORY[5]</p>
+<h2 id="16-3-2-IMAGE-BASE-RELOCATION结构体"><a href="#16-3-2-IMAGE-BASE-RELOCATION结构体" class="headerlink" title="16.3.2 IMAGE_BASE_RELOCATION结构体"></a>16.3.2 IMAGE_BASE_RELOCATION结构体</h2><p>IMAGE_BASE_RELOCATION结构体的定义如下：<img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20231125230625194.png"></p>
+<p>IMAGE_BASE_RELOCATION结构体的第一个成员为VitualAddress，它是一个基准地址（BaseAddress），实际是RVA值。第二个成员为SizeOfBlock，指重定位块的大小。最后一项TypeOffset数组不是结构体成员，而是以注释形式存在的，表示在该结构体之下会出现WORD类型的数组，并且该数组元素的值就是硬编码在程序中的地址偏移</p>
+<h2 id="16-3-3-基址重定位表的分析方法"><a href="#16-3-3-基址重定位表的分析方法" class="headerlink" title="16.3.3 基址重定位表的分析方法"></a>16.3.3 基址重定位表的分析方法</h2>	
 		</div>
 		
-		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+		<div id="current-post-cover" data-scr="/img/RiceShower.png"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -326,10 +327,14 @@
 	<span>
 		<a id="totop-post-page">To Top</a>
 		
-			<a href="/2023/10/28/IDA%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="IDA常用快捷键" rel="prev">
+			<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位" rel="prev">
 				&laquo;Pre post
 			</a>
 		
+		
+			<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe" rel="next">
+				Next post&raquo;
+			</a>
 			
 	</span>
 
@@ -370,34 +375,6 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">
-								PE文件格式-PE重定位操作原理			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 25日, 2023				
-							</p>
-							<p class="relate-post-content">
-								16.3 PE重定位操作原理Windows的PE装载器进行PE重定位处理时，基本的操作原理很简单
-
-PE重定位的基本操作原理
-
-在应用程序中查找硬编码的地址位置
-读取值后，减去ImageBase（VA-&gt;RVA）
-加上实际加载地...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-PE重定位操作原理"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">
 								PE文件格式-调试notepad_upx.exe			
 							</a>
@@ -416,6 +393,29 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 							<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-调试notepad_upx.exe"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">
+								PE文件格式-运行时压缩			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 14日, 2023				
+							</p>
+							<p class="relate-post-content">
+								14.1 数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压缩”；若不能，则称为“有损压缩”
+14.1.1 无损压缩无损压缩用来缩减文件（...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-运行时压缩"/>
 							</a>
 						</div>
 					</li>												
@@ -441,29 +441,6 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 							<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="网鼎杯2020青龙组-singal"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">
-								PE文件格式-运行时压缩			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 14日, 2023				
-							</p>
-							<p class="relate-post-content">
-								14.1 数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压缩”；若不能，则称为“有损压缩”
-14.1.1 无损压缩无损压缩用来缩减文件（...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-运行时压缩"/>
 							</a>
 						</div>
 					</li>												
@@ -583,6 +560,32 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/" title="汇编学习-2.3 几条汇编代码">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.3 几条汇编代码"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">
+								汇编学习-2.2 字在寄存器中的存储			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.2 字在寄存器中的存储出于对兼容性的考虑，8086CPU 可以一次性处理两种尺寸的数据：
+
+字节：记为 byte，一个字节由 8 个比特（即二进制位）组成，可以存在 8 位寄存器中
+
+字：记为 word，一个字由两个字节组成，这两...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.2 字在寄存器中的存储"/>
 							</a>
 						</div>
 					</li>												

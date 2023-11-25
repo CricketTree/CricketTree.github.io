@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Hello World | This is Title
+      PE文件格式-PE重定位 | This is Title
     
   </title>
   <meta name="author" content="John Doe">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Hello World」
+			「PE文件格式-PE重定位」
 		
 	</p>
 
@@ -240,8 +240,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/10/27/hello-world/" itemprop="url">
-		Hello World
+	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" itemprop="url">
+		PE文件格式-PE重定位
 	</a>
 
 		</div>
@@ -257,9 +257,9 @@
 
 	Updated on
 
-	<a href="/2023/10/27/hello-world/" itemprop="url">
-		<time datetime="2023-10-27T14:43:22.000Z" itemprop="dateUpdated">
-	  		2023-10-31
+	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" itemprop="url">
+		<time datetime="2023-11-25T13:43:01.000Z" itemprop="dateUpdated">
+	  		2023-11-25
 	  </time>
 	</a> 
 
@@ -273,7 +273,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2023/10/27/hello-world/_visitors" data-url="/2023/10/27/hello-world/" data-title="Hello World">
+    <span class="leancloud_visitors" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/_visitors" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" data-title="PE文件格式-PE重定位">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -285,7 +285,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/10/27/hello-world/_likes" data-url="/2023/10/27/hello-world/" data-title="Hello World" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/_likes" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" data-title="PE文件格式-PE重定位" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -295,23 +295,29 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+			<h1 id="16-1-PE重定位"><a href="#16-1-PE重定位" class="headerlink" title="16.1 PE重定位"></a>16.1 PE重定位</h1><p>向进程的虚拟内存中加载PE文件时，文件会被加载到PE头的ImageBase所指的地址处。若加载的是DLL（SYS）文件，且在ImageBase位置处已经加载了其它DLL（SYS）文件，那么PE装载器就会将其加载到其它未被占用的空间。这就涉及PE文件重定位的问题，PE重定位是指PE文件无法加载到ImageBase所指位置，而是被加载到其它地址时发生的一系列的处理行为。</p>
+<blockquote>
+<p>使用SDK（Software Development Kit，软件开发工具包）或 Visual C++ 创建 PE 文件时，EXE 默认的 ImageBase 为 00400000，DLL 默认的 ImageBase 为10000000。此外，使用 DDK（Driver Development Kit，驱动开发工具包）创建的 SYS 文件默认的 ImageBase 为 10000</p>
+</blockquote>
+<h2 id="16-1-1-DLL-SYS"><a href="#16-1-1-DLL-SYS" class="headerlink" title="16.1.1 DLL&#x2F;SYS"></a>16.1.1 DLL&#x2F;SYS</h2><p>下图中可以看到，A.DLL 被加载到 TEXT.EXE 进程的 10000000 地址处。此后，B.DLL 试图加载到相同地址（10000000）时，PE装载器将 B.DLL 加载到另一个尚未被占用的地址（3C000000）处</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16%E7%AB%A0%E5%9F%BA%E5%9D%80%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%A1%A8/image-20231125215555002.png" alt="DLL重定位"></p>
+<h2 id="16-1-2-EXE"><a href="#16-1-2-EXE" class="headerlink" title="16.1.2 EXE"></a>16.1.2 EXE</h2><p>创建好进程后，EXE 文件会先首先加载到内存，所以在 EXE 中无须考虑重定位的问题。但是 Windows Vista 之后的版本引入了 ASLR 安全机制，每次运行 EXE 文件都会被加载到随机地址，这样大大增强了系统安全性</p>
+<blockquote>
+<p>ASLR 机制也适用于 DLL&#x2F;SYS 文件，对于各 OS 的主要系统 DLL，微软会根据不同版本分别赋予不同的 ImageBase 地址。同一系统的 kernel32.dll、user32.dll 等会被加载到自身固有的 ImageBase，所以，系统的 DLL实际不会发生重定位问题</p>
+<p>Windows Vista&#x2F;7 的系统 DLL 虽然也拥有自身固有的 ImageBase，但是 ASLR 机制使每次启动时加载的地址都不尽相同。关于 ASLR 的详细内容请参考第 41 章</p>
+</blockquote>
+<h1 id="16-2-PE重定位时执行的操作"><a href="#16-2-PE重定位时执行的操作" class="headerlink" title="16.2 PE重定位时执行的操作"></a>16.2 PE重定位时执行的操作</h1><p>下面以书上的例子来看看 PE 重定位时都发生了什么（Windows7的notepad.exe）</p>
+<p>可以看到notepad.exe的ImageBase为10000000</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16%E7%AB%A0%E5%9F%BA%E5%9D%80%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%A1%A8/image-20231125222802493.png" alt="notepad.exe的ImageBase"></p>
+<p>接下来用OllyDbg运行notepad.exe程序</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16%E7%AB%A0%E5%9F%BA%E5%9D%80%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%A1%A8/image-20231125223009079.png" alt="notepad.exe的EP代码"></p>
+<p>可以看到，在 ASLR 机制作用下，程序被加载到 0028000 处。从图中指令可以看到，方框中进程的内存地址以硬编码形式存在。地址2810FC、281100是.text节区的IAT区域，地址28C0A4是.data节区的全局变量。每当在OllyDbg中重启notepad.exe，地址值就随加载地址的不同而改变。像这样，使硬编码在程序中的内存地址随当前加载地址变化而改变的处理过程就是PE重定位</p>
+<p>无法加载到 ImageBase 地址时，若未进行过 PE重定位处理，应用程序就不能正常运行（因发生“内存地址引用错误”，程序异常终止）</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16%E7%AB%A0%E5%9F%BA%E5%9D%80%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%A1%A8/image-20231125223933003.png"></p>
 	
 		</div>
 		
-		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+		<div id="current-post-cover" data-scr="/img/RiceShower.png"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -326,10 +332,10 @@
 	<span>
 		<a id="totop-post-page">To Top</a>
 		
-			<a href="/2023/10/28/IDA%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="IDA常用快捷键" rel="prev">
-				&laquo;Pre post
-			</a>
 		
+			<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理" rel="next">
+				Next post&raquo;
+			</a>
 			
 	</span>
 
@@ -345,28 +351,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">
-								PE文件格式-PE重定位			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 25日, 2023				
-							</p>
-							<p class="relate-post-content">
-								16.1 PE重定位向进程的虚拟内存中加载PE文件时，文件会被加载到PE头的ImageBase所指的地址处。若加载的是DLL（SYS）文件，且在ImageBase位置处已经加载了其它DLL（SYS）文件，那么PE装载器就会将其加载到其...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-PE重定位"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -422,6 +406,29 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 			
 					<li>
 						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">
+								PE文件格式-运行时压缩			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 14日, 2023				
+							</p>
+							<p class="relate-post-content">
+								14.1 数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压缩”；若不能，则称为“有损压缩”
+14.1.1 无损压缩无损压缩用来缩减文件（...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-运行时压缩"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">
 								网鼎杯2020青龙组-singal			
 							</a>
@@ -441,29 +448,6 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 							<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="网鼎杯2020青龙组-singal"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">
-								PE文件格式-运行时压缩			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 14日, 2023				
-							</p>
-							<p class="relate-post-content">
-								14.1 数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压缩”；若不能，则称为“有损压缩”
-14.1.1 无损压缩无损压缩用来缩减文件（...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-运行时压缩"/>
 							</a>
 						</div>
 					</li>												
@@ -583,6 +567,32 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/" title="汇编学习-2.3 几条汇编代码">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.3 几条汇编代码"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">
+								汇编学习-2.2 字在寄存器中的存储			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2023				
+							</p>
+							<p class="relate-post-content">
+								2.2 字在寄存器中的存储出于对兼容性的考虑，8086CPU 可以一次性处理两种尺寸的数据：
+
+字节：记为 byte，一个字节由 8 个比特（即二进制位）组成，可以存在 8 位寄存器中
+
+字：记为 word，一个字由两个字节组成，这两...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png" alt="汇编学习-2.2 字在寄存器中的存储"/>
 							</a>
 						</div>
 					</li>												

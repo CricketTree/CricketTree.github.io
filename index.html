@@ -219,36 +219,34 @@
 	<div id="layout-cart">
 		
 			<div class="post" id="post">
-				<a class="post-cover" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" title=" PE文件格式-15章调试UPX压缩的notepad的程序 " target="_blank">
+				<a class="post-cover" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title=" PE文件格式-PE重定位 " target="_blank">
 					
 					<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png"/>
 				</a>
 
 				<div class="post-text">
 					<p class="post-time">
-						十一月 23日, 2023
+						十一月 25日, 2023
 					</p>	
 					<h3 class="post-title" id="post-title-index">
-						<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" title="PE文件格式-15章调试UPX压缩的notepad的程序">							
+						<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">							
 							
-	<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" itemprop="url">
-		PE文件格式-15章调试UPX压缩的notepad的程序
+	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" itemprop="url">
+		PE文件格式-PE重定位
 	</a>
 
 						</a>
 					</h3>
 					<p class="post-content">
 						
-							15.1notepad.exe的EP代码先回忆一下什么是EP
-
-EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
+							16.1 PE重定位向进程的虚拟内存中加载PE文件时，文件会被加载到PE头的ImageBase所指的地址处。若加载的是DLL（SYS）文件，且在Image...
 						
 					</p>
 					<p class="post-meta">
 						
 
 	
-    <span class="leancloud_visitors" id="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/_visitors" data-url="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" data-title="PE文件格式-15章调试UPX压缩的notepad的程序">
+    <span class="leancloud_visitors" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/_visitors" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" data-title="PE文件格式-PE重定位">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -260,7 +258,115 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
 
 
 	
-    <span class="leancloud_likes" id="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/_likes" data-url="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E7%AB%A0%E8%B0%83%E8%AF%95UPX%E5%8E%8B%E7%BC%A9%E7%9A%84notepad%E7%9A%84%E7%A8%8B%E5%BA%8F/" data-title="PE文件格式-15章调试UPX压缩的notepad的程序" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/_likes" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" data-title="PE文件格式-PE重定位" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title=" PE文件格式-PE重定位操作原理 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						十一月 25日, 2023
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">							
+							
+	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" itemprop="url">
+		PE文件格式-PE重定位操作原理
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							16.3 PE重定位操作原理Windows的PE装载器进行PE重定位处理时，基本的操作原理很简单
+
+PE重定位的基本操作原理
+
+在应用程序中查找硬编码的地...
+						
+					</p>
+					<p class="post-meta">
+						
+
+	
+    <span class="leancloud_visitors" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/_visitors" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" data-title="PE文件格式-PE重定位操作原理">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/_likes" data-url="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" data-title="PE文件格式-PE重定位操作原理" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title=" PE文件格式-调试notepad_upx.exe " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						十一月 23日, 2023
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">							
+							
+	<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" itemprop="url">
+		PE文件格式-调试notepad_upx.exe
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							15.1 notepad.exe的EP代码先回忆一下什么是EP
+
+EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、D...
+						
+					</p>
+					<p class="post-meta">
+						
+
+	
+    <span class="leancloud_visitors" id="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/_visitors" data-url="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" data-title="PE文件格式-调试notepad_upx.exe">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/_likes" data-url="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" data-title="PE文件格式-调试notepad_upx.exe" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -326,7 +432,7 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
 			</div>
 		
 			<div class="post" id="post">
-				<a class="post-cover" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title=" PE文件格式-14章运行时压缩 " target="_blank">
+				<a class="post-cover" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title=" PE文件格式-运行时压缩 " target="_blank">
 					
 					<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png"/>
 				</a>
@@ -336,24 +442,24 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
 						十一月 14日, 2023
 					</p>	
 					<h3 class="post-title" id="post-title-index">
-						<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-14章运行时压缩">							
+						<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">							
 							
-	<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" itemprop="url">
-		PE文件格式-14章运行时压缩
+	<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" itemprop="url">
+		PE文件格式-运行时压缩
 	</a>
 
 						</a>
 					</h3>
 					<p class="post-content">
 						
-							14.1数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压...
+							14.1 数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损...
 						
 					</p>
 					<p class="post-meta">
 						
 
 	
-    <span class="leancloud_visitors" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_visitors" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-14章运行时压缩">
+    <span class="leancloud_visitors" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_visitors" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-运行时压缩">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -365,7 +471,7 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
 
 
 	
-    <span class="leancloud_likes" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_likes" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E7%AB%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-14章运行时压缩" rel="unlike">
+    <span class="leancloud_likes" id="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/_likes" data-url="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" data-title="PE文件格式-运行时压缩" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -625,110 +731,6 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DL...
 
 	
     <span class="leancloud_likes" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/_likes" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.3%20%E5%87%A0%E6%9D%A1%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/" data-title="汇编学习-2.3 几条汇编代码" rel="unlike">
-        <i class="icon-heart"></i>
-        Likes
-        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
-    </span>
-	
-
-					</p>
-				</div>
-			</div>
-		
-			<div class="post" id="post">
-				<a class="post-cover" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title=" 汇编学习-2.2 字在寄存器中的存储 " target="_blank">
-					
-					<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png"/>
-				</a>
-
-				<div class="post-text">
-					<p class="post-time">
-						十月 31日, 2023
-					</p>	
-					<h3 class="post-title" id="post-title-index">
-						<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="汇编学习-2.2 字在寄存器中的存储">							
-							
-	<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" itemprop="url">
-		汇编学习-2.2 字在寄存器中的存储
-	</a>
-
-						</a>
-					</h3>
-					<p class="post-content">
-						
-							2.2 字在寄存器中的存储出于对兼容性的考虑，8086CPU 可以一次性处理两种尺寸的数据：
-
-字节：记为 byte，一个字节由 8 个比特（即二进制位）...
-						
-					</p>
-					<p class="post-meta">
-						
-
-	
-    <span class="leancloud_visitors" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/_visitors" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" data-title="汇编学习-2.2 字在寄存器中的存储">
-       	<i class="icon-eye"></i>
-       	Hits
-        
-            <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
-                   
-    </span>
-    
-
-
-
-	
-    <span class="leancloud_likes" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/_likes" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.2%20%E5%AD%97%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" data-title="汇编学习-2.2 字在寄存器中的存储" rel="unlike">
-        <i class="icon-heart"></i>
-        Likes
-        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
-    </span>
-	
-
-					</p>
-				</div>
-			</div>
-		
-			<div class="post" id="post">
-				<a class="post-cover" href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" title=" 汇编学习-2.1 通用寄存器 " target="_blank">
-					
-					<img class="lazy" src="/img/lazy.gif" data-src="/img/Painting.png"/>
-				</a>
-
-				<div class="post-text">
-					<p class="post-time">
-						十月 31日, 2023
-					</p>	
-					<h3 class="post-title" id="post-title-index">
-						<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" title="汇编学习-2.1 通用寄存器">							
-							
-	<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" itemprop="url">
-		汇编学习-2.1 通用寄存器
-	</a>
-
-						</a>
-					</h3>
-					<p class="post-content">
-						
-							2.1 通用寄存器8086CPU 的所有寄存器都是 16 位的，可以存放两个字节。AX、BX、CX、DX 四个寄存器通常用来存放一般性的数据，被称为通用寄...
-						
-					</p>
-					<p class="post-meta">
-						
-
-	
-    <span class="leancloud_visitors" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/_visitors" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" data-title="汇编学习-2.1 通用寄存器">
-       	<i class="icon-eye"></i>
-       	Hits
-        
-            <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
-                   
-    </span>
-    
-
-
-
-	
-    <span class="leancloud_likes" id="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/_likes" data-url="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.1%20%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8/" data-title="汇编学习-2.1 通用寄存器" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
