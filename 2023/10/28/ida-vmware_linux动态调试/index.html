@@ -240,7 +240,7 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" itemprop="url">
+	<a href="/2023/10/28/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" itemprop="url">
 		ida-vmware linux 动态调试
 	</a>
 
@@ -257,9 +257,9 @@
 
 	Updated on
 
-	<a href="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" itemprop="url">
+	<a href="/2023/10/28/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" itemprop="url">
 		<time datetime="2023-10-27T17:35:42.000Z" itemprop="dateUpdated">
-	  		2024-01-25
+	  		2024-03-08
 	  </time>
 	</a> 
 
@@ -273,7 +273,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/_visitors" data-url="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" data-title="ida-vmware linux 动态调试">
+    <span class="leancloud_visitors" id="/2023/10/28/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/_visitors" data-url="/2023/10/28/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" data-title="ida-vmware linux 动态调试">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -285,7 +285,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/_likes" data-url="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" data-title="ida-vmware linux 动态调试" rel="unlike">
+    <span class="leancloud_likes" id="/2023/10/28/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/_likes" data-url="/2023/10/28/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" data-title="ida-vmware linux 动态调试" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -298,25 +298,25 @@
 			<h1 id="ida-vmware-linux-动态调试"><a href="#ida-vmware-linux-动态调试" class="headerlink" title="ida-vmware linux 动态调试"></a>ida-vmware linux 动态调试</h1><h2 id="查看虚拟机ip"><a href="#查看虚拟机ip" class="headerlink" title="查看虚拟机ip"></a>查看虚拟机ip</h2><p>使用命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
 
-<p>![image-20240122115621562](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122115621562.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122115621562.png" alt="image-20240122115621562"></p>
 <p><em>注意：如果看不到ip，可能是虚拟机网络问题</em></p>
 <h3 id="确保windows能连上虚拟机"><a href="#确保windows能连上虚拟机" class="headerlink" title="确保windows能连上虚拟机"></a>确保windows能连上虚拟机</h3><p>打开cmd，输入命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping your_ip</span><br></pre></td></tr></table></figure>
 
-<p>![image-20240122120316232](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122120316232.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122120316232.png" alt="image-20240122120316232"></p>
 <h2 id="导入server"><a href="#导入server" class="headerlink" title="导入server"></a>导入server</h2><p>在 IDA\dbgsrv 文件夹下找到以下两个文件</p>
-<p>![image-20240122120925353](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122120925353.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122120925353.png" alt="image-20240122120925353"></p>
 <p>复制到 linux 里，并在终端尝试运行，下面这样就是成功的了</p>
-<p>![image-20240122121426970](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122121426970.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122121426970.png" alt="image-20240122121426970"></p>
 <h3 id="可能出现的报错"><a href="#可能出现的报错" class="headerlink" title="可能出现的报错"></a>可能出现的报错</h3><p>权限不够</p>
-<p>![image-20240122121127622](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122121127622.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122121127622.png" alt="image-20240122121127622"></p>
 <p>使用命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span> 777 文件名	<span class="comment">#普通用户下</span></span><br><span class="line"><span class="built_in">chmod</span> 777 文件名		<span class="comment">#管理员用户下</span></span><br></pre></td></tr></table></figure>
 
-<p>![image-20240122121240470](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122121240470.png)</p>
-<h2 id="ida设置linux-dbg"><a href="#ida设置linux-dbg" class="headerlink" title="ida设置linux dbg"></a>ida设置linux dbg</h2><p>![image-20240122120453211](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122120453211.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122121240470.png" alt="image-20240122121240470"></p>
+<h2 id="ida设置linux-dbg"><a href="#ida设置linux-dbg" class="headerlink" title="ida设置linux dbg"></a>ida设置linux dbg</h2><p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122120453211.png" alt="image-20240122120453211"></p>
 <p>设置参数，更改Hostname为linux ip，Application和Input flie为linux内文件的地址，Directory为linux内文件所在的目录（可以在终端中使用命令<code>pwd</code>查看当前目录地址）</p>
-<p>![image-20240122121623962](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;image-20240122121623962.png)</p>
+<p><img src="/images/ida-vmware_linux%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20240122121623962.png" alt="image-20240122121623962"></p>
 <h2 id="进行动态调试"><a href="#进行动态调试" class="headerlink" title="进行动态调试"></a>进行动态调试</h2><p>将需要调试的程序复制到Linux内</p>
 <p>保持linux上linux_server或linux_server64成功运行（32位程序用linux_server、64位用linux_server64），ida内启动调试</p>
 	
