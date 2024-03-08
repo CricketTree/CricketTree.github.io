@@ -1,0 +1,1163 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      angr安装与学习 | This is Title
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/20210716212924_a036b.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: true,
+	  appId: 'AnkeGlXrMetjoWeeqeBWI3HV-gzGzoHsz',
+	  appKey: 'mysij0IgTp8H4xHv7wHCo1XN',
+	  serverURLs: '' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「angr安装与学习」
+		
+	</p>
+
+	
+	
+		<span id="star-button" rel="unlike">
+			<i class="icon-heart"></i>
+		</span>
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" itemprop="url">
+		angr安装与学习
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" itemprop="url">
+		<time datetime="2024-01-24T08:03:07.000Z" itemprop="dateUpdated">
+	  		2024-01-26
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+	
+    <span class="leancloud_visitors" id="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/_visitors" data-url="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" data-title="angr安装与学习">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">1</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/_likes" data-url="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" data-title="angr安装与学习" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h1 id="angr安装与学习"><a href="#angr安装与学习" class="headerlink" title="angr安装与学习"></a>angr安装与学习</h1><h2 id="angr安装"><a href="#angr安装" class="headerlink" title="angr安装"></a>angr安装</h2><p>kali安装angr</p>
+<h3 id="安装virtualenv"><a href="#安装virtualenv" class="headerlink" title="安装virtualenv"></a>安装virtualenv</h3><p>可以用pip或者apt来安装virtualenv</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br><span class="line">apt-get install virtualenv</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建并启动virtualenv虚拟环境"><a href="#创建并启动virtualenv虚拟环境" class="headerlink" title="创建并启动virtualenv虚拟环境"></a>创建并启动virtualenv虚拟环境</h3><p>创建virtulenv虚拟环境之前需要安装好python</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> angrfile &amp;&amp;<span class="built_in">cd</span> angrfile</span><br></pre></td></tr></table></figure>
+
+<p>创建虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">virtualenv venv								<span class="comment">#使用默认python解释器创建</span></span><br><span class="line">virtualenv -p /usr/bin/python2.7 venv		<span class="comment">#如果你想用其他python解释器，找到你要用的python路径并替换命令中路径后执行</span></span><br></pre></td></tr></table></figure>
+
+<p>启动虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<p>pip安装angr</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install angr</span><br></pre></td></tr></table></figure>
+
+<p>之后可以启动python，import一下angr看看安装好了没有</p>
+<h2 id="angr学习"><a href="#angr学习" class="headerlink" title="angr学习"></a>angr学习</h2><p>摘自<a target="_blank" rel="noopener" href="https://www.cnblogs.com/level5uiharu/p/16925991.html">angr_ctf——从0学习angr（一）：angr简介与核心概念 - Uiharu - 博客园 (cnblogs.com)</a></p>
+<p>angr官方文档: <a target="_blank" rel="noopener" href="https://docs.angr.io/">README - angr Documentation</a></p>
+<p>angr的API文档: <a target="_blank" rel="noopener" href="https://api.angr.io/">angr API documentation — angr 9.2.26 documentation</a></p>
+<p>angr_ctf项目: <a target="_blank" rel="noopener" href="https://github.com/jakespringer/angr_ctf">GitHub - jakespringer&#x2F;angr_ctf</a></p>
+<p>本篇以做angr_ctf中的题目的方式来学习angr</p>
+<h3 id="angr与angr-ctf简介"><a href="#angr与angr-ctf简介" class="headerlink" title="angr与angr_ctf简介"></a>angr与angr_ctf简介</h3><blockquote>
+<p>angr是一个支持多处理架构的用于二进制文件分析的工具包，它提供了动态符号执行的能力以及多种静态分析的能力。项目创建的初衷，是为了整合此前多种二进制分析方式的优点，并开发一个平台，以供二进制分析人员比较不同二进制分析方式的优劣，并根据自身需要开发新的二进制分析系统和方式。</p>
+<p>也正是因为angr是一个二进制文件分析的工具包，因此它可以被使用者扩展，用于自动化逆向工程、漏洞挖掘等多个方面。</p>
+<p>angr_ctf则是一个专门针对angr的项目，里面有17个angr相关的题目。这些题目只有一个唯一的要求：你需要找出能够使程序输出“Good Job”的输入，这也是符号执行常见的应用场景。</p>
+</blockquote>
+<h3 id="angr核心概念"><a href="#angr核心概念" class="headerlink" title="angr核心概念"></a>angr核心概念</h3><h5 id="顶层接口"><a href="#顶层接口" class="headerlink" title="顶层接口"></a>顶层接口</h5><p>Project类是angr的主类，一般写在angr的最开始，通过初始化该类的对象，可以将你想要分析的二进制文件加载进来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> angr</span><br><span class="line">p = angr.Project(<span class="string">&#x27;./bin/true&#x27;</span>)		<span class="comment">#注意Project的P大写</span></span><br></pre></td></tr></table></figure>
+
+<p>参数为需要分析的文件的路径，这个参数是唯一一个必须传入的参数，此外还有一个比较常用的参数load_options，它将指明加载的方式</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>传入参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>auto_loads_libs</td>
+<td>是否自动加载程序的依赖</td>
+<td>布尔</td>
+</tr>
+<tr>
+<td>skip_libs</td>
+<td>希望避免加载的库</td>
+<td>库名</td>
+</tr>
+<tr>
+<td>expect_missing_libs</td>
+<td>无法解析库时是否抛出异常</td>
+<td>布尔</td>
+</tr>
+<tr>
+<td>force_load_libs</td>
+<td>强制加载的库</td>
+<td>库名</td>
+</tr>
+<tr>
+<td>ld_path</td>
+<td>共享库的优先搜索路径</td>
+<td>路径名</td>
+</tr>
+</tbody></table>
+<p>比如我们可以少加载一些无关紧要的库提升angr的效率：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> angr</span><br><span class="line">p = angr.Project(<span class="string">&#x27;./bin/true&#x27;</span>,anto_loads_libs=false)</span><br></pre></td></tr></table></figure>
+
+<p>Project类中有许多方法和属性，例如加载的文件名、架构、程序入口点、大小端等等</p>
+<h5 id="状态State"><a href="#状态State" class="headerlink" title="状态State"></a>状态State</h5><p>Project实际上只是将二进制文件加载进来了，要执行它，实际上是对SimState对象进行操作，它是程序的状态。</p>
+<p>要创建状态，需要使用Project对象中的factory，它还可以用于创建模拟管理器和基本块（后面提到）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">state = p.factory.entry_state()</span><br></pre></td></tr></table></figure>
+
+<p>预设状态有四种方式：</p>
+<table>
+<thead>
+<tr>
+<th>预设状态方式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>entry_state</td>
+<td>初始化状态为程序运行到程序入口点处的状态</td>
+</tr>
+<tr>
+<td>black_state(addr&#x3D;)</td>
+<td>大多数数据都没有初始化，状态中下一条指令为addr处的指令</td>
+</tr>
+<tr>
+<td>full_init_state</td>
+<td>共享库和预定义内容已经加载完毕，例如刚加载完共享库</td>
+</tr>
+<tr>
+<td>call_state</td>
+<td>准备调用函数的状态</td>
+</tr>
+</tbody></table>
+<p>状态包含了程序运行时的一切信息，寄存器、内存的值、文件系统以及<strong>符号变量</strong>等</p>
+<p>entry_state和blank_state是常用的两种方式，后者通常用于跳过一些极大降低angr效率的指令</p>
+<h5 id="模拟管理器"><a href="#模拟管理器" class="headerlink" title="模拟管理器"></a>模拟管理器</h5><p>上述方式只是预设了程序开始分析时的状态，我们要分析程序就必须要让它到达下一个状态，也就是让它动起来，这就需要模拟管理器的帮助（简称SM）</p>
+<p>使用以下指令能创建一个SM，它需要传入一个state或者state的列表作为参数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">simgr = p.factory.simgr(state)</span><br></pre></td></tr></table></figure>
+
+<p>SM中有许多列表，这些列表被称为stash，它保存了处于某种状态的state，stash有如下几种：</p>
+<table>
+<thead>
+<tr>
+<th>stash</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>active</td>
+<td>保存接下来可以执行并且将要执行的状态</td>
+</tr>
+<tr>
+<td>deadended</td>
+<td>由于某些原因不能继续执行的状态，例如没有合法指令，或者有非法指针</td>
+</tr>
+<tr>
+<td>pruned</td>
+<td>与solve的策略有关，当发现一个不可解的节点后，其后面所有的节点都优化掉放在pruned里</td>
+</tr>
+<tr>
+<td>unconstrained</td>
+<td>如果创建SM时启用了save_unconstrained，则被认定为不受约束的state会放在这，不受约束的state是指由用户数据或符号控制的指令指针（例如eip）</td>
+</tr>
+<tr>
+<td>unsat</td>
+<td>如果创建SM时启用了save_unsat，则被认为不可满足的state会放在这里</td>
+</tr>
+</tbody></table>
+<p>默认情况下，state会被存放在active中</p>
+<p>stash中的state可以通过move()方法来转移，将filter_func筛选出来的state从from_stash转移到to_stash：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">simgr.move(from_stash=<span class="string">&#x27;deadended&#x27;</span>, to_stash=<span class="string">&#x27;more_than_50&#x27;</span>, filter_func=<span class="keyword">lambda</span> s: <span class="string">&#x27;100&#x27;</span> <span class="keyword">in</span> s.posix.dumps(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+<p>stash是一个列表，可以使用python支持的方式去遍历其中的元素，也可以使用常见的列表操作。但angr提供了一种更高级的方式，在stash名字前加上one_，可以得到stash中的第一个状态，加上mp_，可以得到一个mulpyplexed版本的stash</p>
+<p>此外，稍微解释一下上面代码中的posix.dumps：</p>
+<ul>
+<li><strong>state.posix.dumps(0):表示到达当前状态所对应的程序输入</strong></li>
+<li><strong>state.posix.dumps(1):表示到达当前状态所对应的程序输出</strong></li>
+</ul>
+<p>上述代码就是将deadended中输出的字符串包含’100’的state转移到more_than_50这个stash中</p>
+<h5 id="step"><a href="#step" class="headerlink" title="step()"></a>step()</h5><p>可以通过step()方法来让处于active的state执行一个基本块，这种操作不会改变state本身：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">摘自 https://www.cnblogs.com/level5uiharu/p/<span class="number">16925991.</span>html</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>state = p.factory.entry_state()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>simgr = p.factory.simgr(state)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(state.regs.rax, state.regs.rip)</span><br><span class="line">&lt;BV64 <span class="number">0x1c</span>&gt; &lt;BV64 <span class="number">0x4023c0</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(simgr.one_active)</span><br><span class="line">&lt;SimState @ <span class="number">0x4023c0</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>simgr.step()</span><br><span class="line">&lt;SimulationManager <span class="keyword">with</span> <span class="number">1</span> active&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(simgr.one_active)</span><br><span class="line">&lt;SimState @ <span class="number">0x529240</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(state.regs.rax, state.regs.rip)</span><br><span class="line">&lt;BV64 <span class="number">0x1c</span>&gt; &lt;BV64 <span class="number">0x4023c0</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="探索技术（explorer-techniques）"><a href="#探索技术（explorer-techniques）" class="headerlink" title="探索技术（explorer techniques）"></a>探索技术（explorer techniques）</h5><p>可以使用explorer方法去执行某个状态，直到找到目标指令或者active中没有状态为止，它有如下参数：</p>
+<ul>
+<li><p>find：传入目标指令的地址或地址列表，或者一个用于判断的函数，函数以state为形参，返回布尔值</p>
+</li>
+<li><p>avoid：传入要避免的指令的地址或地址列表，或者一个用于判断的函数，用于减少路径</p>
+</li>
+</ul>
+<p>explorer找到的符合find的状态会被保存在simgr.found这个列表当中，可以遍历其中元素获取状态</p>
+<h3 id="符号执行"><a href="#符号执行" class="headerlink" title="符号执行"></a>符号执行</h3><p>angr作为一个二进制分析的工具包，但它通常作为符号执行工具更为出名</p>
+<p>符号执行就是给程序传递一个符号而不是具体的值，让这个符号伴随程序运行</p>
+<p>当碰见分支时，符号会进入哪个分支呢？angr的回答是全都进入！angr会保存所有分支，以及分支后的所有分支，并且在分支时，保存进入该分支时的判断条件，通常这些判断条件是对符号的约束条件。当angr运行到目标状态时，就可以调用求解器对一路上收集到的约束进行求解，最终得到某个符号能够到达当前状态的值</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>使用angr一般分为如下步骤：</p>
+<ol>
+<li>创建Project，预设state</li>
+<li>创建位向量和符号变量，保存在内存&#x2F;寄存器&#x2F;文件或其他地方</li>
+<li>将state添加到SM中</li>
+<li>运行，探索满足条件的路径</li>
+<li>约束求解获取执行结果</li>
+</ol>
+<p>先逆向看看逻辑</p>
+<p><img src="/images/angr%E5%AD%A6%E4%B9%A0/image-20240124204053923.png" alt="image-20240124204053923"></p>
+<p>程序接收一个25字节的输入，也就是s1，在enc1()函数中进行处理后，要和一串字符串相等，才能得到flag的part1，那么“You have successfully found part1……”这段输出就是我们要达到的目标</p>
+<p>下面是针对这个程序flag的part1的angr脚本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> angr</span><br><span class="line"></span><br><span class="line">p = angr.Project(<span class="string">&#x27;./O.o&#x27;</span>)			<span class="comment">#二进制文件必须和exp在angrfile目录下</span></span><br><span class="line">state = p.factory.entry_state()</span><br><span class="line">simgr = p.factory.simgr(state)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">good</span>(<span class="params">state</span>):</span><br><span class="line">    tag = <span class="string">b&#x27;You have successfully found part1&#x27;</span> <span class="keyword">in</span> state.posix.dumps(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> tag <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bad</span>(<span class="params">state</span>):</span><br><span class="line">    tag = <span class="string">b&#x27;Sorry you got the wrong answer. Look again!!!&#x27;</span> <span class="keyword">in</span> state.posix.dumps(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> tag <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">simgr.explore(find = good,avoid = bad)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> simgr.found:</span><br><span class="line">    solution = simgr.found[<span class="number">0</span>]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[+] The Solution: &quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(solution.posix.dumps(<span class="number">0</span>))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[!] Could not find solution!&quot;</span>)</span><br></pre></td></tr></table></figure>	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/SummerAgain.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+			<a href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门" rel="prev">
+				&laquo;Pre post
+			</a>
+		
+		
+			<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3 简单使用" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">
+								idapython简单使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 16日, 2024				
+							</p>
+							<p class="relate-post-content">
+								idapython简单使用idapython由三个独立模块组成：idc，idautils 和 idaapi
+idapython的使用方法是 菜单-&gt;File-&gt;script command
+需要注意随着升级到 IDA7+，...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="idapython简单使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">
+								gdb与pwntools简单使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 23日, 2024				
+							</p>
+							<p class="relate-post-content">
+								gdb与pwntools简单使用linux下安装gdb12apt-get updateapt-get install gdb
+
+安装时需要选择 y 确认继续安装
+pwntools123git clone https://github....
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="gdb与pwntools简单使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" title="ida-vmware linux 动态调试">
+								ida-vmware linux 动态调试			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 28日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ida-vmware linux 动态调试查看虚拟机ip使用命令
+1ifconfig
+
+![image-20240122115621562](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;i...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" title="ida-vmware linux 动态调试">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="ida-vmware linux 动态调试"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/28/ida%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="ida常用快捷键">
+								ida常用快捷键			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 28日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ida 几种常用快捷键ida 是反汇编程序 ，反汇编程序是一种软件，用于将机器代码转换为人类可读的格式，称为汇编语言。而且 ida 是用作静态分析的，ida 是神器，尤其是你一个 F5 能看到伪代码，然后修改修改贴到 C 程序里直接能...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/28/ida%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="ida常用快捷键">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="ida常用快捷键"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/05/26/align%E5%AF%B9%E9%BD%90%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="align对齐伪指令">
+								align对齐伪指令			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 26日, 2023				
+							</p>
+							<p class="relate-post-content">
+								align对齐伪指令原理对齐伪指令ALIGN对齐伪指令格式：
+ALIGN Num
+其中：Num必须是2的幂，如：2、4、8和16等。
+伪指令的作用是：告诉汇编程序，本伪指令下面的内存变量必须从下一个能被Num整除的地址开始分配。
+如果...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/05/26/align%E5%AF%B9%E9%BD%90%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="align对齐伪指令">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="align对齐伪指令"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">
+								Python文件读写相关			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 28日, 2024				
+							</p>
+							<p class="relate-post-content">
+								Python文件读写相关open() 方法open()方法用于打开文件并返回一个文件对象，允许用户进行读取、写入、追加等操作
+1file = open(file_name [, mode=&#x27;r&#x27; [ , buffe...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python文件读写相关"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">
+								DES加解密			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 27日, 2024				
+							</p>
+							<p class="relate-post-content">
+								DES加解密DES是一种对称加密
+主要的流程是：
+
+初始置换，也称 IP置换
+加密轮次，共16轮次
+逆置换，也称 FP置换
+
+1. IP置换IP置换是将输入的64位明文块进行置换和重新排列，生成新的64位数据块（不够64位需要补位填充...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="DES加解密"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">
+								脱壳入门			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 25日, 2024				
+							</p>
+							<p class="relate-post-content">
+								脱壳入门工具脱壳简单UPXupx壳是最常见的其中一种壳，其中简单的upx壳都可以用工具去壳
+
+在开始脱壳之前，要将需要脱壳的文件（upx壳的）拖入对应的32位或64位upx脱壳文件夹中并进入文件夹
+然后使用 upx -d 文件名 这条...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="脱壳入门"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3 简单使用">
+								z3 简单使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 23日, 2024				
+							</p>
+							<p class="relate-post-content">
+								z3简单使用安装Windows下安装1pip3 install z3-solver		#注意这里是 z3-solver 而不是 z3
+
+Linux下安装（没什么必要）123456git clone https://github.com...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3 简单使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="z3 简单使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">
+								RC4加解密			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 21日, 2024				
+							</p>
+							<p class="relate-post-content">
+								RC4加解密RC4是一种对称加密，加密过程与解密过程一样
+主要的流程都是
+
+创建大小为256、从0~1的Sbox表
+创建大小为256、重复填充密钥key的Tbox表
+利用Tbox表打乱Sbox表
+根据具体代码生成大小为256的密钥流s...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="RC4加解密"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>

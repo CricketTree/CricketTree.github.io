@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      z3简单使用 | This is Title
+      z3 简单使用 | This is Title
     
   </title>
   <meta name="author" content="John Doe">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「z3简单使用」
+			「z3 简单使用」
 		
 	</p>
 
@@ -241,7 +241,7 @@
 		<div class="article-title">
 			
 	<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" itemprop="url">
-		z3简单使用
+		z3 简单使用
 	</a>
 
 		</div>
@@ -259,7 +259,7 @@
 
 	<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" itemprop="url">
 		<time datetime="2024-01-23T08:03:07.000Z" itemprop="dateUpdated">
-	  		2024-01-23
+	  		2024-01-25
 	  </time>
 	</a> 
 
@@ -273,7 +273,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/_visitors" data-url="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-title="z3简单使用">
+    <span class="leancloud_visitors" id="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/_visitors" data-url="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-title="z3 简单使用">
        	<i class="icon-eye"></i>
        	Hits
         
@@ -285,7 +285,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/_likes" data-url="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-title="z3简单使用" rel="unlike">
+    <span class="leancloud_likes" id="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/_likes" data-url="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-title="z3 简单使用" rel="unlike">
         <i class="icon-heart"></i>
         Likes
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -295,7 +295,9 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h1 id="Z3简单使用"><a href="#Z3简单使用" class="headerlink" title="Z3简单使用"></a>Z3简单使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Pycharm下安装"><a href="#Pycharm下安装" class="headerlink" title="Pycharm下安装"></a>Pycharm下安装</h3><h3 id="Linux下安装（没什么必要）"><a href="#Linux下安装（没什么必要）" class="headerlink" title="Linux下安装（没什么必要）"></a>Linux下安装（没什么必要）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Z3Prover/z3.git</span><br><span class="line"><span class="built_in">cd</span> z3</span><br><span class="line">python scripts/mk_make.py </span><br><span class="line"><span class="built_in">cd</span> build </span><br><span class="line">make </span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+			<h1 id="z3简单使用"><a href="#z3简单使用" class="headerlink" title="z3简单使用"></a>z3简单使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Windows下安装"><a href="#Windows下安装" class="headerlink" title="Windows下安装"></a>Windows下安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install z3-solver		<span class="comment">#注意这里是 z3-solver 而不是 z3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux下安装（没什么必要）"><a href="#Linux下安装（没什么必要）" class="headerlink" title="Linux下安装（没什么必要）"></a>Linux下安装（没什么必要）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Z3Prover/z3.git</span><br><span class="line"><span class="built_in">cd</span> z3</span><br><span class="line">python scripts/mk_make.py </span><br><span class="line"><span class="built_in">cd</span> build </span><br><span class="line">make </span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="常用的几个API"><a href="#常用的几个API" class="headerlink" title="常用的几个API"></a>常用的几个API</h3><ol>
 <li><strong>Solver()：</strong>创建一个通用求解器，创建后我们可以添加我们的约束条件，进行下一步的求解</li>
@@ -334,6 +336,10 @@
 	<span>
 		<a id="totop-post-page">To Top</a>
 		
+			<a href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习" rel="prev">
+				&laquo;Pre post
+			</a>
+		
 		
 			<a href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用" rel="next">
 				Next post&raquo;
@@ -353,6 +359,81 @@
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">
+								脱壳入门			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 25日, 2024				
+							</p>
+							<p class="relate-post-content">
+								脱壳入门工具脱壳简单UPXupx壳是最常见的其中一种壳，其中简单的upx壳都可以用工具去壳
+
+在开始脱壳之前，要将需要脱壳的文件（upx壳的）拖入对应的32位或64位upx脱壳文件夹中并进入文件夹
+然后使用 upx -d 文件名 这条...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="脱壳入门"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">
+								idapython简单使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 16日, 2024				
+							</p>
+							<p class="relate-post-content">
+								idapython简单使用idapython由三个独立模块组成：idc，idautils 和 idaapi
+idapython的使用方法是 菜单-&gt;File-&gt;script command
+需要注意随着升级到 IDA7+，...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="idapython简单使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习">
+								angr安装与学习			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 24日, 2024				
+							</p>
+							<p class="relate-post-content">
+								angr安装与学习angr安装kali安装angr
+安装virtualenv可以用pip或者apt来安装virtualenv
+12pip install virtualenvapt-get install virtualenv
+
+创建...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="angr安装与学习"/>
+							</a>
+						</div>
+					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -428,24 +509,78 @@ pwntools123git clone https://github....
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/07/Pycharm%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/" title="pycharm安装使用">
-								pycharm安装使用			
+							<a class="relate-post-title" href="/2023/05/26/align%E5%AF%B9%E9%BD%90%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="align对齐伪指令">
+								align对齐伪指令			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十月 7日, 2023				
+								五月 26日, 2023				
 							</p>
 							<p class="relate-post-content">
-								Pycharm安装使用安装官网下载：https://www.jetbrains.com/pycharm/download/#section=windows
-有专业版和社区版两种，专业版需要付费，社区版免费
-启动安装程序，更改安装路径，...
+								align对齐伪指令原理对齐伪指令ALIGN对齐伪指令格式：
+ALIGN Num
+其中：Num必须是2的幂，如：2、4、8和16等。
+伪指令的作用是：告诉汇编程序，本伪指令下面的内存变量必须从下一个能被Num整除的地址开始分配。
+如果...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/10/07/Pycharm%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/" title="pycharm安装使用">				
+							<a href="/2023/05/26/align%E5%AF%B9%E9%BD%90%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="align对齐伪指令">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="pycharm安装使用"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="align对齐伪指令"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">
+								Python文件读写相关			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 28日, 2024				
+							</p>
+							<p class="relate-post-content">
+								Python文件读写相关open() 方法open()方法用于打开文件并返回一个文件对象，允许用户进行读取、写入、追加等操作
+1file = open(file_name [, mode=&#x27;r&#x27; [ , buffe...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python文件读写相关"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">
+								DES加解密			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 27日, 2024				
+							</p>
+							<p class="relate-post-content">
+								DES加解密DES是一种对称加密
+主要的流程是：
+
+初始置换，也称 IP置换
+加密轮次，共16轮次
+逆置换，也称 FP置换
+
+1. IP置换IP置换是将输入的64位明文块进行置换和重新排列，生成新的64位数据块（不够64位需要补位填充...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="DES加解密"/>
 							</a>
 						</div>
 					</li>												
@@ -460,13 +595,13 @@ pwntools123git clone https://github....
 								一月 21日, 2024				
 							</p>
 							<p class="relate-post-content">
-								RC4 加解密RC4是一种对称加密，加密过程与解密过程一样
+								RC4加解密RC4是一种对称加密，加密过程与解密过程一样
 主要的流程都是
 
 创建大小为256、从0~1的Sbox表
 创建大小为256、重复填充密钥key的Tbox表
 利用Tbox表打乱Sbox表
-根据具体代码生成大小为256的密钥流...
+根据具体代码生成大小为256的密钥流s...
 							</p>
 						</div>
 
@@ -474,131 +609,6 @@ pwntools123git clone https://github....
 							<a href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="RC4加解密"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">
-								PE文件格式-PE重定位操作原理			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 25日, 2023				
-							</p>
-							<p class="relate-post-content">
-								16.3 PE重定位操作原理Windows的PE装载器进行PE重定位处理时，基本的操作原理很简单
-
-PE重定位的基本操作原理
-
-在应用程序中查找硬编码的地址位置
-读取值后，减去ImageBase（VA-&gt;RVA）
-加上实际加载地...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-PE重定位操作原理"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">
-								PE文件格式-PE重定位			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 25日, 2023				
-							</p>
-							<p class="relate-post-content">
-								16.1 PE重定位向进程的虚拟内存中加载PE文件时，文件会被加载到PE头的ImageBase所指的地址处。若加载的是DLL（SYS）文件，且在ImageBase位置处已经加载了其它DLL（SYS）文件，那么PE装载器就会将其加载到其...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-PE重定位"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">
-								PE文件格式-调试notepad_upx.exe			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 23日, 2023				
-							</p>
-							<p class="relate-post-content">
-								15.1 notepad.exe的EP代码先回忆一下什么是EP
-
-EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS等）的代码入口点，是执行应用程序时最先执行的代码的起始位置，它依赖于...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-调试notepad_upx.exe"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">
-								网鼎杯2020青龙组-singal			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 15日, 2023				
-							</p>
-							<p class="relate-post-content">
-								[网鼎杯2020青龙组]singal
-
-这道题是道虚拟机题，有静态和动调两种方式解决
-方法一：静态分析说是静态分析，其实就是把他给的虚拟机代码和数据库复制粘贴来用，图二中的就是虚拟机的运行代码，我们要的数据库就是 v4，在图一第 6 ...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="网鼎杯2020青龙组-singal"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/15/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF%202023%20%E9%98%BF%E5%B0%BC%E4%BA%9A/" title="红明谷杯2023阿尼亚">
-								红明谷杯2023阿尼亚			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 15日, 2023				
-							</p>
-							<p class="relate-post-content">
-								红明谷杯 2023 阿尼亚下载后得到的是一个压缩包和一张阿尼亚的图片
-压缩包需要密码才能得到 flga.txt，所以我们需要根据图片得到密码
-
-在 stegsolve 里没有得到什么有用的
-放到 010editor 里，发现最后面有一...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/15/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF%202023%20%E9%98%BF%E5%B0%BC%E4%BA%9A/" title="红明谷杯2023阿尼亚">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="红明谷杯2023阿尼亚"/>
 							</a>
 						</div>
 					</li>												

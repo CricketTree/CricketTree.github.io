@@ -259,7 +259,7 @@
 
 	<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" itemprop="url">
 		<time datetime="2023-11-25T15:13:44.000Z" itemprop="dateUpdated">
-	  		2023-11-25
+	  		2024-02-24
 	  </time>
 	</a> 
 
@@ -307,9 +307,49 @@
 <p>其中最关键的是查找硬编码地址的位置。查找过程中会用到PE文件内部的Relocation Table（重定位表），它是记录硬编码地址偏移（位置）的列表（重定位表是在PE文件构建过程（编译&#x2F;链接）中提供的）。通过重定位表查找，其实就是根据PE头的“基址重定位表”项进行的查找</p>
 <h2 id="16-3-1-基址重定位表"><a href="#16-3-1-基址重定位表" class="headerlink" title="16.3.1 基址重定位表"></a>16.3.1 基址重定位表</h2><p>基址重定位表地址位于PE头的 DataDirectory 数组的第六个元素（数组索引为5）：</p>
 <p>IMAGE_NT_HEADERS \ IMAGE_OPTIONAL_HEADER \ IMAGE_DATA_DIRECTORY[5]</p>
+<p>再PEView中查看notepad.exe的基址重定位表地址</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20240129102912873.png" alt="image-20240129102912873"></p>
+<p>可以看到地址是 RVA 0002F000，用PEView查看这个地址</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20240129103043797.png" alt="image-20240129103043797"></p>
 <h2 id="16-3-2-IMAGE-BASE-RELOCATION结构体"><a href="#16-3-2-IMAGE-BASE-RELOCATION结构体" class="headerlink" title="16.3.2 IMAGE_BASE_RELOCATION结构体"></a>16.3.2 IMAGE_BASE_RELOCATION结构体</h2><p>IMAGE_BASE_RELOCATION结构体的定义如下：<img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20231125230625194.png"></p>
-<p>IMAGE_BASE_RELOCATION结构体的第一个成员为VitualAddress，它是一个基准地址（BaseAddress），实际是RVA值。第二个成员为SizeOfBlock，指重定位块的大小。最后一项TypeOffset数组不是结构体成员，而是以注释形式存在的，表示在该结构体之下会出现WORD类型的数组，并且该数组元素的值就是硬编码在程序中的地址偏移</p>
-<h2 id="16-3-3-基址重定位表的分析方法"><a href="#16-3-3-基址重定位表的分析方法" class="headerlink" title="16.3.3 基址重定位表的分析方法"></a>16.3.3 基址重定位表的分析方法</h2>	
+<p>IMAGE_BASE_RELOCATION结构体的第一个成员为VitualAddress，它是一个基准地址（BaseAddress），实际是RVA值。第二个成员为SizeOfBlock，指重定位块的大小。<strong>最后一项TypeOffset数组不是结构体成员，而是以注释形式存在的，表示在该结构体之下会出现WORD类型的数组，并且该数组元素的值就是硬编码在程序中的地址偏移</strong></p>
+<h2 id="16-3-3-基址重定位表的分析方法"><a href="#16-3-3-基址重定位表的分析方法" class="headerlink" title="16.3.3 基址重定位表的分析方法"></a>16.3.3 基址重定位表的分析方法</h2><p>先来看看基址重定位表部分内容</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20240129103101494.png" alt="image-20240129103101494"></p>
+<p>由IMAGE_BASE_RELOCATION结构体可知，VitualAddress成员的值为1000，SizeOfBlock的值为150，说明TypeOffset数组的基准地址就是RVA 1000，块的总大小是150</p>
+<p>块的末端显示为0，TypeOffset值为2个字节大小（也就是16位），是由4位的Type和12位的Offset合成的，比如，TypeOffset的值为3420，那么</p>
+<table>
+<thead>
+<tr>
+<th>类型（4位）</th>
+<th>偏移（12位）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+<td>420</td>
+</tr>
+</tbody></table>
+<p>高4位用作Type，PE文件中常见的值为3（IMAGE_REL_BASED_HIGHLOW），64位的PE+文件中常见的值为A（IMAGE_REL_BASED_DIR64）</p>
+<blockquote>
+<p>在恶意代码中正常修改文件代码后，有时要修改指向相应区域的重定位表（为了略去PE装载器的重定位过程，常常把Type值改为0（IMAGE_REL_BASED_ABSOLUTE））</p>
+</blockquote>
+<p>TypeOffset的低12位是真正的位移，该位移值基于Vitual Address（VA）的偏移，所以程序中硬编码地址的偏移使用下面等式换算：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VirtualSize（1000） + Offset（420） = RVA（1420）</span><br></pre></td></tr></table></figure>
+
+<p>下面看一下 RVA 1420 处是否实际存在要执行PE重定位操作的硬编码地址</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20240129104755275.png" alt="image-20240129104755275"></p>
+<p>图中notepad.exe被加载到AF0000地址处，所以 RVA 1420 即为 VA AF1420，该地址处存储着 IAT地址（VA AF10C4），并且该值经过PE重定位而发生了变化</p>
+<blockquote>
+<p>TypeOffset项中指向位移的低12位拥有的最大地址值为1000。为了表示更大的地址，需要添加一个与其对应的块，由于这些块以数组的形式罗列，故称为重定位表</p>
+</blockquote>
+<h2 id="16-3-4-PE重定位是如何进行的"><a href="#16-3-4-PE重定位是如何进行的" class="headerlink" title="16.3.4 PE重定位是如何进行的"></a>16.3.4 PE重定位是如何进行的</h2><h3 id="1-查找程序中硬编码地址的位置"><a href="#1-查找程序中硬编码地址的位置" class="headerlink" title="#1.查找程序中硬编码地址的位置"></a>#1.查找程序中硬编码地址的位置</h3><p>程序中使用的硬编码地址的偏移，可以通过基址重定位表查找得到，这里我们用上面求得的 RVA 1420 来继续。用 PEView 查看 RVA 1420 地址中的内容</p>
+<p><img src="/images/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/image-20240129105836280.png" alt="image-20240129105836280"></p>
+<p>可以看到， RVA 1420中存在着程序的硬编码地址值010010C4（这个减去基址1000000就是10C4，10C4加上实际加载地址AF0000就是之前看到的AF10C4）</p>
+<h3 id="2-读取值后，减去ImageBase（VA-RVA）"><a href="#2-读取值后，减去ImageBase（VA-RVA）" class="headerlink" title="#2.读取值后，减去ImageBase（VA-&gt;RVA）"></a>#2.读取值后，减去ImageBase（VA-&gt;RVA）</h3><p>​	010010C4 - 01000000 &#x3D; 10C4</p>
+<h3 id="3-加上实际加载地址（RVA-VA）"><a href="#3-加上实际加载地址（RVA-VA）" class="headerlink" title="#3.加上实际加载地址（RVA-&gt;VA）"></a>#3.加上实际加载地址（RVA-&gt;VA）</h3><p>​	10C4 + AF0000 &#x3D; AF10C4</p>
+<p>对于程序内部硬编码的地址（比如010010C4），PE装载器都做以上处理，根据实际加载地址的内存地址修正后，将得到的值（AF10C4）覆盖到同一位置。对一个IMAGE_BASE_RELOCATION结构体的所有TypeOffset都重复上述过程。若TypeOffset的值为0，则表明一个IMAGE_BASE_RELOCATION结构体装载结束</p>
+<p>对重定位表中出现的所有IMAGE_BASE_RELOCATION结构体都重复上述处理后，就完成了对进程内存区域相应的硬编码地址的PE重定位。重定位表以NULL结构体结束（即IMAGE_BASE_RELOCATION结构体的所有成员值为NULL）</p>
+	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/RiceShower.png"></div>
@@ -422,175 +462,173 @@ EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS�
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3简单使用">
-								z3简单使用			
+							<a class="relate-post-title" href="/2023/02/24/DLL%E6%B3%A8%E5%85%A5-%E7%AC%AC23%E7%AB%A0DLL%E6%B3%A8%E5%85%A5/" title="DLL注入-第23章DLL注入">
+								DLL注入-第23章DLL注入			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								一月 23日, 2024				
+								二月 24日, 2023				
 							</p>
 							<p class="relate-post-content">
-								Z3简单使用安装Pycharm下安装Linux下安装（没什么必要）123456git clone https://github.com/Z3Prover/z3.gitcd z3python scripts/mk_make.py cd ...
+								第23章 DLL注入
+12345678910111213141516BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD dwReason, LPVOID lpvReserved)&#123;  ...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3简单使用">				
+							<a href="/2023/02/24/DLL%E6%B3%A8%E5%85%A5-%E7%AC%AC23%E7%AB%A0DLL%E6%B3%A8%E5%85%A5/" title="DLL注入-第23章DLL注入">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="z3简单使用"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="DLL注入-第23章DLL注入"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">
-								gdb与pwntools简单使用			
+							<a class="relate-post-title" href="/2023/02/22/DLL%E6%B3%A8%E5%85%A5-%E7%AC%AC21%E7%AB%A0Windows%E6%B6%88%E6%81%AF%E9%92%A9%E5%8F%96/" title="DLL注入-第21章Windows消息钩取">
+								DLL注入-第21章Windows消息钩取			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								一月 23日, 2024				
+								二月 22日, 2023				
 							</p>
 							<p class="relate-post-content">
-								gdb与pwntools简单使用linux下安装gdb12apt-get updateapt-get install gdb
-
-安装时需要选择 y 确认继续安装
-pwntools123git clone https://github....
+								第21章 Windows消息钩取21.1 钩子Hook，不仅可以查看来往于“OS-应用程序-用户”之间的全部信息，也可以操控它们。具体方法有很多，其中最基本的是“消息钩子”（Message Hook）
+21.2 消息钩子Windows...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">				
+							<a href="/2023/02/22/DLL%E6%B3%A8%E5%85%A5-%E7%AC%AC21%E7%AB%A0Windows%E6%B6%88%E6%81%AF%E9%92%A9%E5%8F%96/" title="DLL注入-第21章Windows消息钩取">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="gdb与pwntools简单使用"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="DLL注入-第21章Windows消息钩取"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">
-								RC4加解密			
+							<a class="relate-post-title" href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">
+								idapython简单使用			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								一月 21日, 2024				
+								二月 16日, 2024				
 							</p>
 							<p class="relate-post-content">
-								RC4 加解密RC4是一种对称加密，加密过程与解密过程一样
-主要的流程都是
-
-创建大小为256、从0~1的Sbox表
-创建大小为256、重复填充密钥key的Tbox表
-利用Tbox表打乱Sbox表
-根据具体代码生成大小为256的密钥流...
+								idapython简单使用idapython由三个独立模块组成：idc，idautils 和 idaapi
+idapython的使用方法是 菜单-&gt;File-&gt;script command
+需要注意随着升级到 IDA7+，...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">				
+							<a href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="RC4加解密"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="idapython简单使用"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">
-								网鼎杯2020青龙组-singal			
+							<a class="relate-post-title" href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">
+								Python文件读写相关			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十一月 15日, 2023				
+								一月 28日, 2024				
 							</p>
 							<p class="relate-post-content">
-								[网鼎杯2020青龙组]singal
-
-这道题是道虚拟机题，有静态和动调两种方式解决
-方法一：静态分析说是静态分析，其实就是把他给的虚拟机代码和数据库复制粘贴来用，图二中的就是虚拟机的运行代码，我们要的数据库就是 v4，在图一第 6 ...
+								Python文件读写相关open() 方法open()方法用于打开文件并返回一个文件对象，允许用户进行读取、写入、追加等操作
+1file = open(file_name [, mode=&#x27;r&#x27; [ , buffe...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/11/15/%5B%E7%BD%91%E9%BC%8E%E6%9D%AF2020%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal/" title="网鼎杯2020青龙组-singal">				
+							<a href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="网鼎杯2020青龙组-singal"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python文件读写相关"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/15/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF%202023%20%E9%98%BF%E5%B0%BC%E4%BA%9A/" title="红明谷杯2023阿尼亚">
-								红明谷杯2023阿尼亚			
+							<a class="relate-post-title" href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">
+								DES加解密			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十一月 15日, 2023				
+								一月 27日, 2024				
 							</p>
 							<p class="relate-post-content">
-								红明谷杯 2023 阿尼亚下载后得到的是一个压缩包和一张阿尼亚的图片
-压缩包需要密码才能得到 flga.txt，所以我们需要根据图片得到密码
+								DES加解密DES是一种对称加密
+主要的流程是：
 
-在 stegsolve 里没有得到什么有用的
-放到 010editor 里，发现最后面有一...
+初始置换，也称 IP置换
+加密轮次，共16轮次
+逆置换，也称 FP置换
+
+1. IP置换IP置换是将输入的64位明文块进行置换和重新排列，生成新的64位数据块（不够64位需要补位填充...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/11/15/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF%202023%20%E9%98%BF%E5%B0%BC%E4%BA%9A/" title="红明谷杯2023阿尼亚">				
+							<a href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="红明谷杯2023阿尼亚"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="DES加解密"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">
-								Python base64 编解码			
+							<a class="relate-post-title" href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">
+								脱壳入门			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
+								一月 25日, 2024				
 							</p>
 							<p class="relate-post-content">
-								Python base64 编解码1. 引入 base64 模块想要在 python 中使用 base64 编解码，我们要先引入 base64 模块
-1import base64
+								脱壳入门工具脱壳简单UPXupx壳是最常见的其中一种壳，其中简单的upx壳都可以用工具去壳
 
-这个时候我们就可以使用 base64 模块中的相关功...
+在开始脱壳之前，要将需要脱壳的文件（upx壳的）拖入对应的32位或64位upx脱壳文件夹中并进入文件夹
+然后使用 upx -d 文件名 这条...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">				
+							<a href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python base64 编解码"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="脱壳入门"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构">
-								线性结构和非线性结构			
+							<a class="relate-post-title" href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习">
+								angr安装与学习			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
+								一月 24日, 2024				
 							</p>
 							<p class="relate-post-content">
-								线性结构和非线性结构▲线性结构首先，我们先了解一下线性结构：
-线性是种什么样的关系呢，简单的理解就是，有一定的联系，即数据之间是相关的。说的学术一点就是数据元素之间存在一对一的线性关系。
-而数据元素之间不一定是物理地址上的连续才是线性...
+								angr安装与学习angr安装kali安装angr
+安装virtualenv可以用pip或者apt来安装virtualenv
+12pip install virtualenvapt-get install virtualenv
+
+创建...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/10/31/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%E5%92%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="线性结构和非线性结构">				
+							<a href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/SanGuoSha2.jpeg" alt="线性结构和非线性结构"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="angr安装与学习"/>
 							</a>
 						</div>
 					</li>												

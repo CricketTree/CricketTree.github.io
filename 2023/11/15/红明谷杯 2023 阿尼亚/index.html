@@ -389,223 +389,232 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/01/21/ctfshow-re2/" title="ctfshow-re2">
-								ctfshow-re2			
+							<a class="relate-post-title" href="/2023/02/20/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%20-%20RE%20-%20MZ/" title="西湖论剑 - RE - MZ">
+								西湖论剑 - RE - MZ			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 20日, 2023				
+							</p>
+							<p class="relate-post-content">
+								西湖论剑 - RE - MZ附件只有一个MZ.exe，用ida打开可以直接看到主逻辑
+![image-20240219175702988](&#x2F;images&#x2F;西湖论剑 - RE - MZ&#x2F;image-202...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/02/20/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%20-%20RE%20-%20MZ/" title="西湖论剑 - RE - MZ">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="西湖论剑 - RE - MZ"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/01/27/ctfshow-reverse-%E7%9C%9F%E7%9A%84%E6%98%AF%E7%AD%BE%E5%88%B0/" title="ctfshow-reverse-真的是签到">
+								ctfshow-reverse-真的是签到			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 27日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ctfshow-reverse-真的是签到附件用die查发现有aspack壳，用x32dbg尝试手动去壳
+设好硬件断点
+
+F9到断点，但是没发现jmp
+
+继续执行发现又有pushad，怀疑还有一层壳
+
+尝试再设一次硬件断点去这层壳，发...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/01/27/ctfshow-reverse-%E7%9C%9F%E7%9A%84%E6%98%AF%E7%AD%BE%E5%88%B0/" title="ctfshow-reverse-真的是签到">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="ctfshow-reverse-真的是签到"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/01/27/ctfshow-reverse-%E7%BA%A2%E5%8C%85%E9%A2%98%E6%AD%A6%E7%A9%86%E9%81%97%E4%B9%A6/" title="ctfshow-reverse-红包题武穆遗书">
+								ctfshow-reverse-红包题武穆遗书			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 27日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ctfshow-reverse-红包题武穆遗书附件是一个exe，要去upx壳
+
+ida看看逻辑
+
+所以重点就是把反调试过了就可以了
+法一：nop把反调试的一个个都nop掉，在进行比较的地方下好断点，直接调试到断点处就可以找到flag了...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/01/27/ctfshow-reverse-%E7%BA%A2%E5%8C%85%E9%A2%98%E6%AD%A6%E7%A9%86%E9%81%97%E4%B9%A6/" title="ctfshow-reverse-红包题武穆遗书">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="ctfshow-reverse-红包题武穆遗书"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/01/26/ctfshow-reverse-%E9%80%86%E5%90%915/" title="ctfshow-reverse-逆向5">
+								ctfshow-reverse-逆向5			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 26日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ctfshow-reverse-逆向5下载下来的附件是一个dll和一个exe，exe直接运行是弹窗，确定弹窗后就没有了
+
+用ida打开看看exe文件，可以看到这个函数里面是有加载dll的
+
+一开始打算去直接分析dll，但是dll有加壳...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/01/26/ctfshow-reverse-%E9%80%86%E5%90%915/" title="ctfshow-reverse-逆向5">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="ctfshow-reverse-逆向5"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/01/21/ctfshow-reverse-re2/" title="ctfshow-reverse-re2">
+								ctfshow-reverse-re2			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
 								一月 21日, 2023				
 							</p>
 							<p class="relate-post-content">
-								ctfshow-re2题目包含一个可执行文件和一个文本文件
+								ctfshow-reverse-re2题目包含一个可执行文件和一个文本文件
 
 ida下可以看到enflag.txt里的内容被提取给enflag（我自己重命名成enflag了，后面的函数名、参数名我都进行过重命名）
 
-获取key进入第51行的encod...
+获取key进入第5...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/01/21/ctfshow-re2/" title="ctfshow-re2">				
+							<a href="/2023/01/21/ctfshow-reverse-re2/" title="ctfshow-reverse-re2">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="ctfshow-re2"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/YiZhiZhu.png" alt="ctfshow-reverse-re2"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3简单使用">
-								z3简单使用			
+							<a class="relate-post-title" href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">
+								idapython简单使用			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								一月 23日, 2024				
+								二月 16日, 2024				
 							</p>
 							<p class="relate-post-content">
-								Z3简单使用安装Pycharm下安装Linux下安装（没什么必要）123456git clone https://github.com/Z3Prover/z3.gitcd z3python scripts/mk_make.py cd ...
+								idapython简单使用idapython由三个独立模块组成：idc，idautils 和 idaapi
+idapython的使用方法是 菜单-&gt;File-&gt;script command
+需要注意随着升级到 IDA7+，...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3简单使用">				
+							<a href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="idapython简单使用">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="z3简单使用"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="idapython简单使用"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">
-								gdb与pwntools简单使用			
+							<a class="relate-post-title" href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">
+								Python文件读写相关			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								一月 23日, 2024				
+								一月 28日, 2024				
 							</p>
 							<p class="relate-post-content">
-								gdb与pwntools简单使用linux下安装gdb12apt-get updateapt-get install gdb
-
-安装时需要选择 y 确认继续安装
-pwntools123git clone https://github....
+								Python文件读写相关open() 方法open()方法用于打开文件并返回一个文件对象，允许用户进行读取、写入、追加等操作
+1file = open(file_name [, mode=&#x27;r&#x27; [ , buffe...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">				
+							<a href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="gdb与pwntools简单使用"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python文件读写相关"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">
-								RC4加解密			
+							<a class="relate-post-title" href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">
+								DES加解密			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								一月 21日, 2024				
+								一月 27日, 2024				
 							</p>
 							<p class="relate-post-content">
-								RC4 加解密RC4是一种对称加密，加密过程与解密过程一样
-主要的流程都是
+								DES加解密DES是一种对称加密
+主要的流程是：
 
-创建大小为256、从0~1的Sbox表
-创建大小为256、重复填充密钥key的Tbox表
-利用Tbox表打乱Sbox表
-根据具体代码生成大小为256的密钥流...
+初始置换，也称 IP置换
+加密轮次，共16轮次
+逆置换，也称 FP置换
+
+1. IP置换IP置换是将输入的64位明文块进行置换和重新排列，生成新的64位数据块（不够64位需要补位填充...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">				
+							<a href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="RC4加解密"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="DES加解密"/>
 							</a>
 						</div>
 					</li>												
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">
-								PE文件格式-PE重定位操作原理			
+							<a class="relate-post-title" href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">
+								脱壳入门			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十一月 25日, 2023				
+								一月 25日, 2024				
 							</p>
 							<p class="relate-post-content">
-								16.3 PE重定位操作原理Windows的PE装载器进行PE重定位处理时，基本的操作原理很简单
+								脱壳入门工具脱壳简单UPXupx壳是最常见的其中一种壳，其中简单的upx壳都可以用工具去壳
 
-PE重定位的基本操作原理
-
-在应用程序中查找硬编码的地址位置
-读取值后，减去ImageBase（VA-&gt;RVA）
-加上实际加载地...
+在开始脱壳之前，要将需要脱壳的文件（upx壳的）拖入对应的32位或64位upx脱壳文件夹中并进入文件夹
+然后使用 upx -d 文件名 这条...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.3PE%E9%87%8D%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86/" title="PE文件格式-PE重定位操作原理">				
+							<a href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-PE重定位操作原理"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">
-								PE文件格式-PE重定位			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 25日, 2023				
-							</p>
-							<p class="relate-post-content">
-								16.1 PE重定位向进程的虚拟内存中加载PE文件时，文件会被加载到PE头的ImageBase所指的地址处。若加载的是DLL（SYS）文件，且在ImageBase位置处已经加载了其它DLL（SYS）文件，那么PE装载器就会将其加载到其...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/25/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-16.1&2PE%E9%87%8D%E5%AE%9A%E4%BD%8D/" title="PE文件格式-PE重定位">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-PE重定位"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">
-								PE文件格式-调试notepad_upx.exe			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 23日, 2023				
-							</p>
-							<p class="relate-post-content">
-								15.1 notepad.exe的EP代码先回忆一下什么是EP
-
-EP（EntryPoint 入口点）- EP 是 Windows 可执行文件（EXE、DLL、SYS等）的代码入口点，是执行应用程序时最先执行的代码的起始位置，它依赖于...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/23/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-15%E8%B0%83%E8%AF%95notepad_upx.exe/" title="PE文件格式-调试notepad_upx.exe">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-调试notepad_upx.exe"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">
-								PE文件格式-运行时压缩			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 14日, 2023				
-							</p>
-							<p class="relate-post-content">
-								14.1 数据压缩不论哪种形态的文件（数据）都是由二进制组成的，只要使用合适的压缩算法，就能缩减其大小。经过压缩的文件若能100%恢复，则称该压缩为“无损压缩”；若不能，则称为“有损压缩”
-14.1.1 无损压缩无损压缩用来缩减文件（...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/11/14/PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-14%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8E%8B%E7%BC%A9/" title="PE文件格式-运行时压缩">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/RiceShower.png" alt="PE文件格式-运行时压缩"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">
-								Python base64 编解码			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 31日, 2023				
-							</p>
-							<p class="relate-post-content">
-								Python base64 编解码1. 引入 base64 模块想要在 python 中使用 base64 编解码，我们要先引入 base64 模块
-1import base64
-
-这个时候我们就可以使用 base64 模块中的相关功...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/10/31/Python%20base64%20%E7%BC%96%E8%A7%A3%E7%A0%81/" title="Python base64 编解码">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python base64 编解码"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="脱壳入门"/>
 							</a>
 						</div>
 					</li>												

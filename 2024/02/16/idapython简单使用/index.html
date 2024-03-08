@@ -1,0 +1,1267 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      idapython简单使用 | This is Title
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/20210716212924_a036b.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: true,
+	  appId: 'AnkeGlXrMetjoWeeqeBWI3HV-gzGzoHsz',
+	  appKey: 'mysij0IgTp8H4xHv7wHCo1XN',
+	  serverURLs: '' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「idapython简单使用」
+		
+	</p>
+
+	
+	
+		<span id="star-button" rel="unlike">
+			<i class="icon-heart"></i>
+		</span>
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" itemprop="url">
+		idapython简单使用
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" itemprop="url">
+		<time datetime="2024-02-16T03:26:22.000Z" itemprop="dateUpdated">
+	  		2024-02-19
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+	
+    <span class="leancloud_visitors" id="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/_visitors" data-url="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-title="idapython简单使用">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">1</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/_likes" data-url="/2024/02/16/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-title="idapython简单使用" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h1 id="idapython简单使用"><a href="#idapython简单使用" class="headerlink" title="idapython简单使用"></a>idapython简单使用</h1><p>idapython由三个独立模块组成：idc，idautils 和 idaapi</p>
+<p>idapython的使用方法是 菜单-&gt;File-&gt;script command</p>
+<h2 id="需要注意"><a href="#需要注意" class="headerlink" title="需要注意"></a>需要注意</h2><p>随着升级到 IDA7+，使用十六进制打印地址的用户将不再有可点击的地址。现在的地址是long而不是int。如果你需要打印的地址是可点击的，请使用 字符串格式化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;ea = idc.get_screen_ea()</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="built_in">hex</span>(ea))</span><br><span class="line"><span class="number">0x407e3bL</span>	<span class="comment">#不可点击的</span></span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x&quot;</span>%ea)</span><br><span class="line"><span class="number">0x407e3b</span>	<span class="comment">#可点击的</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="获取光标的地址：here"><a href="#获取光标的地址：here" class="headerlink" title="获取光标的地址：here()"></a>获取光标的地址：here()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idc.get_screen_ea()</span><br><span class="line">here()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120151408.png" alt="image-20240216120151408"></p>
+<h3 id="获取当前基本块的范围：idc-get-inf-attr"><a href="#获取当前基本块的范围：idc-get-inf-attr" class="headerlink" title="获取当前基本块的范围：idc.get_inf_attr()"></a>获取当前基本块的范围：idc.get_inf_attr()</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idc.get_inf_attr(INF_MIN_EA)</span><br><span class="line">idc.get_inf_attr(INF_MAX_EA)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120218754.png" alt="image-20240216120218754"></p>
+<h3 id="获取当前地址所在段名称：idc-get-segm-name-ea"><a href="#获取当前地址所在段名称：idc-get-segm-name-ea" class="headerlink" title="获取当前地址所在段名称：idc.get_segm_name(ea)"></a>获取当前地址所在段名称：idc.get_segm_name(ea)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idc.get_segm_name(ea)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120232569.png" alt="image-20240216120232569"></p>
+<h3 id="获取当前地址反汇编语句：idc-generate-disasm-line-ea-0"><a href="#获取当前地址反汇编语句：idc-generate-disasm-line-ea-0" class="headerlink" title="获取当前地址反汇编语句：idc.generate_disasm_line(ea,0)"></a>获取当前地址反汇编语句：idc.generate_disasm_line(ea,0)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idc.generate_disasm_line(ea,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120500313.png" alt="image-20240216120500313"></p>
+<h3 id="获取当前反汇编语句操作符：idc-print-insn-mnem-ea"><a href="#获取当前反汇编语句操作符：idc-print-insn-mnem-ea" class="headerlink" title="获取当前反汇编语句操作符：idc.print_insn_mnem(ea)"></a>获取当前反汇编语句操作符：idc.print_insn_mnem(ea)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idc.print_insn_mnem(ea)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120518685.png" alt="image-20240216120518685"></p>
+<h3 id="获取当前反汇编语句操作数：idc-print-operand-ea-n"><a href="#获取当前反汇编语句操作数：idc-print-operand-ea-n" class="headerlink" title="获取当前反汇编语句操作数：idc.print_operand(ea,n)"></a>获取当前反汇编语句操作数：idc.print_operand(ea,n)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idc.print_operand(ea,<span class="number">0</span>)		<span class="comment">#第一个操作数</span></span><br><span class="line">idc.print_operand(ea,<span class="number">1</span>)		<span class="comment">#第二个操作数</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120556267.png" alt="image-20240216120556267"></p>
+<h3 id="验证一个地址是否存在：BADADDR"><a href="#验证一个地址是否存在：BADADDR" class="headerlink" title="验证一个地址是否存在：BADADDR"></a>验证一个地址是否存在：BADADDR</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idaapi.BADADDR		<span class="comment">#idc.BADADDR、BADADDR都可以</span></span><br><span class="line"><span class="keyword">if</span> BADADDR != here(): <span class="built_in">print</span>(<span class="string">&quot;valid address&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216120111635.png" alt="image-20240216120111635"></p>
+<h3 id="遍历所有段"><a href="#遍历所有段" class="headerlink" title="遍历所有段"></a>遍历所有段</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> seg <span class="keyword">in</span> idautils.Segments():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;%s, 0x%x, 0x%x&quot;</span> % (idc.get_segm_name(seg), idc.get_segm_start(seg), idc.get_segm_end(seg)))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216121903169.png" alt="image-20240216121903169"></p>
+<h3 id="寻找下一个段：idc-get-next-seg-ea"><a href="#寻找下一个段：idc-get-next-seg-ea" class="headerlink" title="寻找下一个段：idc.get_next_seg(ea)"></a>寻找下一个段：idc.get_next_seg(ea)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idc.get_next_seg(ea) <span class="comment">#返回的是下一个段中的任意一个地址</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216123037868.png" alt="image-20240216123037868"></p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="遍历所有函数"><a href="#遍历所有函数" class="headerlink" title="遍历所有函数"></a>遍历所有函数</h3><p>idautils.Functions()返回一个已知函数的列表。该列表包含每个函数的起始地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idautils</span><br><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;0x%x, %s&quot;</span> % (func, idc.get_func_name(func)))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216140857140.png" alt="image-20240216140857140"></p>
+<h3 id="处理函数的API：idaapi-get-func-ea"><a href="#处理函数的API：idaapi-get-func-ea" class="headerlink" title="处理函数的API：idaapi.get_func(ea)"></a>处理函数的API：idaapi.get_func(ea)</h3><p>idapython中包含了一大套用于处理函数的api</p>
+<p>idaapi.get_func(ea)返回ida_funcs.func_t的一个类</p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216141903815.png" alt="image-20240216141903815"></p>
+<p>有时并不知道如何使用一个由函数调用返回的类，在python中探索类的一个有用的命令是</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span>(<span class="keyword">class</span>)		<span class="comment">#class是需要探索的类名</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216142154076.png" alt="image-20240216142154076"></p>
+<p>从输出中我们可以看到函数 start_ea 和 end_ea，这是用来访问函数的开始和结束的（需要注意的是，结束地址不是最后一条指令中的最后一个地址，而是该指令之后的一个字节）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#利用函数类查看函数边界</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Start: 0x%x, End: 0x%x&quot;</span> % (func.start_ea,func.end_ea))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216143036405.png" alt="image-20240216143036405"></p>
+<p>这些属性只适用于当前函数，如果我们想访问周围的函数，我们可以用以下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idc.get_next_func(ea)	<span class="comment">#ea所在函数的后一个函数</span></span><br><span class="line">idc.get_prev_func(ea)	<span class="comment">#ea所在函数的前一个函数</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>枚举函数的一个注意事项是，它只在IDA已经确定了的代码块作为一个函数。在代码块被标记为函数之前，它在函数枚举过程中被跳过。函数枚举过程中被跳过。没有被标记为函数的代码在图例中被标记为红色(在IDA的GUI中顶部的彩色条)。这些代码可以手动修复，或者使用函数自动修复 idc.create_insn(ea)</p>
+</blockquote>
+<h3 id="另一种查找函数边界的方式：idc-get-func-attr-ea-attr"><a href="#另一种查找函数边界的方式：idc-get-func-attr-ea-attr" class="headerlink" title="另一种查找函数边界的方式：idc.get_func_attr(ea, attr)"></a>另一种查找函数边界的方式：idc.get_func_attr(ea, attr)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">start = idc.get_func_attr(ea, FUNCATTR_START)</span><br><span class="line">end = idc.get_func_attr(ea, FUNCATTR_END)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Start: 0x%x, End: 0x%x&quot;</span> % (start,end))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216143552371.png" alt="image-20240216143552371"></p>
+<h3 id="打印函数反汇编语句"><a href="#打印函数反汇编语句" class="headerlink" title="打印函数反汇编语句"></a>打印函数反汇编语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">start = idc.get_func_attr(ea, FUNCATTR_START)</span><br><span class="line">end = idc.get_func_attr(ea, FUNCATTR_END)</span><br><span class="line">cur_addr = start</span><br><span class="line"><span class="keyword">while</span> cur_addr &lt;= end:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (cur_addr, idc.generate_disasm_line(cur_addr,<span class="number">0</span>)))</span><br><span class="line">	cur_addr = idc.next_head(cur_addr, end)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216144007253.png" alt="image-20240216144007253"></p>
+<blockquote>
+<p>我们使用 idc.next_head() 来获取下一条指令的开始，并继续下去直到这个函数结束。</p>
+<p>这种方法有一个缺陷，就是它依赖于指令被包含在边界内。如果有一个跳转到比函数结束更高的地址，那么循环就会过早的退出。这种类型的跳转在混淆技术中是很常见的。所以由于边界是不可靠的，最好的做法是调用 idautils.FuncItems(ea) 在一个函数中进行地址循环，将在下文详细介绍</p>
+</blockquote>
+<h3 id="另一个收集函数信息的函数：idc-get-func-attr-ea-FUNCATTR-FLAGS"><a href="#另一个收集函数信息的函数：idc-get-func-attr-ea-FUNCATTR-FLAGS" class="headerlink" title="另一个收集函数信息的函数：idc.get_func_attr(ea, FUNCATTR_FLAGS)"></a>另一个收集函数信息的函数：idc.get_func_attr(ea, FUNCATTR_FLAGS)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idc.get_func_attr(ea, FUNCATTR_FLAGS)</span><br></pre></td></tr></table></figure>
+
+<p>FUNCATTR_FLAGS 可以用于检索关于一个函数的信息，比如它是否是库代码，或者该函数是否不返回一个值。一个函数有九种可能的flags。如果我们想列举所有函数的所有flags，我们可以使用所有函数的所有flags</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idautils</span><br><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    flags = idc.get_func_attr(func,FUNCATTR_FLAGS)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_NORET:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_NORET&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_FAR:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_FAR&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_LIB:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_LIB&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_STATIC:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_STATIC&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_FRAME:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_FRAME&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_USERFAR:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_USERFAR&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_HIDDEN:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_HIDDEN&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_THUNK:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_THUNK&quot;</span> % func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_LIB:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;0x%x FUNC_BOTTOMBP&quot;</span> % func)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216145841986.png" alt="image-20240216145841986"></p>
+<h3 id="函数flags"><a href="#函数flags" class="headerlink" title="函数flags"></a>函数flags</h3><p>这些标志中有些是很常见的，而其他的则很罕见，需要注意的是一个函数可以由多个flags组成。下面来了解一下九种flags：</p>
+<h4 id="FUNC-NORET"><a href="#FUNC-NORET" class="headerlink" title="FUNC_NORET"></a>FUNC_NORET</h4><p>请注意，ret或leave不是最后的指令。函数是否有返回表示1</p>
+<h4 id="FUNC-FAR"><a href="#FUNC-FAR" class="headerlink" title="FUNC_FAR"></a>FUNC_FAR</h4><p>这个标志非常少的出现,标志程序是否使用分段内存,它的值为 2</p>
+<h4 id="FUNC-USERFAR"><a href="#FUNC-USERFAR" class="headerlink" title="FUNC_USERFAR"></a>FUNC_USERFAR</h4><p>这个标志也非常少见,也很少有文档,HexRays 把它描述为“user has specified far-nessof the function”,它的值是 32</p>
+<h4 id="FUNC-LIB"><a href="#FUNC-LIB" class="headerlink" title="FUNC_LIB"></a>FUNC_LIB</h4><p>这个标志是用来寻找库代码的。识别库代码是非常有用的，因为它是在做分析时通常可以忽略的代码。其内部表示为4的整数值</p>
+<h4 id="FUNC-STATIC"><a href="#FUNC-STATIC" class="headerlink" title="FUNC_STATIC"></a>FUNC_STATIC</h4><p>这个标志用于识别具有基于静态ebp框架的库函数</p>
+<h4 id="FUNC-FRAME"><a href="#FUNC-FRAME" class="headerlink" title="FUNC_FRAME"></a>FUNC_FRAME</h4><p>这个标志表示该函数使用了一个帧指针ebp。使用帧指针的函数通常 以标准函数的序言开始，用于设置堆栈框架</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.text:1A716697 push ebp</span><br><span class="line">.text:1A716698 mov ebp, esp</span><br><span class="line">.text:1A71669A sub esp, 5Ch</span><br></pre></td></tr></table></figure>
+
+<h4 id="FUNC-BOTTOMBP"><a href="#FUNC-BOTTOMBP" class="headerlink" title="FUNC_BOTTOMBP"></a>FUNC_BOTTOMBP</h4><p>和FUNC_FRAM一样，这个标志也是用来跟踪帧指针的。它可以识别出基础指针指向堆栈指针的函数</p>
+<h4 id="FUNC-HIDDEN"><a href="#FUNC-HIDDEN" class="headerlink" title="FUNC_HIDDEN"></a>FUNC_HIDDEN</h4><p>带有FUNC_HIDDEN标志的函数意味着它们是隐藏的，需要展开才能看到。如果我们进入一个被标记为隐藏的函数的地址，它将自动被 展开</p>
+<h4 id="FUNC-THUNK"><a href="#FUNC-THUNK" class="headerlink" title="FUNC_THUNK"></a>FUNC_THUNK</h4><p>表示这个函数是否是一个 thunk 函数，thunk 函数表示的是一个简单的跳转函数</p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216151041993.png" alt="image-20240216151041993"></p>
+<h3 id="定义一个函数：idc-add-func-StartEA-EndEA"><a href="#定义一个函数：idc-add-func-StartEA-EndEA" class="headerlink" title="定义一个函数：idc.add_func(StartEA, EndEA)"></a>定义一个函数：idc.add_func(StartEA, EndEA)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idc.add_func(StartEA, EndEA)</span><br></pre></td></tr></table></figure>
+
+<p>idc.add_func(StartEA, EndEA) 的第一个参数是函数的起始地址，第二个是函数的结束地址。在许多情况下，结束地址是不需要的，IDA会自动识别出函数的结束</p>
+<h3 id="提取函数的参数"><a href="#提取函数的参数" class="headerlink" title="提取函数的参数"></a>提取函数的参数</h3><p>在idapython中，提取函数参数并不总是一个简单的任务，在许多情况下，需要确定一个函数的调用约定，并且必须使用反向追踪或类似的技术来手动解析参数。由于有大量的调用约定，这并不总是可行的通用实现。</p>
+<p>idapython包含一个名为idaapi.get_arg_addrs(ea)的函数，可以用来获取参数的地址，如果ida能够识别出被调用函数的原型。虽然这种调用并不总是存在，但是它在调用api或64位代码中可以经常看到，例如下面的汇编中，我们可以看到API SendMessage有四个参数传递给它：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.text:000000014001B5FF js loc_14001B72B</span><br><span class="line">.text:000000014001B605 mov rcx, cs:qword_14002D368 ; hWnd</span><br><span class="line">.text:000000014001B60C xor r9d, r9d ; lParam</span><br><span class="line">.text:000000014001B60F xor r8d, r8d ; wParam</span><br><span class="line">.text:000000014001B612 mov edx, 0BDh ; &#x27;½&#x27; ; Msg</span><br><span class="line">.text:000000014001B617 call cs:SendMessageW</span><br><span class="line">.text:000000014001B61D xor esi, esi</span><br></pre></td></tr></table></figure>
+
+<p>通过idaapi.get_arg_addrs(ea)可以得到参数地址的列表</p>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><p>idautils.FuncItem(here()) 返回 func_item_iterator_t * 类型的数据，用list转换格式得到指令地址的列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idautils</span><br><span class="line">dism_addr = <span class="built_in">list</span>(idautils.FuncItems(here()))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(dism_addr))</span><br><span class="line"><span class="built_in">print</span>(dism_addr)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> dism_addr:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (line, idc.generate_disasm_line(line,<span class="number">0</span>)))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216164327385.png" alt="image-20240216164327385"></p>
+<p>idautils.FuncItems(ea)返回一个迭代器类型，但被转换为一个列表。该列表包含了每个指令的起始 顺序的每条指令的起始地址</p>
+<blockquote>
+<p>让我们来看看一个有用的例子。有时当逆向打包的代码时，只知道动态调用发生的地方是有用的。一个动态调用是指对一个寄存器的操作数的调用或跳转，如调用eax或jmp edi</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;</span><br><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    flags = idc.get_func_attr(func, FUNCATTR_FLAGS)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_LIB <span class="keyword">or</span> flags &amp; FUNC_THUNK:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    dism_addr = <span class="built_in">list</span>(idautils.FuncItems(func))</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> dism_addr:</span><br><span class="line">        m = idc.print_insn_mnem(line)</span><br><span class="line">        <span class="keyword">if</span> m == <span class="string">&#x27;call&#x27;</span> <span class="keyword">or</span> m == <span class="string">&#x27;jmp&#x27;</span>:</span><br><span class="line">            op = idc.get_operand_type(line, <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> op == o_reg:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (line, idc.generate_disasm_line(line, <span class="number">0</span>)))</span><br><span class="line">Python&gt;</span><br><span class="line"><span class="number">0x43ebde</span> call eax ; VirtualProtect</span><br></pre></td></tr></table></figure>
+
+<p>对于每个函数，我们通过调用 idc.get_func_attr(ea, FUNCATTR_FLAGS) 函数的标志，如果该函数是库代码或thunk函数，则该函数被跳过。</p>
+<p>接下来，我们调用 idautils.FuncItems(ea) 来获得该函数中的所有地址。</p>
+<p>我们用for循环的方式循环浏览这个列表。由于我们只对调用和jmp指令感兴趣，我们需要通过调用 idc.print_insn_mnem(ea) 获得操作符。然后我们用一个简单的字符串比较来检查操作符。</p>
+<p>如果操作符是跳转或调用，我们通过调用 idc.get_operand_type(ea, n) 得到操作数类型。这个函数返回一个整数，内部称为op_t.type。这个值可以用来确定操作数是否是一个寄存器、内存引用等。如果是，我们就打印这一行</p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216170513126.png" alt="image-20240216170513126"></p>
+<p>除了使用字符串比较（比较jmp和call），还可以使用 idaapi.decode_insn(insn_t, ea) 对指令进行解码，其中insn_t是一个来自ida_ua的insn_t类，该类是调用ida_ua.insn_t()创建。示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;</span><br><span class="line">JMPS = [idaapi.NN_jmp, idaapi.NN_jmpfi, idaapi.NN_jmpni]</span><br><span class="line">CALLS = [idaapi.NN_call, idaapi.NN_callfi, idaapi.NN_callni]</span><br><span class="line">for func in idautils.Functions():</span><br><span class="line">    flags = idc.get_func_attr(func, FUNCATTR_FLAGS)</span><br><span class="line">    if flags &amp; FUNC_LIB or flags &amp; FUNC_THUNK:</span><br><span class="line">        continue</span><br><span class="line">    dism_addr = list(idautils.FuncItems(func))</span><br><span class="line">    for line in dism_addr:</span><br><span class="line">        ins = ida_ua.insn_t()</span><br><span class="line">        idaapi.decode_insn(ins, line)</span><br><span class="line">        if ins.itype in CALLS or ins.itype in JMPS:</span><br><span class="line">            if ins.Op1.type == o_reg: </span><br><span class="line">                print(&quot;0x%x %s&quot; % (line, idc.generate_disasm_line(line, 0)))</span><br><span class="line">Python&gt;</span><br><span class="line">0x43ebde call eax ; VirtualProtect</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216171535313.png" alt="image-20240216171535313"></p>
+<p>输出结果与前面的例子相同。前两行将jmp和call的常量放入两个列表中。由于我们不是在处理助记符的字符串表示法，我们需要认识到，一个助记符（如call或jmp）可能有多个值。例如 例如，jmp可以用idaapi.NN_jmp表示跳转，idaapi.NN_jmpfi表示间接远端跳转，或者idaapi.NN_jmpni表示间接近跳。X86和X64指令类型都 以NN开头。为了探索所有1700多种指令类型，我们可以执行[name for name in dir(idaapi) if “NN” in name] 的命令行，或者在IDA的SDK文件allins.hpp中查看它们。</p>
+</blockquote>
+<p>我们可以用len()来获取一个函数的行数或者指令数，不过迭代器中没有len()这一对象，我们需要先将其转换成列表类型</p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240216165643949.png" alt="image-20240216165643949"></p>
+<h3 id="操作符类型"><a href="#操作符类型" class="headerlink" title="操作符类型"></a>操作符类型</h3><p>idc.get_operand_type(ea,n)获取对应地址的操作符类型</p>
+<h4 id="o-void"><a href="#o-void" class="headerlink" title="o_void"></a>o_void</h4><p>如果一条指令没有操作符，比如 retn</p>
+<p>返回 0</p>
+<h4 id="o-reg"><a href="#o-reg" class="headerlink" title="o_reg"></a>o_reg</h4><p>通用寄存器，比如 eax、edi等</p>
+<p>返回 1</p>
+<h4 id="o-mem"><a href="#o-mem" class="headerlink" title="o_mem"></a>o_mem</h4><p>如果一个操作数是直接的内存引用，则返回这种类型。比如 ds:dword_A152B8</p>
+<p>这个值在内部表示为2，这个类型对于寻找对DATA的引用很有用</p>
+<h4 id="o-phrase"><a href="#o-phrase" class="headerlink" title="o_phrase"></a>o_phrase</h4><p>如果操作数包括一个基数寄存器 和&#x2F;或 一个索引寄存器，则返回这个操作数。比如 [edi+ecx]</p>
+<p>这个值内部表示为3</p>
+<h4 id="o-displ"><a href="#o-displ" class="headerlink" title="o_displ"></a>o_displ</h4><p>如果操作数由寄存器和一个位移值组成，则返回该操作数。比如 [edi+18h]</p>
+<p>该位移是一个整数值，如0x18。它通常出现在指令访问结构中的值时。结构中的值时常见。在内部，它被表示为一个4的值</p>
+<h4 id="o-imm"><a href="#o-imm" class="headerlink" title="o_imm"></a>o_imm</h4><p>立即数</p>
+<p>返回 5</p>
+<h4 id="o-far"><a href="#o-far" class="headerlink" title="o_far"></a>o_far</h4><p>这个操作数在反转x86或x86_64时不常见。它被用来寻找正在访问远端地址的操作数</p>
+<p>它在内部被表示为6</p>
+<h4 id="o-near"><a href="#o-near" class="headerlink" title="o_near"></a>o_near</h4><p>这个操作数在反转x86或x86_64时不常见。它被用来寻找正在访问近端地址的操作数</p>
+<p>它在内部被表示为7</p>
+<h3 id="基本块"><a href="#基本块" class="headerlink" title="基本块"></a>基本块</h3><p>一个基本块是一个直线代码序列，它没有分支，有一个单一入口点和一个退出点。IDA在使用函数的图形反汇编视图时，通常可以看到基本块的表示。函数的图解视图时，通常会看到基本块的表示。使用基本块进行分析的一些明显的例子是识别循环或控制流混淆、流程的混淆。当一个基本块将控制权转移到另一个块时，下一个块被称为 继承者，而之前的块被称为 前者。</p>
+<p>下面的流程图是一个函数，用单字节XOR来解密一个字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ea = <span class="number">0x0401050</span></span><br><span class="line">f = idaapi.get_func(ea)</span><br><span class="line">fc = idaapi.FlowChart(f, flags=idaapi.FC_PREDS)</span><br><span class="line"><span class="keyword">for</span> block <span class="keyword">in</span> fc:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;ID: %i Start: 0x%x End: 0x%x&quot;</span> % (block.<span class="built_in">id</span>, block.start_ea, block.end_ea)) </span><br><span class="line">	<span class="keyword">if</span> block.start_ea &lt;= ea &lt; block.end_ea:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; Basic Block selected&quot;</span>)</span><br><span class="line">	successor = block.succs()</span><br><span class="line">    <span class="keyword">for</span> addr <span class="keyword">in</span> successor:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; Successor: 0x%x&quot;</span> % addr.start_ea)</span><br><span class="line">	pre = block.preds()</span><br><span class="line">    <span class="keyword">for</span> addr <span class="keyword">in</span> pre:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; Predecessor: 0x%x&quot;</span> % addr.end_ea)</span><br><span class="line">	<span class="keyword">if</span> ida_gdl.is_ret_block(block.<span class="built_in">type</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; Return Block&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>第一条指令将单字节的XOR偏移量分配给变量ea</p>
+<p>函数 idaapi.FlowChart(f&#x3D;None, bounds&#x3D;None, flags&#x3D;0) 需要一个 func_t 的类作为第一个参数，为了得到这个类，我们调用 idaapi.get_func(ea) ；参数 bounds 可以是一个元组，第一项是起始地址，第二项是结束地址，bounds&#x3D;(start, end) ；在IDA 7.4中，第三个参数flags必须被设置为 idaapi.FC_PREDS</p>
+<p>变量fc包含一个 ida_gdl.FlowChart对象，可以通过循环来迭代所有的块</p>
+<p>每个区块都包含以下属性：</p>
+<ul>
+<li><code>id</code>：每一个函数中每一块都有独立的编号，从0开始</li>
+<li><code>type</code>：类型描述<ul>
+<li><code>fcb_normal</code>：代表正常的块，表示0</li>
+<li><code>fcb_indjump</code>：以简介跳转结尾的块，表示1</li>
+<li><code>fcb_ret</code>：返回块，表示2（ida_gdl.is_ret_block(block.type)也可以判断该块是否是返回块）</li>
+<li><code>fcb_cndret</code>：条件返回块，表示3</li>
+<li><code>fcb_noret</code>：无返回的块，表示4</li>
+<li><code>fcb_enoret</code>：一个没有返回的块，它不属于一个函数，并且有一个内部值5</li>
+<li><code>fcb_extern</code>：外部正常块，内部值6</li>
+<li><code>fcb_error</code>：一个通过函数尾端传递执行的块，内部值7</li>
+</ul>
+</li>
+<li><code>start_ea</code>：基本块的起始地址</li>
+<li><code>end_ea</code>：基本块的结束地址（基本块的结束地址不是最后一个指令地址，而是它后面的偏移量）</li>
+<li><code>preds</code>：返回前驱地址的生成器的一个函数</li>
+<li><code>succs</code>：返回一个包含所有后续地址的生成器的一个函数</li>
+</ul>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>暂无</p>
+<h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><p>暂无</p>
+<h3 id="Xrefs交叉引用"><a href="#Xrefs交叉引用" class="headerlink" title="Xrefs交叉引用"></a>Xrefs交叉引用</h3><p>能够找到数据或代码的交叉引用（又称Xrefs）是一项常见的分析任务。定位Xrefs是很重要的，因为它们提供了某些数据被使用的位置或一个函数被调用的位置。</p>
+<p>例如，我们想找到WriteFile被调用的所有地址，通过使用Xrefs，我们所需要做的就是通过名称定位WriteFile的地址，然后找到所有与之相关的Xrefs</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;wf_addr = idc.get_name_ea_simple(<span class="string">&quot;WriteFile&quot;</span>)</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (wf_addr, idc.generate_disasm_line(wf_addr, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x1000e1b8</span> extrn WriteFile:dword</span><br><span class="line">Python&gt;<span class="keyword">for</span> addr <span class="keyword">in</span> idautils.CodeRefsTo(wf_addr, <span class="number">0</span>):</span><br><span class="line">			<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x10004932</span> call ds:WriteFile</span><br><span class="line"><span class="number">0x10005c38</span> call ds:WriteFile</span><br><span class="line"><span class="number">0x10007458</span> call ds:WriteFile</span><br></pre></td></tr></table></figure>
+
+<p>在第一行，我们通过使用 idc.get_name_ea_simple(str) 得到 API WriteFile 的地址。这个函数返回API的地址。我们打印出 WriteFile 的地址和它的字符串表示</p>
+<p>然后通过调用 idautils.CodeRefs<strong>To</strong>(ea, flow) 循环浏览所有代码交叉引用。它返回一个可以循环使用的迭代器。其中 ea 是我们希望交叉引用的地址；参数flow是一个bool，它用于指定是否遵循正常的代码流</p>
+<blockquote>
+<p>关于 idc.get_name_ea_simple(str) 的使用，有一点要注意。IDB中所有重命名的函数和API都可以通过调用idautils.Names()访问，这个函数返回一个迭代器对象，可以通过循环来打印或访问这些名称。每个命名的项目是一个(ea, str_name)的元组</p>
+</blockquote>
+<p>如果我们想获得代码被引用的位置，我们将使用idautisl.CodeRefs<strong>From</strong>(ea,flow)</p>
+<blockquote>
+<p>使用 idautils.CodeRefsTo(ea, flow) 的一个局限性是，动态导入的API，然后手动重命名的API，并不代表它的名字。然后手动重命名的API，不会显示为代码交叉引用。稍后我们将描述一个通用的技术来获取所有的交叉引用</p>
+</blockquote>
+<p>如果我们想搜索<strong>数据</strong>的交叉引用，我们可以使用 idautils.<strong>Data</strong>RefsTo(e) 或 idautils.<strong>Data</strong>RefsFrom(ea)</p>
+<ul>
+<li><code>idautils.DataRefsFrom(ea)</code>	获取当前指令中包含的偏移地址</li>
+<li><code>idautils.DataRefsTo(ea)</code>	获取到当前偏移的指令的地址</li>
+<li><code>idautils.CodeRefsFrom(ea,flow)</code>	获取该地址指令引用到的地址</li>
+<li><code>idautils.CodeRefsTo(ea,flow)</code>	获取到该地址的指令的地址</li>
+</ul>
+<p>代码和数据的不同用法会让人有些困惑。让我们来描述一个更通用的技术，这种方法可以通过调用一个单一的函数</p>
+<p>我们可以使用 idautils.XrefsTo(ea, flags&#x3D;0) 获得一个地址的所有引用对象。 并通过调用 idautils.XrefsFrom(ea, flags&#x3D;0) 获得一个地址的所有跳转的地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (ea, idc.generate_disasm_line(ea, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x1000eee0</span> unicode <span class="number">0</span>, &lt;Path&gt;,<span class="number">0</span></span><br><span class="line">Python&gt;<span class="keyword">for</span> xref <span class="keyword">in</span> idautils.XrefsTo(ea, <span class="number">1</span>):</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;%i %s 0x%x 0x%x %i&quot;</span> % (xref.<span class="built_in">type</span>, idautils.XrefTypeName(xref.<span class="built_in">type</span>), </span><br><span class="line">xref.frm, xref.to, xref.iscode))</span><br><span class="line">Python&gt;</span><br><span class="line"><span class="number">1</span> Data_Offset <span class="number">0x1000ac0d</span> <span class="number">0x1000eee0</span> <span class="number">0</span></span><br><span class="line">Python&gt;&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (xref.frm, idc.generate_disasm_line(xref.frm, <span class="number">0</span>))</span><br><span class="line"><span class="number">0x1000ac0d</span> push offset KeyName ; <span class="string">&quot;Path&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>第一行显示我们的地址和一个名为 “Path “的字符串。我们使用idautils.XrefsTo(ea, 1)来获取所有与该字符串的交叉引用</p>
+<p>然后我们使用 xref.type 来打印 xrefs类型值。idautils.XrefTypeName(xref.type) 用来打印这种类型的字符串表示</p>
+<p>xref.frm表示当前标识符引用其他标识符的地方，xref.to表示表示当前标识符被其他标识符引用的地方，xref.iscode用于确定引用的目标是否是代码。</p>
+<p>我们把idautils.XrefsTo(ea, 1)的标志设置为值1。如果这个标志是0，那么任何交叉引用都会被显示出来（交叉引用不一定是 分支指令造成的。它们也可以由正常的普通代码流引起。如果我们把 标志为1，普通代码流引用类型将不会被添加）</p>
+<p>其中xref.type和idautils.XrefTypeName(xref.type)如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> = <span class="string">&#x27;Data_Unknown&#x27;</span></span><br><span class="line"><span class="number">1</span> = <span class="string">&#x27;Data_Offset&#x27;</span></span><br><span class="line"><span class="number">2</span> = <span class="string">&#x27;Data_Write&#x27;</span></span><br><span class="line"><span class="number">3</span> = <span class="string">&#x27;Data_Read&#x27;</span></span><br><span class="line"><span class="number">4</span> = <span class="string">&#x27;Data_Text&#x27;</span></span><br><span class="line"><span class="number">5</span> = <span class="string">&#x27;Data_Informational&#x27;</span></span><br><span class="line"><span class="number">16</span> = <span class="string">&#x27;Code_Far_Call&#x27;</span></span><br><span class="line"><span class="number">17</span> = <span class="string">&#x27;Code_Near_Call&#x27;</span></span><br><span class="line"><span class="number">18</span> = <span class="string">&#x27;Code_Far_Jump&#x27;</span></span><br><span class="line"><span class="number">19</span> = <span class="string">&#x27;Code_Near_Jump&#x27;</span></span><br><span class="line"><span class="number">20</span> = <span class="string">&#x27;Code_User&#x27;</span></span><br><span class="line"><span class="number">21</span> = <span class="string">&#x27;Ordinary_Flow&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p>我们已经通过迭代所有已知的函数或指令进行了一些基本搜索。这很有用，但有时我们需要搜索特定的字节</p>
+<h4 id="字节查找：ida-search-find-binary"><a href="#字节查找：ida-search-find-binary" class="headerlink" title="字节查找：ida_search.find_binary"></a>字节查找：ida_search.find_binary</h4><p>如0x55 0x8B 0xEC，这个字节模式是经典的函数prologue push ebp，mov ebp, esp</p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240217150733999.png" alt="image-20240217150733999"></p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240217150716392.png" alt="image-20240217150716392"></p>
+<p>为了搜索字节或二进制模式，我们可以使用 ida_search.find_binary(start, end, searchstr, radix, sflag)</p>
+<p>其中 <code>start</code> 和 <code>end</code> 定义了我们想要搜索的范围</p>
+<p><code>searchstr</code> 是我们正在搜索的模式，<code>radix</code>在编写处理器模块时使用，我们将其填充16就好（这个我们不研究，需要深入了解的阅读Chris Eagle的The IDA Pro Book中的第19章）</p>
+<p><code>sflag</code>是方向或条件。有几种不同类型的标志，如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SEARCH_UP = <span class="number">0</span></span><br><span class="line">SEARCH_DOWN = <span class="number">1</span></span><br><span class="line">SEARCH_NEXT = <span class="number">2</span></span><br><span class="line">SEARCH_CASE = <span class="number">4</span></span><br><span class="line">SEARCH_REGEX = <span class="number">8</span></span><br><span class="line">SEARCH_NOBRK = <span class="number">16</span></span><br><span class="line">SEARCH_NOSHOW = <span class="number">32</span></span><br><span class="line">SEARCH_IDENT = <span class="number">128</span></span><br><span class="line">SEARCH_BRK = <span class="number">256</span></span><br></pre></td></tr></table></figure>
+
+<p>我们只需要知道最常用的那几个</p>
+<ul>
+<li>SEARCH_UP和SEARCH_DOWN用于选择我们希望搜索遵循的方向（升序or降序）</li>
+<li>SEARCH_NEXT用于获取下一个找到的对象</li>
+<li>SEARCH_CASE用于指定大小写敏感性</li>
+<li>SEARCH_NOSHOW不显示搜索进度</li>
+</ul>
+<blockquote>
+<p>IDA以前的版本包含一个SEARCH_UNICODE的sflag来搜索Unicode字符串。在搜索字符时不再需要这个标志，因为IDA在默认情况下同时搜索ASCII和Unicode。</p>
+</blockquote>
+<p>接下来我们来看看下面这个实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">pattern = <span class="string">&#x27;55 8B EC&#x27;</span></span><br><span class="line">addr = idc.get_inf_attr(INF_MIN_EA)</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">5</span>):</span><br><span class="line">	addr = ida_search.find_binary(addr, idc.BADADDR, pattern, <span class="number">16</span>,ida_search.SEARCH_DOWN)</span><br><span class="line">	<span class="keyword">if</span> addr != idc.BADADDR:</span><br><span class="line"> 		<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>)))</span><br><span class="line">Python&gt;</span><br><span class="line"><span class="number">0x401000</span> push ebp</span><br><span class="line"><span class="number">0x401000</span> push ebp</span><br><span class="line"><span class="number">0x401000</span> push ebp</span><br><span class="line"><span class="number">0x401000</span> push ebp</span><br><span class="line"><span class="number">0x401000</span> push ebp</span><br></pre></td></tr></table></figure>
+
+<p>在第一行我们定义我们的搜索模式。<strong>搜索模式可以是以0x开头的十六进制格式，如0x55 0x8B 0xEC或以字节形式出现在IDA的十六进制视图55 8B EC</strong>，idc.get_inf_attr(INF_MIN_EA) 被用来获取可执行文件中的第一个地址，然后我们将使用 ida_search.find_binary(start, end, searchstr, radiux, sflag) 的回报分配给一个叫做 addr 的变量</p>
+<p>当搜索时，重要的是验证搜索是否找到了模式，这可以通过比较addr和idc.BADADDR来测试。</p>
+<p>不知道你有没有注意到，下面回显的结果地址并没有改变。这是<strong>因为我们没有传递SEARCH_NEXT标志</strong>。如果没有传递这个标志，当前地址将被用来搜索模式。如果最后一个地址包含了我们的字节模式，那么搜索将永远不会通过它来增量。下面是更正后的版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">pattern = <span class="string">&#x27;55 8B EC&#x27;</span></span><br><span class="line">addr = idc.get_inf_attr(INF_MIN_EA)</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">5</span>):</span><br><span class="line">	addr = ida_search.find_binary(addr, idc.BADADDR, pattern, <span class="number">16</span>, </span><br><span class="line">ida_search.SEARCH_NEXT|ida_search.SEARCH_DOWN)</span><br><span class="line">	<span class="keyword">if</span> addr != idc.BADADDR:</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>))</span><br><span class="line">Python&gt;</span><br><span class="line"><span class="number">0x401000</span> push ebp</span><br><span class="line"><span class="number">0x401040</span> push ebp</span><br><span class="line"><span class="number">0x401070</span> push ebp</span><br><span class="line"><span class="number">0x4010e0</span> push ebp</span><br><span class="line"><span class="number">0x401150</span> push ebp</span><br></pre></td></tr></table></figure>
+
+<p>可以看到我们<strong>在SEARCH_DOWN之前加上SEARCH_NEXT标志</strong>（注意需要加上<code>|</code>进行分隔）</p>
+<h4 id="字符串查找：ida-search-find-text"><a href="#字符串查找：ida-search-find-text" class="headerlink" title="字符串查找：ida_search.find_text"></a>字符串查找：ida_search.find_text</h4><p>搜索字节模式很有用，但有时我们可能想搜索字符串，如 “chrome.dll”。我们可以用[hex(y) for y in bytearray(“chrome.dll”)]将字符串转换为十六进制字节，但这有点难看</p>
+<p>另外，如果字符串是Unicode，我们就必须考虑到这种编码。最简单的方法是使用 ida_search.find_text(ea, y, x, searchstr, sflag)</p>
+<p>这些字段大部分看起来都很熟悉，因为它们与 ida_search.find_binary 相同。 ea 是起始地址。y 是 ea 处要搜索的行数，x 是该行的坐标。<strong>y和x这两个字段通常分配为0</strong>。 searchstr是要搜索的模式，sflag定义了要搜索的方向和类型</p>
+<p>我们来看一个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;cur_addr = idc.get_inf_attr(INF_MIN_EA)</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">5</span>):</span><br><span class="line">	cur_addr = ida_search.find_text(cur_addr, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&quot;Accept&quot;</span>,ida_search.SEARCH_DOWN)</span><br><span class="line">	<span class="keyword">if</span> addr == idc.BADADDR:</span><br><span class="line">		<span class="keyword">break</span></span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (cur_addr, idc.generate_disasm_line(cur_addr, <span class="number">0</span>)))</span><br><span class="line">	cur_addr = idc.next_head(cur_addr)</span><br><span class="line">Python&gt;</span><br><span class="line"><span class="number">0x40da72</span> push offset aAcceptEncoding; <span class="string">&quot;Accept-Encoding:\n&quot;</span></span><br><span class="line"><span class="number">0x40face</span> push offset aHttp1_1Accept; <span class="string">&quot; HTTP/1.1\r\nAccept: */* \r\n &quot;</span></span><br><span class="line"><span class="number">0x40fadf</span> push offset aAcceptLanguage; <span class="string">&quot;Accept-Language: ru \r\n&quot;</span></span><br><span class="line">...</span><br><span class="line"><span class="number">0x423c00</span> db <span class="string">&#x27;Accept&#x27;</span>,<span class="number">0</span></span><br><span class="line"><span class="number">0x423c14</span> db <span class="string">&#x27;Accept-Language&#x27;</span>,<span class="number">0</span></span><br><span class="line"><span class="number">0x423c24</span> db <span class="string">&#x27;Accept-Encoding&#x27;</span>,<span class="number">0</span></span><br><span class="line"><span class="number">0x423ca4</span> db <span class="string">&#x27;Accept-Ranges&#x27;</span>,<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>由于我们通过调用 idc.next_head(ea) 手动增加地址，我们不需要 SEARCH_NEXT 标志。我们手动将当前地址递增到下一行的原因是一个字符串可以在一行中出现多次。这可能会使获取下一个字符串的地址变得很棘手。</p>
+<blockquote>
+<p>有一个以 “is “开头的API子集，可以用来确定一个地址的类型。这些API返回一个真或假的布尔值：</p>
+<ul>
+<li><h4 id="idc-is-code-f-：如果ida标记该地址为代码，则返回真"><a href="#idc-is-code-f-：如果ida标记该地址为代码，则返回真" class="headerlink" title="idc.is_code(f)：如果ida标记该地址为代码，则返回真"></a>idc.is_code(f)：如果ida标记该地址为代码，则返回真</h4></li>
+<li><h4 id="idc-is-data-f-：如果ida标记该地址为数据，返回真"><a href="#idc-is-data-f-：如果ida标记该地址为数据，返回真" class="headerlink" title="idc.is_data(f)：如果ida标记该地址为数据，返回真"></a>idc.is_data(f)：如果ida标记该地址为数据，返回真</h4></li>
+<li><h4 id="idc-is-tail-f-：如果ida标记改地址为尾部，返回真"><a href="#idc-is-tail-f-：如果ida标记改地址为尾部，返回真" class="headerlink" title="idc.is_tail(f)：如果ida标记改地址为尾部，返回真"></a>idc.is_tail(f)：如果ida标记改地址为尾部，返回真</h4></li>
+<li><h4 id="idc-is-unknown-f-：如果IDA将该地址标记为未知，则返回True。这种类型用于当IDA还没有-识别地址是代码还是数据时使用该类型"><a href="#idc-is-unknown-f-：如果IDA将该地址标记为未知，则返回True。这种类型用于当IDA还没有-识别地址是代码还是数据时使用该类型" class="headerlink" title="idc.is_unknown(f)：如果IDA将该地址标记为未知，则返回True。这种类型用于当IDA还没有 识别地址是代码还是数据时使用该类型"></a>idc.is_unknown(f)：如果IDA将该地址标记为未知，则返回True。这种类型用于当IDA还没有 识别地址是代码还是数据时使用该类型</h4></li>
+<li><h4 id="idc-is-head-f-：如果IDA标记改地址为头部，返回真"><a href="#idc-is-head-f-：如果IDA标记改地址为头部，返回真" class="headerlink" title="idc.is_head(f)：如果IDA标记改地址为头部，返回真"></a>idc.is_head(f)：如果IDA标记改地址为头部，返回真</h4></li>
+</ul>
+<p>这个f对我们来说是新的。我们不是传递地址，而是首先需要得到内部标志的表示，然后将其传递给我们的 idc.is_* 集合的函数。为了得到内部标志，我们使用idc.get_full_flags(ea)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (ea, idc.generate_disasm_line(ea, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x10001000</span> push ebp</span><br><span class="line">Python&gt;idc.is_code(idc.get_full_flags(ea))</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>除了前面描述的模式搜索外，还有几个函数可以用来查找其他类型。查找API的命名惯例使我们很容易推断其整体功能。</p>
+<h4 id="其它查找模式"><a href="#其它查找模式" class="headerlink" title="其它查找模式"></a>其它查找模式</h4><h5 id="查找下一段代码：ida-search-find-code-ea-flag"><a href="#查找下一段代码：ida-search-find-code-ea-flag" class="headerlink" title="查找下一段代码：ida_search.find_code(ea,flag)"></a>查找下一段代码：ida_search.find_code(ea,flag)</h5><p>它被用来寻找被标记为代码的下一个地址。如果我们想找到一个数据块的结尾，这就很有用。如果ea是一个已经被标记为代码的地址，它会返回下一个地址</p>
+<p>flag的使用与之前在ida_search.find_text中描述的一样</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (ea, idc.generate_disasm_line(ea, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x4140e8</span> dd offset dword_4140EC</span><br><span class="line">Python&gt;addr = ida_search.find_code(ea, SEARCH_DOWN|SEARCH_NEXT)</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x41410c</span> push ebx</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，通过调用这个单一的函数，我们跳过了36个字节的数据，得到了一个标记为代码的部分的开始</p>
+<h5 id="查找下一段数据：ida-search-find-data-ea-flag"><a href="#查找下一段数据：ida-search-find-data-ea-flag" class="headerlink" title="查找下一段数据：ida_search.find_data(ea,flag)"></a>查找下一段数据：ida_search.find_data(ea,flag)</h5><p>返回下一个标记为数据块的地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (ea, idc.generate_disasm_line(ea, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x41410c</span> push ebx</span><br><span class="line">Python&gt;addr = ida_search.find_data(ea, SEARCH_UP|SEARCH_NEXT)</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x4140ec</span> dd 49540E0Eh, 746E6564h, 4570614Dh, 7972746Eh, <span class="number">8</span>, <span class="number">1</span>, <span class="number">40</span>10BCh</span><br></pre></td></tr></table></figure>
+
+<h5 id="查找下一段未识别：ida-search-find-unknown-ea-flag"><a href="#查找下一段未识别：ida-search-find-unknown-ea-flag" class="headerlink" title="查找下一段未识别：ida_search.find_unknown(ea,flag)"></a>查找下一段未识别：ida_search.find_unknown(ea,flag)</h5><p>这个功能是用来查找IDA没有识别为代码或数据的字节的地址。未知的类型需要进一步的人工分析，可以通过视觉或脚本来进行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (ea, idc.generate_disasm_line(ea, <span class="number">0</span>)))</span><br><span class="line"><span class="number">0x406a05</span> jge short loc_406A3A</span><br><span class="line">Python&gt;addr = ida_search.find_unknown(ea, SEARCH_DOWN)</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>))))</span><br><span class="line"><span class="number">0x41b004</span> db 0DFh ; ?</span><br></pre></td></tr></table></figure>
+
+<h5 id="查找下一段已识别：ida-search-find-defined-ea-flag"><a href="#查找下一段已识别：ida-search-find-defined-ea-flag" class="headerlink" title="查找下一段已识别：ida_search.find_defined(ea,flag)"></a>查找下一段已识别：ida_search.find_defined(ea,flag)</h5><p>寻找ida识别为代码或数据的地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0x41b900</span> db ? ;</span><br><span class="line">Python&gt;addr = ida_search.find_defined(ea, SEARCH_UP)</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (addr, idc.generate_disasm_line(addr, <span class="number">0</span>))))</span><br><span class="line"><span class="number">0x41b5f4</span> dd ?</span><br></pre></td></tr></table></figure>
+
+<p>尽管看起来没有任何有用的数据，但我们可以通过查看引用可以看到他确实被用到了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;<span class="keyword">for</span> xref <span class="keyword">in</span> idautils.XrefsTo(addr, <span class="number">1</span>):</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;0x%x %s&quot;</span> % (xref.frm, idc.generate_disasm_line(addr, <span class="number">0</span>))))</span><br><span class="line">Python&gt;</span><br><span class="line"><span class="number">0x4069c3</span> mov eax, dword_41B5F4[ecx*<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<h5 id="查找特定值：ida-search-find-imm-ea-flag-value"><a href="#查找特定值：ida-search-find-imm-ea-flag-value" class="headerlink" title="查找特定值：ida_search.find_imm(ea,flag,value)"></a>查找特定值：ida_search.find_imm(ea,flag,value)</h5><p>比起搜索一个类型，我们可能想搜索一个特定的值。比如说，我们感觉代码调用rand来生成一个随机数，但我们找不到代码。如果我们知道 rand 使用值 0x343FD 作为种子，我们可以通过 ida_search.find_imm ( get_inf_attr( INF_MIN_EA ), SEARCH_DOWN, 0x343FD ) 搜索这个数字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Python&gt;addr = ida_search.find_imm(get_inf_attr(INF_MIN_EA), SEARCH_DOWN, <span class="number">0x343FD</span> )</span><br><span class="line">Python&gt;addr</span><br><span class="line">[<span class="number">268453092</span>, <span class="number">0</span>]</span><br><span class="line">Python&gt;<span class="built_in">print</span>(<span class="string">&quot;0x%x %s %x&quot;</span> % (addr[<span class="number">0</span>], idc.generate_disasm_line(addr[<span class="number">0</span>], <span class="number">0</span>), </span><br><span class="line">addr[<span class="number">1</span>]))</span><br><span class="line"><span class="number">0x100044e4</span> imul eax, 343FDh <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>ida_search.find_imm 返回一个元组。元组中的第一项是地址，第二项是操作数。和 idc.print_operand 的返回一样，第一个操作数从零开始。当我们打印地址和反汇编时，我们可以看到值是第二个操作数</p>
+<p>在某些情况下，使用ida_search.find_*搜索会有点慢。Yara可以用来加快IDA的搜索速度。请参阅Yara一章，了解在IDA中使用Yara来加速搜索的更多细节</p>
+<h3 id="选择数据"><a href="#选择数据" class="headerlink" title="选择数据"></a>选择数据</h3><p>idc.read_selection_start() 获取选择部分的起始地址</p>
+<p>idc.read_selection_end() 获取选择部分的结束地址</p>
+<p><img src="/images/idapython%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/image-20240217160728247.png" alt="image-20240217160728247"></p>
+<p><strong>需要注意</strong>的是结束地址不是最后一条指令的地址，而是最后一条指令下一条指令的地址</p>
+<p>如果我们希望只做一个API调用，我们可以使用idaapi.read_selection()</p>
+<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><p>idc.get_wide_byte(ea)</p>
+<p>idc.get_wide_word(ea)</p>
+<p>idc.get_wide_dword(ea)</p>
+<p>idc.get_qword(ea)</p>
+<p>idc.GetFloat(ea)</p>
+<p>idc.GetDouble(ea)</p>
+<p>idc.get_bytes(ea, size, use_dbg&#x3D;False)</p>
+<h3 id="注释和重命名"><a href="#注释和重命名" class="headerlink" title="注释和重命名"></a>注释和重命名</h3><p>暂无</p>
+<h3 id="着色"><a href="#着色" class="headerlink" title="着色"></a>着色</h3><p>暂无</p>
+<p>如果你有兴趣改变IDA的颜色主题，我建议你去看看IDASkins11项目</p>
+<p>————————————————————————————————————————————————————————————</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53342264/article/details/127477778">https://blog.csdn.net/m0_53342264/article/details/127477778</a></p>
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/IDA.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+		
+			<a href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习">
+								angr安装与学习			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 24日, 2024				
+							</p>
+							<p class="relate-post-content">
+								angr安装与学习angr安装kali安装angr
+安装virtualenv可以用pip或者apt来安装virtualenv
+12pip install virtualenvapt-get install virtualenv
+
+创建...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/24/angr%E5%AD%A6%E4%B9%A0/" title="angr安装与学习">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="angr安装与学习"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">
+								gdb与pwntools简单使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 23日, 2024				
+							</p>
+							<p class="relate-post-content">
+								gdb与pwntools简单使用linux下安装gdb12apt-get updateapt-get install gdb
+
+安装时需要选择 y 确认继续安装
+pwntools123git clone https://github....
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/23/gdb%E4%B8%8Epwntools%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="gdb与pwntools简单使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="gdb与pwntools简单使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" title="ida-vmware linux 动态调试">
+								ida-vmware linux 动态调试			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 28日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ida-vmware linux 动态调试查看虚拟机ip使用命令
+1ifconfig
+
+![image-20240122115621562](&#x2F;images&#x2F;ida-vmware linux 动态调试&#x2F;i...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/28/ida-vmware%20linux%20%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/" title="ida-vmware linux 动态调试">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="ida-vmware linux 动态调试"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/10/28/ida%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="ida常用快捷键">
+								ida常用快捷键			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 28日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ida 几种常用快捷键ida 是反汇编程序 ，反汇编程序是一种软件，用于将机器代码转换为人类可读的格式，称为汇编语言。而且 ida 是用作静态分析的，ida 是神器，尤其是你一个 F5 能看到伪代码，然后修改修改贴到 C 程序里直接能...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/10/28/ida%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="ida常用快捷键">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/IDA.jpg" alt="ida常用快捷键"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/05/26/align%E5%AF%B9%E9%BD%90%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="align对齐伪指令">
+								align对齐伪指令			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 26日, 2023				
+							</p>
+							<p class="relate-post-content">
+								align对齐伪指令原理对齐伪指令ALIGN对齐伪指令格式：
+ALIGN Num
+其中：Num必须是2的幂，如：2、4、8和16等。
+伪指令的作用是：告诉汇编程序，本伪指令下面的内存变量必须从下一个能被Num整除的地址开始分配。
+如果...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/05/26/align%E5%AF%B9%E9%BD%90%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="align对齐伪指令">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="align对齐伪指令"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">
+								Python文件读写相关			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 28日, 2024				
+							</p>
+							<p class="relate-post-content">
+								Python文件读写相关open() 方法open()方法用于打开文件并返回一个文件对象，允许用户进行读取、写入、追加等操作
+1file = open(file_name [, mode=&#x27;r&#x27; [ , buffe...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/28/Python%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3/" title="Python文件读写相关">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="Python文件读写相关"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">
+								DES加解密			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 27日, 2024				
+							</p>
+							<p class="relate-post-content">
+								DES加解密DES是一种对称加密
+主要的流程是：
+
+初始置换，也称 IP置换
+加密轮次，共16轮次
+逆置换，也称 FP置换
+
+1. IP置换IP置换是将输入的64位明文块进行置换和重新排列，生成新的64位数据块（不够64位需要补位填充...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/27/DES%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="DES加解密">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="DES加解密"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">
+								脱壳入门			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 25日, 2024				
+							</p>
+							<p class="relate-post-content">
+								脱壳入门工具脱壳简单UPXupx壳是最常见的其中一种壳，其中简单的upx壳都可以用工具去壳
+
+在开始脱壳之前，要将需要脱壳的文件（upx壳的）拖入对应的32位或64位upx脱壳文件夹中并进入文件夹
+然后使用 upx -d 文件名 这条...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/25/%E8%84%B1%E5%A3%B3%E5%85%A5%E9%97%A8/" title="脱壳入门">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="脱壳入门"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3 简单使用">
+								z3 简单使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 23日, 2024				
+							</p>
+							<p class="relate-post-content">
+								z3简单使用安装Windows下安装1pip3 install z3-solver		#注意这里是 z3-solver 而不是 z3
+
+Linux下安装（没什么必要）123456git clone https://github.com...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/23/z3%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="z3 简单使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/SummerAgain.jpg" alt="z3 简单使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">
+								RC4加解密			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 21日, 2024				
+							</p>
+							<p class="relate-post-content">
+								RC4加解密RC4是一种对称加密，加密过程与解密过程一样
+主要的流程都是
+
+创建大小为256、从0~1的Sbox表
+创建大小为256、重复填充密钥key的Tbox表
+利用Tbox表打乱Sbox表
+根据具体代码生成大小为256的密钥流s...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2024/01/21/RC4%20%E5%8A%A0%E8%A7%A3%E5%AF%86/" title="RC4加解密">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/ShuShu.png" alt="RC4加解密"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>

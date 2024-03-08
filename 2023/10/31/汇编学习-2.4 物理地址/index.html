@@ -221,6 +221,19 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
 	 
 
 <div class="layout-post">
@@ -246,7 +259,7 @@
 
 	<a href="/2023/10/31/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0-2.4%20%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80/" itemprop="url">
 		<time datetime="2023-10-31T03:56:27.000Z" itemprop="dateUpdated">
-	  		2023-11-23
+	  		2024-01-25
 	  </time>
 	</a> 
 
@@ -282,7 +295,7 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址</p>
+			<h1 id="汇编学习-2-4-物理地址"><a href="#汇编学习-2-4-物理地址" class="headerlink" title="汇编学习-2.4 物理地址"></a>汇编学习-2.4 物理地址</h1><p>CPU 访问内存单元时，要给出内存单元的地址。所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有惟一的地址，我们将这个惟一的地址称为物理地址</p>
 <p>CPU 通过地址总线送入存储器的必须是一个内存单元的物理地址，在 CPU 向地址总线上发出物理地址之前，必须在内部先形成这个物理地址。不同的 CPU 可以有不同的形成物理地址的方式</p>
 <p>我们要研究的是 8086CPU，我们知道 8086CPU 的上一代等是 8 位机，而 8086CPU 是 16 位机，也可以说是 16 位结构的 CPU，现在我们先来了解一下什么是 16 位结构的 CPU</p>
 <p>简单的， 16 位结构讲的是 CPU 具有以下几个结构特性：</p>
